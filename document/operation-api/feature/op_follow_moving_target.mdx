@@ -1,0 +1,24 @@
+---
+title: "Follow a Moving Target"
+---
+This feature covers selecting an entity for the camera of [`IOperationsAnimation`](/lib/VM-Operations-Post-Interfaces-IOperationsAnimation) to follow, enabling camera tracking, and choosing whether the camera follows the entity's translation or rotation.
+
+## Selecting a Target
+`IOperationsAnimation` created through [Manage View - Creating](/document/operation-api/feature/op_manage_view#creating) is required before selecting a target for camera tracking.
+
+Select a target with [`SetFollowingCameraTarget(string)`](/lib/VM-Operations-Post-Interfaces-IOperationsAnimation-SetFollowingCameraTarget). Subsequent camera-follow updates use the found entity as their target.
+
+<Danger>
+The target name must identify a supported entity. If no supported entity is found, no camera target is set.
+</Danger>
+
+## Enabling Camera Tracking
+Turn camera tracking on or off with [`IsFollowingCameraActive`](/lib/VM-Operations-Post-Interfaces-IOperationsAnimation-IsFollowingCameraActive). With a selected target and tracking enabled, camera updates follow the target as its position or orientation changes.
+
+## Configuring Tracking Direction
+Choose how target motion affects the camera with [`TransformationType`](/lib/VM-Operations-Post-Interfaces-IOperationsAnimation-TransformationType). [`TransformationType`](/lib/VM-Models-Post-TransformationType) value `Translation` moves the camera along the enabled translation axes while keeping its orientation. The `Rotation` value makes target orientation determine the camera position and up direction, while the enabled rotation axes determine which rotations are applied.
+
+Configure the axes used by each mode:
+
+- Translation follows the selected components from [`IsFollowingXAxis`](/lib/VM-Operations-Post-Interfaces-IOperationsAnimation-IsFollowingXAxis), [`IsFollowingYAxis`](/lib/VM-Operations-Post-Interfaces-IOperationsAnimation-IsFollowingYAxis), and [`IsFollowingZAxis`](/lib/VM-Operations-Post-Interfaces-IOperationsAnimation-IsFollowingZAxis).
+- Rotation follows the selected components from [`IsFollowingRotXAxis`](/lib/VM-Operations-Post-Interfaces-IOperationsAnimation-IsFollowingRotXAxis), [`IsFollowingRotYAxis`](/lib/VM-Operations-Post-Interfaces-IOperationsAnimation-IsFollowingRotYAxis), and [`IsFollowingRotZAxis`](/lib/VM-Operations-Post-Interfaces-IOperationsAnimation-IsFollowingRotZAxis).

@@ -1,0 +1,25 @@
+---
+title: "Property BodyName"
+sidebarTitle: "BodyName"
+---
+<a id="VM_Operations_Post_FatigueParameter_BodyName"></a>
+
+Namespace: [VM.Operations.Post](/lib/VM-Operations-Post)  
+Assembly: VM.Operations.Post.dll  
+
+## BodyName {#VM_Operations_Post_FatigueParameter_BodyName}
+
+Gets or sets the legacy body name used by the obsolete fatigue parameter model to find a finite-element body in the legacy analysis path.
+
+```csharp
+[Obsolete("This property will be deprecated in the near future.")]
+public string BodyName { get; set; }
+```
+
+### Property Value
+
+ string
+
+### Remarks
+
+This property is obsolete. New analyses identify target bodies with [`Targets`](/lib/VM-ViewModels-Post-IDurabilityAnalysisParameter-Targets) and configure the target through [`IOperationsFEBody`](/lib/VM-Operations-Post-Interfaces-IOperationsFEBody).

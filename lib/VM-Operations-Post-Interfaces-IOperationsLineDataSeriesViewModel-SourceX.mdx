@@ -1,0 +1,24 @@
+---
+title: "Property SourceX"
+sidebarTitle: "SourceX"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationsLineDataSeriesViewModel_SourceX"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## SourceX {#VM_Operations_Post_Interfaces_IOperationsLineDataSeriesViewModel_SourceX}
+
+Gets or sets [`ILineDataSeriesAxisViewModel`](/lib/VM-ViewModels-Post-ILineDataSeriesAxisViewModel) used to obtain X values for the curve.
+
+```csharp
+ILineDataSeriesAxisViewModel SourceX { get; set; }
+```
+
+### Property Value
+
+ [ILineDataSeriesAxisViewModel](/lib/VM-ViewModels-Post-ILineDataSeriesAxisViewModel)
+
+### Remarks
+
+Changing this value updates the user-defined X source metadata and recalculates the curve when the Y source is also available.

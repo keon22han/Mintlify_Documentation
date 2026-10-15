@@ -1,0 +1,24 @@
+---
+title: "Property WeightingType"
+sidebarTitle: "WeightingType"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationsSignalProcessingLineDataSeriesViewModel_WeightingType"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## WeightingType {#VM_Operations_Post_Interfaces_IOperationsSignalProcessingLineDataSeriesViewModel_WeightingType}
+
+Gets or sets the frequency-weighting method selected from `WeightingType`.
+
+```csharp
+WeightingType WeightingType { get; set; }
+```
+
+### Property Value
+
+ [WeightingType](/lib/VM-Models-Post-WeightingType)
+
+### Remarks
+
+This value applies when [`SignalProcessingType`](/lib/VM-Operations-Post-Interfaces-IOperationsSignalProcessingLineDataSeriesViewModel-SignalProcessingType) selects frequency weighting. The weighting calculation uses [`FrequencyAxisType`](/lib/VM-Operations-Post-Interfaces-IOperationsSignalProcessingLineDataSeriesViewModel-FrequencyAxisType) to select the frequency axis.

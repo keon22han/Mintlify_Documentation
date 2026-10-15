@@ -1,0 +1,24 @@
+---
+title: "Property IsAuto"
+sidebarTitle: "IsAuto"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationsCustomAxisViewModel_IsAuto"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## IsAuto {#VM_Operations_Post_Interfaces_IOperationsCustomAxisViewModel_IsAuto}
+
+Gets or sets whether axis tick intervals and range limits are automatic. `true` calculates them automatically and `false` enables [`ScaleInterval`](/lib/VM-Operations-Post-Interfaces-IOperationsCustomAxisViewModel-ScaleInterval), [`ScaleMin`](/lib/VM-Operations-Post-Interfaces-IOperationsCustomAxisViewModel-ScaleMin), and [`ScaleMax`](/lib/VM-Operations-Post-Interfaces-IOperationsCustomAxisViewModel-ScaleMax).
+
+```csharp
+bool IsAuto { get; set; }
+```
+
+### Property Value
+
+ bool
+
+### Remarks
+
+When this value is `false`, [`ScaleInterval`](/lib/VM-Operations-Post-Interfaces-IOperationsCustomAxisViewModel-ScaleInterval), [`ScaleMin`](/lib/VM-Operations-Post-Interfaces-IOperationsCustomAxisViewModel-ScaleMin), and [`ScaleMax`](/lib/VM-Operations-Post-Interfaces-IOperationsCustomAxisViewModel-ScaleMax) provide the manual interval and range settings for the axis.

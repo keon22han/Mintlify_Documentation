@@ -1,0 +1,55 @@
+---
+title: "Manage View"
+---
+This feature covers creating, finding, activating, closing, and docking [`IView`](/lib/VM-Operations-Post-Interfaces-IView), the animation or chart view used by the Operation API.
+
+The Operation API uses [`IOperationsAnimation`](/lib/VM-Operations-Post-Interfaces-IOperationsAnimation) for animation results and [`IOperationsLine2DViewModelBase`](/lib/VM-Operations-Post-Interfaces-IOperationsLine2DViewModelBase) for chart data. Creating, finding, and closing `IView` are provided by [`IPage`](/lib/VM-Operations-Post-Interfaces-IPage), while activating and docking are provided by `IView` itself.
+
+## Creating
+Create `IPage` before creating a view, see [Manage Page](/document/operation-api/feature/op_manage_page).
+
+[`IAnalysisResultViewModel`](/lib/VM-ViewModels-Post-IAnalysisResultViewModel) from imported result data is required for animation creation, see [Import File](/document/operation-api/feature/op_import_file).
+
+Create `IOperationsAnimation` with [`CreateAnimation(IAnalysisResultViewModel, string)`](/lib/VM-Operations-Post-Interfaces-IPage-CreateAnimation).
+
+The new `IOperationsAnimation` becomes active after creation.
+
+After creation, `IOperationsAnimation` can be used with related animation operations:
+
+- Configure its camera position, see [Configure Camera Position](/document/operation-api/feature/op_configure_camera_position).
+- Follow a moving target, see [Follow a Moving Target](/document/operation-api/feature/op_follow_moving_target).
+- Manage a coordinate system, see [Manage a Coordinate System](/document/operation-api/feature/op_manage_coordinate_system).
+- Control animation playback, see [Control Animation Playback](/document/operation-api/feature/op_control_animation_playback).
+- Manage a contour, see [Manage a Contour](/document/operation-api/feature/op_manage_contour).
+- Manage a vector, see [Manage a Vector](/document/operation-api/feature/op_manage_vector).
+- Configure the animation display, see [Animation Properties](/document/operation-api/feature/op_animation_properties).
+- Run a sound-pressure analysis, see [Run an Analysis](/document/operation-api/feature/op_run_analysis).
+
+Create `IOperationsLine2DViewModelBase` with [`CreateChart(string)`](/lib/VM-Operations-Post-Interfaces-IPage-CreateChart).
+
+The new `IOperationsLine2DViewModelBase` becomes active after creation.
+
+`IOperationsLine2DViewModelBase` can be used with related chart operations:
+
+- Manage curve data, see [Manage a Curve](/document/operation-api/feature/op_manage_curve).
+- Postprocess curve data, see [Postprocess a Curve](/document/operation-api/feature/op_postprocess_curve).
+- Configure chart properties, see [Chart Properties](/document/operation-api/feature/op_chart_properties).
+- Import numeric data, see [Import File](/document/operation-api/feature/op_import_file).
+
+## Getting
+Get `IView` with [`GetView(int)`](/lib/VM-Operations-Post-Interfaces-IPage-GetView) or [`GetView(string)`](/lib/VM-Operations-Post-Interfaces-IPage-GetView).
+
+Get the active `IView` with [`GetActiveView()`](/lib/VM-Operations-Post-Interfaces-IPage-GetActiveView).
+
+Get all views with [`GetViews()`](/lib/VM-Operations-Post-Interfaces-IPage-GetViews).
+
+## Activating
+Activate the target `IView` with [`Activate()`](/lib/VM-Operations-Post-Interfaces-IView-Activate). Other views in the same `IPage` are deactivated.
+
+## Closing
+Close `IView` through [`CloseView(IView)`](/lib/VM-Operations-Post-Interfaces-IPage-CloseView), [`CloseView(int)`](/lib/VM-Operations-Post-Interfaces-IPage-CloseView), or [`CloseView(string)`](/lib/VM-Operations-Post-Interfaces-IPage-CloseView).
+
+## Docking
+Place `IView` relative to another `IView` with [`DockTo(DockLayout, IView)`](/lib/VM-Operations-Post-Interfaces-IView-DockTo).
+
+Docking changes the arrangement of the two views without changing how they are found or closed.

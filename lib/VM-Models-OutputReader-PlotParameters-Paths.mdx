@@ -1,0 +1,26 @@
+---
+title: "Property Paths"
+sidebarTitle: "Paths"
+---
+<a id="VM_Models_OutputReader_PlotParameters_Paths"></a>
+
+Namespace: [VM.Models.OutputReader](/lib/VM-Models-OutputReader)  
+Assembly: VM.Models.OutputReader.dll  
+
+## Paths {#VM_Models_OutputReader_PlotParameters_Paths}
+
+Gets or sets the characteristic and component paths to read from [`Target`](/lib/VM-Models-OutputReader-PlotParameters-Target).
+
+Each value combines a characteristic and component with a slash, such as &lt;code>Displacement/Magnitude&lt;/code>.
+
+```csharp
+public IEnumerable<string> Paths { get; set; }
+```
+
+### Property Value
+
+ IEnumerable&lt;string\>
+
+### Remarks
+
+Each path combines a characteristic with a component returned by the plot-characteristic lookup operations.

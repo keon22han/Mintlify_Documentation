@@ -1,0 +1,24 @@
+---
+title: "Property SignalProcessingType"
+sidebarTitle: "SignalProcessingType"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationsSignalProcessingLineDataSeriesViewModel_SignalProcessingType"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## SignalProcessingType {#VM_Operations_Post_Interfaces_IOperationsSignalProcessingLineDataSeriesViewModel_SignalProcessingType}
+
+Gets or sets the signal-processing operation selected from `SignalProcessingType` and applied to the source curve.
+
+```csharp
+SignalProcessingType SignalProcessingType { get; set; }
+```
+
+### Property Value
+
+ [SignalProcessingType](/lib/VM-Models-Post-SignalProcessingType)
+
+### Remarks
+
+Filtering uses [`FilteringType`](/lib/VM-Operations-Post-Interfaces-IOperationsSignalProcessingLineDataSeriesViewModel-FilteringType), smoothing uses [`SmoothingType`](/lib/VM-Operations-Post-Interfaces-IOperationsSignalProcessingLineDataSeriesViewModel-SmoothingType), and frequency weighting uses [`WeightingType`](/lib/VM-Operations-Post-Interfaces-IOperationsSignalProcessingLineDataSeriesViewModel-WeightingType) with [`FrequencyAxisType`](/lib/VM-Operations-Post-Interfaces-IOperationsSignalProcessingLineDataSeriesViewModel-FrequencyAxisType). Changing this value recalculates the calculated curve when an original curve exists.

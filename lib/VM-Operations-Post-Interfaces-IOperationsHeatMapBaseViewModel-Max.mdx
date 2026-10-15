@@ -1,0 +1,24 @@
+---
+title: "Property Max"
+sidebarTitle: "Max"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationsHeatMapBaseViewModel_Max"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## Max {#VM_Operations_Post_Interfaces_IOperationsHeatMapBaseViewModel_Max}
+
+Gets or sets the maximum value of the heat-map legend range used when [`IsAutoRange`](/lib/VM-Operations-Post-Interfaces-IOperationsHeatMapBaseViewModel-IsAutoRange) is `false`.
+
+```csharp
+double Max { get; set; }
+```
+
+### Property Value
+
+ double
+
+### Remarks
+
+When [`IsAutoRange`](/lib/VM-Operations-Post-Interfaces-IOperationsHeatMapBaseViewModel-IsAutoRange) is `false`, changing this value updates the upper legend limit. When automatic range is enabled, the heat-map data determines the limit.

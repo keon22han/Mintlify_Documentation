@@ -1,0 +1,24 @@
+---
+title: "Property EntityType"
+sidebarTitle: "EntityType"
+---
+<a id="VM_ViewModels_Post_IEntityBaseViewModel_EntityType"></a>
+
+Namespace: [VM.ViewModels.Post](/lib/VM-ViewModels-Post)  
+Assembly: VM.ViewModels.Post.dll  
+
+## EntityType {#VM_ViewModels_Post_IEntityBaseViewModel_EntityType}
+
+Gets the [`EntityType`](/lib/VM-Models-Post-EntityType) that classifies which kind of result entity is represented. The value reflects the loaded result data and does not change after the entity becomes available.
+
+```csharp
+EntityType EntityType { get; }
+```
+
+### Property Value
+
+ [EntityType](/lib/VM-Models-Post-EntityType)
+
+### Remarks
+
+The matching display text is available from `EntityTypeName`.

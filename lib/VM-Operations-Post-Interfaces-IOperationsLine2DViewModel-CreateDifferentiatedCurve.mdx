@@ -1,0 +1,118 @@
+---
+title: "Method CreateDifferentiatedCurve"
+sidebarTitle: "CreateDifferentiatedCurve"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationsLine2DViewModel_CreateDifferentiatedCurve_System_Collections_Generic_IEnumerable_System_String__"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## CreateDifferentiatedCurve\(IEnumerable&lt;string\>\) {#VM_Operations_Post_Interfaces_IOperationsLine2DViewModel_CreateDifferentiatedCurve_System_Collections_Generic_IEnumerable_System_String__}
+
+Differentiates curve data as part of the chart tab's Calculus functionality.
+
+For a complete operations, see [Operation API Example - Calculus](/document/operation-api/example/example_chart_for_operation_api#calculus).
+
+```csharp
+IEnumerable<IOperationsLineDataSeriesViewModelBase> CreateDifferentiatedCurve(IEnumerable<string> lstSeriesName)
+```
+
+### Parameters
+
+`lstSeriesName` IEnumerable&lt;string\>
+
+The list of curve names to perform the differentiation on.
+
+### Returns
+
+ IEnumerable&lt;[IOperationsLineDataSeriesViewModelBase](/lib/VM-Operations-Post-Interfaces-IOperationsLineDataSeriesViewModelBase)\>
+
+A collection of curves with differentiated values.
+
+### Examples
+
+```python
+# Get the result document.
+# RESULT_FILE_PATH : .dfr result file path
+document = application_handler.GetDocument(RESULT_FILE_PATH)
+
+# Create the chart view.
+page = application_handler.GetActivePage()
+chart_name = "Chart"
+chart = page.CreateChart(chart_name)
+
+# Add curves to the chart.
+curve_paths = List[str]()
+curve_path = "Displacement/Magnitude"
+curve_paths.Add(curve_path)
+entity_name = "Crank"
+parameters = PlotParameters()
+parameters.Paths = curve_paths
+parameters.Target = entity_name
+curves = chart.AddCurves(RESULT_FILE_PATH, parameters)
+
+# Select the source curves.
+series_names = List[str]()
+series_names.Add(curves[0].SeriesName)
+
+# Create the differentiated curve.
+chart.CreateDifferentiatedCurve(series_names)
+```
+
+### Remarks
+
+This function iterates over each curve specified in `lstSeriesName` and applies differentiation to the Y values
+of each point in the curve. The differentiation calculates the difference between consecutive points.
+
+## CreateDifferentiatedCurve\(IEnumerable&lt;IOperationsLineDataSeriesViewModelBase\>\) {#VM_Operations_Post_Interfaces_IOperationsLine2DViewModel_CreateDifferentiatedCurve_System_Collections_Generic_IEnumerable_VM_Operations_Post_Interfaces_IOperationsLineDataSeriesViewModelBase__}
+
+Differentiates curve data as part of the chart tab's Calculus functionality.
+
+For a complete operations, see [Operation API Example - Calculus](/document/operation-api/example/example_chart_for_operation_api#calculus).
+
+```csharp
+IEnumerable<IOperationsLineDataSeriesViewModelBase> CreateDifferentiatedCurve(IEnumerable<IOperationsLineDataSeriesViewModelBase> seriesViewModels)
+```
+
+### Parameters
+
+`seriesViewModels` IEnumerable&lt;[IOperationsLineDataSeriesViewModelBase](/lib/VM-Operations-Post-Interfaces-IOperationsLineDataSeriesViewModelBase)\>
+
+Curves that are differentiated.
+
+### Returns
+
+ IEnumerable&lt;[IOperationsLineDataSeriesViewModelBase](/lib/VM-Operations-Post-Interfaces-IOperationsLineDataSeriesViewModelBase)\>
+
+A collection of curves with differentiated values.
+
+### Examples
+
+```python
+# Get the result document.
+# RESULT_FILE_PATH : .dfr result file path
+document = application_handler.GetDocument(RESULT_FILE_PATH)
+
+# Create the chart view.
+page = application_handler.GetActivePage()
+chart_name = "ChartSeries"
+chart = page.CreateChart(chart_name)
+
+# Add curves to the chart.
+curve_paths = List[str]()
+curve_path = "Displacement/Magnitude"
+curve_paths.Add(curve_path)
+entity_name = "Crank"
+parameters = PlotParameters()
+parameters.Paths = curve_paths
+parameters.Target = entity_name
+curves = chart.AddCurves(RESULT_FILE_PATH, parameters)
+
+# Create the differentiated curve.
+chart.CreateDifferentiatedCurve(curves)
+```
+
+### Remarks
+
+This function iterates over each curve in `seriesViewModels` and applies differentiation to the Y values
+of each point in the curve. The differentiation calculates the difference between consecutive points.

@@ -1,0 +1,45 @@
+---
+title: "Method CreateChart"
+sidebarTitle: "CreateChart"
+---
+<a id="VM_Operations_Post_Interfaces_IPage_CreateChart_System_String_"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## CreateChart\(string\) {#VM_Operations_Post_Interfaces_IPage_CreateChart_System_String_}
+
+Creates [`IOperationsLine2DViewModelBase`](/lib/VM-Operations-Post-Interfaces-IOperationsLine2DViewModelBase) on this page for 2D curve operations.
+
+For a complete operations, see [Operation API Example - Create a ChartView](/document/operation-api/example/example_chart_for_operation_api#create-a-chartview).
+
+```csharp
+IOperationsLine2DViewModelBase CreateChart(string name = null)
+```
+
+### Parameters
+
+`name` string
+
+Initial name for the new view. If omitted, a default name is generated.
+
+### Returns
+
+ [IOperationsLine2DViewModelBase](/lib/VM-Operations-Post-Interfaces-IOperationsLine2DViewModelBase)
+
+Newly created [`IOperationsLine2DViewModelBase`](/lib/VM-Operations-Post-Interfaces-IOperationsLine2DViewModelBase).
+
+### Examples
+
+```python
+page_name = "Page"
+page = application_handler.GetPage(page_name)
+chart_name = "Chart"
+chart = page.CreateChart(chart_name)
+```
+
+### Remarks
+
+If `IPage` is inactive, this call activates it before creating the chart.
+
+The returned `IOperationsLine2DViewModelBase` is kept with [`IPage`](/lib/VM-Operations-Post-Interfaces-IPage) and becomes active immediately. It starts without curve data until curve data is imported or added.

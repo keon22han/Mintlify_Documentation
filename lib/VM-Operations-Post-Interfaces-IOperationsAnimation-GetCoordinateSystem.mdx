@@ -1,0 +1,28 @@
+---
+title: "Method GetCoordinateSystem"
+sidebarTitle: "GetCoordinateSystem"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationsAnimation_GetCoordinateSystem_System_String_"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## GetCoordinateSystem\(string\) {#VM_Operations_Post_Interfaces_IOperationsAnimation_GetCoordinateSystem_System_String_}
+
+Gets a coordinate system by its [`FullName`](/lib/VM-Operations-Post-Interfaces-IOperationsCSYSViewModel-FullName).
+
+```csharp
+IOperationsCSYSViewModel GetCoordinateSystem(string name)
+```
+
+### Parameters
+
+`name` string
+
+Full name from `IOperationsCSYSViewModel.FullName` for a coordinate system returned by [CreateCoordinateSystem\(string, string\)](/lib/VM-Operations-Post-Interfaces-IOperationsAnimation-CreateCoordinateSystem) or found through another public coordinate-system lookup.
+
+### Returns
+
+ [IOperationsCSYSViewModel](/lib/VM-Operations-Post-Interfaces-IOperationsCSYSViewModel)
+
+Matching [`IOperationsCSYSViewModel`](/lib/VM-Operations-Post-Interfaces-IOperationsCSYSViewModel), or `null` if no coordinate system with that name exists.

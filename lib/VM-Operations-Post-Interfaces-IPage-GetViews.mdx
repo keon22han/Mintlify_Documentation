@@ -1,0 +1,30 @@
+---
+title: "Method GetViews"
+sidebarTitle: "GetViews"
+---
+<a id="VM_Operations_Post_Interfaces_IPage_GetViews"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## GetViews\(\) {#VM_Operations_Post_Interfaces_IPage_GetViews}
+
+Gets every [`IView`](/lib/VM-Operations-Post-Interfaces-IView) associated with [`IPage`](/lib/VM-Operations-Post-Interfaces-IPage).
+
+```csharp
+IView[] GetViews()
+```
+
+### Returns
+
+ [IView](/lib/VM-Operations-Post-Interfaces-IView)\[\]
+
+Array containing every `IView` currently associated with `IPage`, or an empty array if no views are associated with it.
+
+### Examples
+
+```python
+page_name = "Page"
+page = application_handler.GetPage(page_name)
+views = page.GetViews()
+```

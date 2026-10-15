@@ -1,0 +1,24 @@
+---
+title: "Property FilteringType"
+sidebarTitle: "FilteringType"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationsSignalProcessingLineDataSeriesViewModel_FilteringType"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## FilteringType {#VM_Operations_Post_Interfaces_IOperationsSignalProcessingLineDataSeriesViewModel_FilteringType}
+
+Gets or sets the filter mode selected from `FilteringType` for signal processing.
+
+```csharp
+FilteringType FilteringType { get; set; }
+```
+
+### Property Value
+
+ [FilteringType](/lib/VM-Models-Post-FilteringType)
+
+### Remarks
+
+Low-pass and high-pass modes use [`CutOffFrequency`](/lib/VM-Operations-Post-Interfaces-IOperationsSignalProcessingLineDataSeriesViewModel-CutOffFrequency). Band-pass and band-stop modes use [`LowCutOffFrequency`](/lib/VM-Operations-Post-Interfaces-IOperationsSignalProcessingLineDataSeriesViewModel-LowCutOffFrequency) and [`HighCutOffFrequency`](/lib/VM-Operations-Post-Interfaces-IOperationsSignalProcessingLineDataSeriesViewModel-HighCutOffFrequency).

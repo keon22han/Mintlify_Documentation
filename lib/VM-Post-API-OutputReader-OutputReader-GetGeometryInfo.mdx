@@ -1,0 +1,44 @@
+---
+title: "Method GetGeometryInfo"
+sidebarTitle: "GetGeometryInfo"
+---
+<a id="VM_Post_API_OutputReader_OutputReader_GetGeometryInfo_System_String_"></a>
+
+Namespace: [VM.Post.API.OutputReader](/lib/VM-Post-API-OutputReader)  
+Assembly: VM.Post.API.OutputReader.dll  
+
+## GetGeometryInfo\(string\) {#VM_Post_API_OutputReader_OutputReader_GetGeometryInfo_System_String_}
+
+Gets the primary geometry data for the body identified by `target` with [`OutputReader`](/lib/VM-Post-API-OutputReader-OutputReader).
+
+```csharp
+public IDataPart GetGeometryInfo(string target)
+```
+
+### Parameters
+
+`target` string
+
+Full name of the body whose primary geometry data is requested.
+
+### Returns
+
+ [IDataPart](/lib/VM-Models-Post-IDataPart)
+
+Primary geometry data for the identified body.
+
+### Examples
+
+```python
+# Read primary geometry information for a body.
+entity_name = "FEBody_01"
+geometry_info = output_reader.GetGeometryInfo(entity_name)
+```
+
+### Remarks
+
+The method retrieves `target` with `OutputReader` and returns the first geometry data entry for that body.
+
+<Danger>
+`target` must identify a body. An unknown name or a non-body entity causes the lookup to fail before geometry data is returned.
+</Danger>

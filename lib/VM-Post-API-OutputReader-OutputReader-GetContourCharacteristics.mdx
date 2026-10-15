@@ -1,0 +1,52 @@
+---
+title: "Method GetContourCharacteristics"
+sidebarTitle: "GetContourCharacteristics"
+---
+<a id="VM_Post_API_OutputReader_OutputReader_GetContourCharacteristics_System_String_VM_Models_ContourMappingType_VM_Models_AnalysisResultType_"></a>
+
+Namespace: [VM.Post.API.OutputReader](/lib/VM-Post-API-OutputReader)  
+Assembly: VM.Post.API.OutputReader.dll  
+
+## GetContourCharacteristics\(string, ContourMappingType, AnalysisResultType\) {#VM_Post_API_OutputReader_OutputReader_GetContourCharacteristics_System_String_VM_Models_ContourMappingType_VM_Models_AnalysisResultType_}
+
+Gets contour characteristic names available for an entity and mapping type.
+
+```csharp
+public IEnumerable<string> GetContourCharacteristics(string entityName, ContourMappingType contourMappingType, AnalysisResultType analysisResultType)
+```
+
+### Parameters
+
+`entityName` string
+
+Full name of the entity whose contour characteristics are requested.
+
+`contourMappingType` [ContourMappingType](/lib/VM-Models-ContourMappingType)
+
+Mapping type used to select contour data.
+
+`analysisResultType` [AnalysisResultType](/lib/VM-Models-AnalysisResultType)
+
+Analysis result type used to select contour data.
+
+### Returns
+
+ IEnumerable&lt;string\>
+
+Enumerable of characteristic full names, or an empty enumerable when the entity is not contourable.
+
+### Examples
+
+```python
+# Read contour characteristics for a finite-element body.
+entity_name = "FEBody_01"
+characteristics = output_reader.GetContourCharacteristics(
+    entity_name,
+    ContourMappingType.FENode,
+    AnalysisResultType.Dynamics,
+)
+```
+
+### Remarks
+
+The entity is looked up with [`OutputReader`](/lib/VM-Post-API-OutputReader-OutputReader). A non-contourable entity produces an empty result.

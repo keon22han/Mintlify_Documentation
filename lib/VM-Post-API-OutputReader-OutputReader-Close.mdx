@@ -1,0 +1,20 @@
+---
+title: "Method Close"
+sidebarTitle: "Close"
+---
+<a id="VM_Post_API_OutputReader_OutputReader_Close"></a>
+
+Namespace: [VM.Post.API.OutputReader](/lib/VM-Post-API-OutputReader)  
+Assembly: VM.Post.API.OutputReader.dll  
+
+## Close\(\) {#VM_Post_API_OutputReader_OutputReader_Close}
+
+Closes [`OutputReader`](/lib/VM-Post-API-OutputReader-OutputReader).
+
+```csharp
+public void Close()
+```
+
+### Remarks
+
+[`OutputReader`](/lib/VM-Post-API-OutputReader-OutputReader) has no method to open another result file afterward, so this call leaves the object permanently unusable. Construct a new [OutputReader\(string\)](/lib/VM-Post-API-OutputReader-OutputReader--ctor) to read a result file again.

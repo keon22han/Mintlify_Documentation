@@ -1,0 +1,24 @@
+---
+title: "Property End"
+sidebarTitle: "End"
+---
+<a id="VM_ViewModels_Post_IDurabilityAnalysisParameter_End"></a>
+
+Namespace: [VM.ViewModels.Post](/lib/VM-ViewModels-Post)  
+Assembly: VM.ViewModels.Post.dll  
+
+## End {#VM_ViewModels_Post_IDurabilityAnalysisParameter_End}
+
+Gets or sets the last State included in the fatigue analysis range.
+
+```csharp
+int End { get; set; }
+```
+
+### Property Value
+
+ int
+
+### Remarks
+
+[RunFatigueAnalysis\(IDurabilityAnalysisParameter\)](/lib/VM-API-Post-Operations-DurabilityAnalysis-RunFatigueAnalysis) analyzes States from [`Start`](/lib/VM-ViewModels-Post-IDurabilityAnalysisParameter-Start) through this value, including both endpoints. A value lower than `Start` produces an empty state range.

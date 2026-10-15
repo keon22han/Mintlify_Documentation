@@ -1,0 +1,16 @@
+---
+title: "Result File Reader"
+sidebarTitle: "Changelog"
+---
+This page lists the changes in 2027 R1.
+
+## Added
+- Added the [`ExecuteSoundPressureAnalysis(IList<string>, IList<double[]>, double, double, double, double, double, double, double, double, bool)`](/lib/VM-Post-API-OutputReader-OutputReader-ExecuteSoundPressureAnalysis) method to the [`OutputReader`](/lib/VM-Post-API-OutputReader-OutputReader) class.
+- Added contour metadata methods to the `OutputReader` class:
+  - [`GetContourCharacteristics(string, ContourMappingType, AnalysisResultType)`](/lib/VM-Post-API-OutputReader-OutputReader-GetContourCharacteristics)
+  - [`GetContourComponents(string, ContourMappingType, string, AnalysisResultType)`](/lib/VM-Post-API-OutputReader-OutputReader-GetContourComponents)
+- Added the [`RemoveCoordinateSystem(string)`](/lib/VM-Post-API-OutputReader-OutputReader-RemoveCoordinateSystem) method to the `OutputReader` class.
+- Added plot metadata methods to the `OutputReader` class:
+  - [`GetPlotCharacteristics(string)`](/lib/VM-Post-API-OutputReader-OutputReader-GetPlotCharacteristics)
+  - [`GetPlotComponents(string, string)`](/lib/VM-Post-API-OutputReader-OutputReader-GetPlotComponents)
+- Added the [`GetVectorDisplayCharacteristics(string)`](/lib/VM-Post-API-OutputReader-OutputReader-GetVectorDisplayCharacteristics) method to the `OutputReader` class.

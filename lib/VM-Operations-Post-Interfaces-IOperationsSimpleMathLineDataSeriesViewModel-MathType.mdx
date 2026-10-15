@@ -1,0 +1,24 @@
+---
+title: "Property MathType"
+sidebarTitle: "MathType"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationsSimpleMathLineDataSeriesViewModel_MathType"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## MathType {#VM_Operations_Post_Interfaces_IOperationsSimpleMathLineDataSeriesViewModel_MathType}
+
+Gets or sets the arithmetic operation selected from [`SimpleMathType`](/lib/VM-Models-Post-SimpleMathType) to combine the source curves.
+
+```csharp
+SimpleMathType MathType { get; set; }
+```
+
+### Property Value
+
+ [SimpleMathType](/lib/VM-Models-Post-SimpleMathType)
+
+### Remarks
+
+Changing this value recalculates the calculated curve. Source curves must have compatible domains, and their units are converted before the selected operation is applied.

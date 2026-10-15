@@ -1,0 +1,24 @@
+---
+title: "Property PointsOfWindow"
+sidebarTitle: "PointsOfWindow"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationsSignalProcessingLineDataSeriesViewModel_PointsOfWindow"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## PointsOfWindow {#VM_Operations_Post_Interfaces_IOperationsSignalProcessingLineDataSeriesViewModel_PointsOfWindow}
+
+Gets or sets the number of points used by the smoothing calculation.
+
+```csharp
+int PointsOfWindow { get; set; }
+```
+
+### Property Value
+
+ int
+
+### Remarks
+
+This value applies when [`SignalProcessingType`](/lib/VM-Operations-Post-Interfaces-IOperationsSignalProcessingLineDataSeriesViewModel-SignalProcessingType) selects smoothing. The calculation returns no curve when twice this value exceeds the source point count or when the value is not positive.

@@ -1,0 +1,39 @@
+---
+title: "Method GetAssemblyInfo"
+sidebarTitle: "GetAssemblyInfo"
+---
+<a id="VM_Post_API_OutputReader_OutputReader_GetAssemblyInfo_VM_Enums_Post_AssemblyType_"></a>
+
+Namespace: [VM.Post.API.OutputReader](/lib/VM-Post-API-OutputReader)  
+Assembly: VM.Post.API.OutputReader.dll  
+
+## GetAssemblyInfo\(AssemblyType\) {#VM_Post_API_OutputReader_OutputReader_GetAssemblyInfo_VM_Enums_Post_AssemblyType_}
+
+Gets assembly information filtered by [`AssemblyType`](/lib/VM-Enums-Post-AssemblyType).
+
+```csharp
+public AssemblyInfo[] GetAssemblyInfo(AssemblyType assemblyType = AssemblyType.All)
+```
+
+### Parameters
+
+`assemblyType` [AssemblyType](/lib/VM-Enums-Post-AssemblyType)
+
+Assembly category used to filter the result. The default value `All` returns every assembly information entity.
+
+### Returns
+
+ [AssemblyInfo](/lib/VM-Models-Post-EntityTypes-Assembly-AssemblyInfo)\[\]
+
+Array of assembly information matching `assemblyType`.
+
+### Examples
+
+```python
+# Read assembly information.
+assembly_info = output_reader.GetAssemblyInfo(AssemblyType.All)
+```
+
+### Remarks
+
+When `assemblyType` is not `All`, only assembly information with the selected type is included.

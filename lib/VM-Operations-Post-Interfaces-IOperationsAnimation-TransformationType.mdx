@@ -1,0 +1,29 @@
+---
+title: "Property TransformationType"
+sidebarTitle: "TransformationType"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationsAnimation_TransformationType"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## TransformationType {#VM_Operations_Post_Interfaces_IOperationsAnimation_TransformationType}
+
+Gets or sets [`TransformationType`](/lib/VM-Models-Post-TransformationType) that determines the camera-follow direction.
+
+```csharp
+TransformationType TransformationType { get; set; }
+```
+
+### Property Value
+
+ [TransformationType](/lib/VM-Models-Post-TransformationType)
+
+### Remarks
+
+`TransformationType` controls whether the camera follows the target's translational or rotational direction.
+The selected mode determines whether camera-follow updates use target translation, target rotation, or both.
+
+<Danger>
+`Unknown` is not a settable value. Assigning it throws `NotSupportedException`.
+</Danger>

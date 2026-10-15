@@ -1,0 +1,33 @@
+---
+title: "Method GetAxis"
+sidebarTitle: "GetAxis"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationsLine2DViewModelBase_GetAxis_System_String_"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## GetAxis\(string\) {#VM_Operations_Post_Interfaces_IOperationsLine2DViewModelBase_GetAxis_System_String_}
+
+Retrieves an axis by its name.
+
+```csharp
+IOperationsAxisViewModelBase GetAxis(string name)
+```
+
+### Parameters
+
+`name` string
+
+The name of the axis to be retrieved.
+
+### Returns
+
+ [IOperationsAxisViewModelBase](/lib/VM-Operations-Post-Interfaces-IOperationsAxisViewModelBase)
+
+Matching [`IOperationsAxisViewModelBase`](/lib/VM-Operations-Post-Interfaces-IOperationsAxisViewModelBase), or `null` if no such axis exists.
+
+### Remarks
+
+This method searches for an axis with the given name and returns the matching axis.
+If no axis with the specified name is found, the method returns `null`.

@@ -1,0 +1,27 @@
+---
+title: "Method GetActivePlotView"
+sidebarTitle: "GetActivePlotView"
+---
+<a id="VM_API_Post_Operations_ApplicationHandler_GetActivePlotView"></a>
+
+Namespace: [VM.API.Post.Operations](/lib/VM-API-Post-Operations)  
+Assembly: VM.API.Post.Operations.dll  
+
+## GetActivePlotView\(\) {#VM_API_Post_Operations_ApplicationHandler_GetActivePlotView}
+
+Retrieves the active chart view from the current page.
+
+```csharp
+[Obsolete("This method is considered outdated and its use is discouraged. It may be removed in future versions, so it is advisable to use the GetActiveView function of the IPage interface instead.", true)]
+public IOperationsLine2DViewModelBase GetActivePlotView()
+```
+
+### Returns
+
+ [IOperationsLine2DViewModelBase](/lib/VM-Operations-Post-Interfaces-IOperationsLine2DViewModelBase)
+
+The active [`IOperationsLine2DViewModelBase`](/lib/VM-Operations-Post-Interfaces-IOperationsLine2DViewModelBase), or &lt;code>null&lt;/code> when the active view is not a chart.
+
+### Remarks
+
+This method is obsolete. Use [GetActiveView\(\)](/lib/VM-Operations-Post-Interfaces-IPage-GetActiveView) instead.

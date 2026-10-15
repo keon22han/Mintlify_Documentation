@@ -1,0 +1,24 @@
+---
+title: "Property LineStyle"
+sidebarTitle: "LineStyle"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationsLineDataSeriesViewModelBase_LineStyle"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## LineStyle {#VM_Operations_Post_Interfaces_IOperationsLineDataSeriesViewModelBase_LineStyle}
+
+Gets or sets the dash style selected from [`LineStyleType`](/lib/VM-Models-Post-LineStyleType) to render the line.
+
+```csharp
+LineStyleType LineStyle { get; set; }
+```
+
+### Property Value
+
+ [LineStyleType](/lib/VM-Models-Post-LineStyleType)
+
+### Remarks
+
+Changing this value changes the line pattern. Point-only rendering is unaffected.

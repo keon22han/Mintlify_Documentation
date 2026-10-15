@@ -1,0 +1,25 @@
+---
+title: "Property IsFollowingRotYAxis"
+sidebarTitle: "IsFollowingRotYAxis"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationsAnimation_IsFollowingRotYAxis"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## IsFollowingRotYAxis {#VM_Operations_Post_Interfaces_IOperationsAnimation_IsFollowingRotYAxis}
+
+Gets or sets whether camera tracking follows target rotation around the Y axis when `TransformationType` is `Rotation`.
+
+```csharp
+bool IsFollowingRotYAxis { get; set; }
+```
+
+### Property Value
+
+ bool
+
+### Remarks
+
+This flag is used when [`TransformationType`](/lib/VM-Operations-Post-Interfaces-IOperationsAnimation-TransformationType) is `Rotation`. It selects whether target rotation around the Y axis changes the following camera.
+When this value is `false`, target rotation around the Y axis is not applied to camera tracking.

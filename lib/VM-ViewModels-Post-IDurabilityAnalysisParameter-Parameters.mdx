@@ -1,0 +1,25 @@
+---
+title: "Property Parameters"
+sidebarTitle: "Parameters"
+---
+<a id="VM_ViewModels_Post_IDurabilityAnalysisParameter_Parameters"></a>
+
+Namespace: [VM.ViewModels.Post](/lib/VM-ViewModels-Post)  
+Assembly: VM.ViewModels.Post.dll  
+
+## Parameters {#VM_ViewModels_Post_IDurabilityAnalysisParameter_Parameters}
+
+Gets the legacy fatigue parameter collection.
+
+```csharp
+[Obsolete("Use Targets instead.")]
+IList<IFatigueParameter> Parameters { get; }
+```
+
+### Property Value
+
+ IList&lt;IFatigueParameter\>
+
+### Remarks
+
+This property is obsolete. Configure fatigue settings on the target [`IOperationsFEBody`](/lib/VM-Operations-Post-Interfaces-IOperationsFEBody) and add its identifier through [`Targets`](/lib/VM-ViewModels-Post-IDurabilityAnalysisParameter-Targets) instead.

@@ -1,0 +1,25 @@
+---
+title: "Property StressStrainCombinationType"
+sidebarTitle: "StressStrainCombinationType"
+---
+<a id="VM_Operations_Post_FatigueParameter_StressStrainCombinationType"></a>
+
+Namespace: [VM.Operations.Post](/lib/VM-Operations-Post)  
+Assembly: VM.Operations.Post.dll  
+
+## StressStrainCombinationType {#VM_Operations_Post_FatigueParameter_StressStrainCombinationType}
+
+Gets or sets the legacy stress or strain combination selected from `StressStrainCombinationType` for the legacy analysis path.
+
+```csharp
+[Obsolete("This property will be deprecated in the near future.")]
+public StressStrainCombinationType StressStrainCombinationType { get; set; }
+```
+
+### Property Value
+
+ [StressStrainCombinationType](/lib/VM-Models-StressStrainCombinationType)
+
+### Remarks
+
+This property is obsolete. New analyses set [`StressStrainCombination`](/lib/VM-Operations-Post-Interfaces-IOperationsFEBody-StressStrainCombination) on the selected target body.

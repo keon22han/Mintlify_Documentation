@@ -1,0 +1,26 @@
+---
+title: "Method AddTarget"
+sidebarTitle: "AddTarget"
+---
+<a id="VM_ViewModels_Post_IDurabilityAnalysisParameter_AddTarget_System_Guid_"></a>
+
+Namespace: [VM.ViewModels.Post](/lib/VM-ViewModels-Post)  
+Assembly: VM.ViewModels.Post.dll  
+
+## AddTarget\(Guid\) {#VM_ViewModels_Post_IDurabilityAnalysisParameter_AddTarget_System_Guid_}
+
+Adds a finite-element body identifier to the fatigue analysis targets.
+
+```csharp
+void AddTarget(Guid target)
+```
+
+### Parameters
+
+`target` Guid
+
+The identifier of a finite-element body available in the imported result document.
+
+### Remarks
+
+The identifier is appended to [`Targets`](/lib/VM-ViewModels-Post-IDurabilityAnalysisParameter-Targets).

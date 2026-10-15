@@ -1,0 +1,100 @@
+---
+title: "Method GetVector"
+sidebarTitle: "GetVector"
+---
+<a id="VM_Post_API_OutputReader_OutputReader_GetVector_System_String_System_String_"></a>
+
+Namespace: [VM.Post.API.OutputReader](/lib/VM-Post-API-OutputReader)  
+Assembly: VM.Post.API.OutputReader.dll  
+
+## GetVector\(string, string\) {#VM_Post_API_OutputReader_OutputReader_GetVector_System_String_System_String_}
+
+Gets vector results for a target entity and characteristic path using Dynamics analysis data.
+
+For a complete operations, see [Result File Reader API Example - Get Vector](/document/result-file-reader/example/example_vector_for_result_file_reader_api#get-vector).
+
+```csharp
+public IDictionary<string, IVectorDisplayAnimationData> GetVector(string target, string path)
+```
+
+### Parameters
+
+`target` string
+
+Full name of the vector-displayable entity.
+
+`path` string
+
+Characteristic path used to read vector values.
+
+### Returns
+
+ IDictionary&lt;string, [IVectorDisplayAnimationData](/lib/VM-Models-OutputReader-IVectorDisplayAnimationData)\>
+
+Dictionary of vector display animation data, or `null` when `target` is not vector-displayable.
+
+### Examples
+
+```python
+# Read vector data with the default Dynamics analysis result.
+entity_name = "TJ_01"
+characteristic_name = "Base Force"
+vector_data = output_reader.GetVector(entity_name, characteristic_name)
+```
+
+### Remarks
+
+This calls `GetVector(string, string, AnalysisResultType)` with `Dynamics`.
+
+<Danger>
+`target` and `path` must be valid for the Dynamics analysis result.
+</Danger>
+
+<Note>
+This overload uses `AnalysisResultType.Dynamics` when no analysis-result type is supplied.
+</Note>
+
+## GetVector\(string, string, AnalysisResultType\) {#VM_Post_API_OutputReader_OutputReader_GetVector_System_String_System_String_VM_Models_AnalysisResultType_}
+
+Gets vector results for a target entity, characteristic path, and analysis result type.
+
+```csharp
+public IDictionary<string, IVectorDisplayAnimationData> GetVector(string target, string path, AnalysisResultType analysisResultType = AnalysisResultType.Dynamics)
+```
+
+### Parameters
+
+`target` string
+
+Full name of the vector-displayable entity.
+
+`path` string
+
+Characteristic path used to read vector values.
+
+`analysisResultType` [AnalysisResultType](/lib/VM-Models-AnalysisResultType)
+
+Specifies the analysis result used to read vector data.
+
+### Returns
+
+ IDictionary&lt;string, [IVectorDisplayAnimationData](/lib/VM-Models-OutputReader-IVectorDisplayAnimationData)\>
+
+Dictionary of vector display animation data, or `null` when `target` is not vector-displayable.
+
+### Examples
+
+```python
+# Read vector data from the selected analysis result type.
+entity_name = "TJ_01"
+characteristic_name = "Base Force"
+vector_data = output_reader.GetVector(entity_name, characteristic_name, AnalysisResultType.Dynamics)
+```
+
+### Remarks
+
+The selected analysis result is used with [`OutputReader`](/lib/VM-Post-API-OutputReader-OutputReader) to read vector display information.
+
+<Danger>
+`target` and `path` must be valid for `analysisResultType`.
+</Danger>

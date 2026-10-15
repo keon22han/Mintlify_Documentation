@@ -1,0 +1,26 @@
+---
+title: "Method RemoveContour"
+sidebarTitle: "RemoveContour"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationAnalysisResult_RemoveContour_System_String_"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## RemoveContour\(string\) {#VM_Operations_Post_Interfaces_IOperationAnalysisResult_RemoveContour_System_String_}
+
+Removes a contour by its [`FullName`](/lib/VM-Operations-Post-Interfaces-IOperationsContourViewModel-FullName).
+
+```csharp
+void RemoveContour(string name)
+```
+
+### Parameters
+
+`name` string
+
+Full name of a contour previously created with [CreateContour\(IList&lt;string\>, ContourMappingType, string, string, string\)](/lib/VM-Operations-Post-Interfaces-IOperationAnalysisResult-CreateContour).
+
+### Remarks
+
+If `name` does not identify an existing contour, this method has no effect.

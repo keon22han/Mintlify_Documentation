@@ -1,0 +1,24 @@
+---
+title: "Property Order"
+sidebarTitle: "Order"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationsSignalProcessingLineDataSeriesViewModel_Order"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## Order {#VM_Operations_Post_Interfaces_IOperationsSignalProcessingLineDataSeriesViewModel_Order}
+
+Gets or sets the filter order passed to the filtering calculation.
+
+```csharp
+int Order { get; set; }
+```
+
+### Property Value
+
+ int
+
+### Remarks
+
+This value applies when [`SignalProcessingType`](/lib/VM-Operations-Post-Interfaces-IOperationsSignalProcessingLineDataSeriesViewModel-SignalProcessingType) selects filtering. Changing it recalculates the calculated curve when an original curve exists.

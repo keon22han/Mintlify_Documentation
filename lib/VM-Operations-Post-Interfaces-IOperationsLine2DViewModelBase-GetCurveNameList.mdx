@@ -1,0 +1,52 @@
+---
+title: "Method GetCurveNameList"
+sidebarTitle: "GetCurveNameList"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationsLine2DViewModelBase_GetCurveNameList"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## GetCurveNameList\(\) {#VM_Operations_Post_Interfaces_IOperationsLine2DViewModelBase_GetCurveNameList}
+
+Gets a list of names of all curves in the chart view.
+
+```csharp
+IEnumerable<string> GetCurveNameList()
+```
+
+### Returns
+
+ IEnumerable&lt;string\>
+
+A collection of the names of all curves currently displayed in the chart view.
+
+### Examples
+
+```python
+# Get the result document.
+# RESULT_FILE_PATH : .dfr result file path
+document = application_handler.GetDocument(RESULT_FILE_PATH)
+
+# Create the chart view.
+page = application_handler.GetActivePage()
+chart_name = "Chart"
+chart = page.CreateChart(chart_name)
+
+# Add curves to the chart.
+curve_paths = List[str]()
+curve_path = "Displacement/Magnitude"
+curve_paths.Add(curve_path)
+entity_name = "Crank"
+parameters = PlotParameters()
+parameters.Paths = curve_paths
+parameters.Target = entity_name
+chart.AddCurves(RESULT_FILE_PATH, parameters)
+
+# Get the curve name list.
+curve_name_list = chart.GetCurveNameList()
+```
+
+### Remarks
+
+This method retrieves the names of all the curves that are currently displayed in the chart view.

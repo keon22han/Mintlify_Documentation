@@ -1,0 +1,68 @@
+---
+title: "Method GetView"
+sidebarTitle: "GetView"
+---
+<a id="VM_Operations_Post_Interfaces_IPage_GetView_System_Int32_"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## GetView\(int\) {#VM_Operations_Post_Interfaces_IPage_GetView_System_Int32_}
+
+Finds [`IView`](/lib/VM-Operations-Post-Interfaces-IView) with the specified [`Index`](/lib/VM-Operations-Post-Interfaces-IView-Index).
+
+```csharp
+IView GetView(int index)
+```
+
+### Parameters
+
+`index` int
+
+Index of the `IView` to find.
+
+### Returns
+
+ [IView](/lib/VM-Operations-Post-Interfaces-IView)
+
+Matching `IView`, or `null` if no view with this `Index` is found with `IPage`.
+
+### Examples
+
+```python
+page_name = "Page"
+page = application_handler.GetPage(page_name)
+chart_name = "Chart"
+chart = page.CreateChart(chart_name)
+view = page.GetView(chart.Index)
+```
+
+## GetView\(string\) {#VM_Operations_Post_Interfaces_IPage_GetView_System_String_}
+
+Finds [`IView`](/lib/VM-Operations-Post-Interfaces-IView) with the specified [`FullName`](/lib/VM-Operations-Post-Interfaces-IView-FullName).
+
+```csharp
+IView GetView(string name)
+```
+
+### Parameters
+
+`name` string
+
+`FullName` of the `IView` to find.
+
+### Returns
+
+ [IView](/lib/VM-Operations-Post-Interfaces-IView)
+
+Matching `IView`, or `null` if no view with this `FullName` is found with `IPage`.
+
+### Examples
+
+```python
+page_name = "Page"
+page = application_handler.GetPage(page_name)
+chart_name = "ChartByName"
+chart = page.CreateChart(chart_name)
+view = page.GetView(chart.FullName)
+```

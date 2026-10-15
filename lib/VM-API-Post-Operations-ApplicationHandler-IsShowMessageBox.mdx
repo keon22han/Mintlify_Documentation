@@ -1,0 +1,26 @@
+---
+title: "Property IsShowMessageBox"
+sidebarTitle: "IsShowMessageBox"
+---
+<a id="VM_API_Post_Operations_ApplicationHandler_IsShowMessageBox"></a>
+
+Namespace: [VM.API.Post.Operations](/lib/VM-API-Post-Operations)  
+Assembly: VM.API.Post.Operations.dll  
+
+## IsShowMessageBox {#VM_API_Post_Operations_ApplicationHandler_IsShowMessageBox}
+
+Gets or sets whether Operation API errors are displayed in a message box. `false` writes error messages to a `.log` file instead.
+
+```csharp
+public bool IsShowMessageBox { get; set; }
+```
+
+### Property Value
+
+ bool
+
+### Remarks
+
+The `.log` file is created when the Postprocessor starts, in the current user's `AppData\Local\Temp\.ansys motion\postprocessor <version>` folder, with a file name based on the start time.
+
+The default value is `false` after [`ApplicationHandler`](/lib/VM-API-Post-Operations-ApplicationHandler) is created.

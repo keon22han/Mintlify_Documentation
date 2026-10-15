@@ -1,0 +1,33 @@
+---
+title: "Method GetReferenceTimeArray"
+sidebarTitle: "GetReferenceTimeArray"
+---
+<a id="VM_Post_API_OutputReader_OutputReader_GetReferenceTimeArray"></a>
+
+Namespace: [VM.Post.API.OutputReader](/lib/VM-Post-API-OutputReader)  
+Assembly: VM.Post.API.OutputReader.dll  
+
+## GetReferenceTimeArray\(\) {#VM_Post_API_OutputReader_OutputReader_GetReferenceTimeArray}
+
+Gets reference times in the order reported by the opened result file.
+
+```csharp
+public IList<double> GetReferenceTimeArray()
+```
+
+### Returns
+
+ IList&lt;double\>
+
+List of reference times corresponding to the state IDs returned by [GetStateIDArray\(\)](/lib/VM-Post-API-OutputReader-OutputReader-GetStateIDArray).
+
+### Examples
+
+```python
+# Read reference times in result-file order.
+reference_times = output_reader.GetReferenceTimeArray()
+```
+
+### Remarks
+
+The same index in `GetReferenceTimeArray()` and `GetStateIDArray()` identifies the same state.

@@ -1,0 +1,36 @@
+---
+title: "Method Activate"
+sidebarTitle: "Activate"
+---
+<a id="VM_Operations_Post_Interfaces_IView_Activate"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## Activate\(\) {#VM_Operations_Post_Interfaces_IView_Activate}
+
+Activates the view.
+
+```csharp
+void Activate()
+```
+
+### Examples
+
+```python
+page_name = "Page"
+page = application_handler.GetPage(page_name)
+chart_name = "Chart"
+view = page.CreateChart(chart_name)
+view.Activate()
+```
+
+### Remarks
+
+Calling `Activate()` activates the selected view.
+When this method is called, it deactivates any currently active views within the same page and sets the selected view as the only active view.
+There can be only one active view at a time.
+
+<Note>
+Activating this view deactivates the other active views in the same page.
+</Note>

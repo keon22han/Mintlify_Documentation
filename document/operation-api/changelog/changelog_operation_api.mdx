@@ -1,0 +1,65 @@
+---
+title: "Operation API"
+sidebarTitle: "Changelog"
+---
+This page lists the changes in 2027 R1.
+
+## Added
+- Added contour management methods to [`IOperationAnalysisResult`](/lib/VM-Operations-Post-Interfaces-IOperationAnalysisResult):
+  - [`GetContour(string)`](/lib/VM-Operations-Post-Interfaces-IOperationAnalysisResult-GetContour)
+  - [`RemoveContour(string)`](/lib/VM-Operations-Post-Interfaces-IOperationAnalysisResult-RemoveContour)
+  - [`GetContourCharacteristics(string, ContourMappingType)`](/lib/VM-Operations-Post-Interfaces-IOperationAnalysisResult-GetContourCharacteristics)
+  - [`GetContourComponents(string, ContourMappingType, string)`](/lib/VM-Operations-Post-Interfaces-IOperationAnalysisResult-GetContourComponents)
+- Added plot characteristic and component retrieval methods to [`IOperationAnalysisResult`](/lib/VM-Operations-Post-Interfaces-IOperationAnalysisResult):
+  - [`GetPlotCharacteristics(string)`](/lib/VM-Operations-Post-Interfaces-IOperationAnalysisResult-GetPlotCharacteristics)
+  - [`GetPlotComponents(string, string)`](/lib/VM-Operations-Post-Interfaces-IOperationAnalysisResult-GetPlotComponents)
+- Added vector display characteristic and vector display management methods to [`IOperationsDynamicAnalysisResultViewModel`](/lib/VM-Operations-Post-Interfaces-IOperationsDynamicAnalysisResultViewModel):
+  - [`GetVectorDisplayCharacteristics(string)`](/lib/VM-Operations-Post-Interfaces-IOperationsDynamicAnalysisResultViewModel-GetVectorDisplayCharacteristics)
+  - [`GetVectorDisplay(string)`](/lib/VM-Operations-Post-Interfaces-IOperationsDynamicAnalysisResultViewModel-GetVectorDisplay)
+  - [`RemoveVectorDisplay(string)`](/lib/VM-Operations-Post-Interfaces-IOperationsDynamicAnalysisResultViewModel-RemoveVectorDisplay)
+- Added Python expression management methods to [`IOperationsDynamicAnalysisResultViewModel`](/lib/VM-Operations-Post-Interfaces-IOperationsDynamicAnalysisResultViewModel):
+  - [`GetExpression(string)`](/lib/VM-Operations-Post-Interfaces-IOperationsDynamicAnalysisResultViewModel-GetExpression)
+  - [`RemoveExpression(string)`](/lib/VM-Operations-Post-Interfaces-IOperationsDynamicAnalysisResultViewModel-RemoveExpression)
+- Added coordinate-system retrieval and removal methods to [`IOperationsAnimation`](/lib/VM-Operations-Post-Interfaces-IOperationsAnimation):
+  - [`GetCoordinateSystem(string)`](/lib/VM-Operations-Post-Interfaces-IOperationsAnimation-GetCoordinateSystem)
+  - [`RemoveCoordinateSystem(string)`](/lib/VM-Operations-Post-Interfaces-IOperationsAnimation-RemoveCoordinateSystem)
+- Added the [`ShellResult`](/lib/VM-Operations-Post-Interfaces-IOperationsFEBody-ShellResult) property.
+- Added the [`ShowVisibleMinMax`](/lib/VM-Operations-Post-Interfaces-IOperationsLine2DViewModel-ShowVisibleMinMax) property.
+
+## Changed
+- Changed the view identity contract:
+  - [`IView`](/lib/VM-Operations-Post-Interfaces-IView) now inherits [`IHasGuid`](/lib/VM-Models-Post-IHasGuid).
+  - [`Index`](/lib/VM-Operations-Post-Interfaces-IView-Index) replaces the former integer ID property.
+  - The view GUID is provided by [`ID`](/lib/VM-Models-Post-IHasGuid-ID).
+- Changed the parameter name from `id` to `index` for:
+  - [`CloseView(int)`](/lib/VM-Operations-Post-Interfaces-IPage-CloseView)
+  - [`GetView(int)`](/lib/VM-Operations-Post-Interfaces-IPage-GetView)
+- Renamed the [`ShellDirectionType`](/lib/VM-Models-Post-ShellDirectionType) enumeration members:
+  - `TOP` to `Top`
+  - `BOTTOM` to `Bottom`
+- Removed properties from the `IOperationMaterial` interface:
+  - `N`
+  - `K`
+- Replaced the `MaterialSequence` property on [`IFEProperty`](/lib/VM-Models-Post-IFEProperty) with [`FatigueMaterial`](/lib/VM-Models-Post-IFEProperty-FatigueMaterial), which exposes the fatigue material as a `FatigueMaterial` object instead of an integer sequence.
+- Renamed the `ExportAllCurves` method of [`IOperationsHeatMapBaseViewModel`](/lib/VM-Operations-Post-Interfaces-IOperationsHeatMapBaseViewModel) to [`ExportHeatMapData(string)`](/lib/VM-Operations-Post-Interfaces-IOperationsHeatMapBaseViewModel-ExportHeatMapData).
+
+## Deprecated
+- Deprecated [`AddPlotView()`](/lib/VM-API-Post-Operations-ApplicationHandler-AddPlotView). Use [`CreateChart(string)`](/lib/VM-Operations-Post-Interfaces-IPage-CreateChart) instead.
+- Deprecated [`DurabilityAnalysis(IDurabilityAnalysisParameter)`](/lib/VM-API-Post-Operations-ApplicationHandler-DurabilityAnalysis). Use [`RunFatigueAnalysis(IDurabilityAnalysisParameter)`](/lib/VM-API-Post-Operations-DurabilityAnalysis-RunFatigueAnalysis) and the contour APIs instead.
+- Deprecated the [`ExportImage(IView, string, ExportType, double?, double?)`](/lib/VM-API-Post-Operations-ApplicationHandler-ExportImage) overload. Use [`ExportImage(string, ImageFormat, double?, double?)`](/lib/VM-Operations-Post-Interfaces-IView-ExportImage) instead.
+- Deprecated active-view helper methods:
+  - [`GetActiveAnimationView()`](/lib/VM-API-Post-Operations-ApplicationHandler-GetActiveAnimationView)
+  - [`GetActivePlotView()`](/lib/VM-API-Post-Operations-ApplicationHandler-GetActivePlotView)
+  Use [`GetActiveView()`](/lib/VM-Operations-Post-Interfaces-IPage-GetActiveView) instead.
+- Deprecated view lookup methods:
+  - [`GetView(int)`](/lib/VM-API-Post-Operations-ApplicationHandler-GetView)
+  - [`GetView(string)`](/lib/VM-API-Post-Operations-ApplicationHandler-GetView)
+  Use the corresponding [`GetView(int)`](/lib/VM-Operations-Post-Interfaces-IPage-GetView) or [`GetView(string)`](/lib/VM-Operations-Post-Interfaces-IPage-GetView) method instead.
+- Deprecated [`ImportNumeric(IOperationsLine2DViewModelBase, string, List<INumericParameter>)`](/lib/VM-API-Post-Operations-ApplicationHandler-ImportNumeric). Use [`ImportNumeric(string, List<INumericParameter>)`](/lib/VM-Operations-Post-Interfaces-IOperationsChartViewModel-ImportNumeric) instead.
+- Deprecated [`RemoveDocument(string)`](/lib/VM-API-Post-Operations-ApplicationHandler-RemoveDocument). Use [`CloseDocument(string)`](/lib/VM-API-Post-Operations-ApplicationHandler-CloseDocument) instead.
+- Deprecated [`RemoveView(string)`](/lib/VM-API-Post-Operations-ApplicationHandler-RemoveView). Use [`CloseView(string)`](/lib/VM-Operations-Post-Interfaces-IPage-CloseView) instead.
+- Deprecated [`RunFatigueAnalysisAndGenerateContours(IDurabilityAnalysisParameter)`](/lib/VM-API-Post-Operations-DurabilityAnalysis-RunFatigueAnalysisAndGenerateContours). Use [`RunFatigueAnalysis(IDurabilityAnalysisParameter)`](/lib/VM-API-Post-Operations-DurabilityAnalysis-RunFatigueAnalysis) together with the contour APIs instead.
+
+## Removed
+- Removed the `ExportAllDataSeries` method from [`IOperationsLine2DViewModelBase`](/lib/VM-Operations-Post-Interfaces-IOperationsLine2DViewModelBase). Use [`ExportAllCurves(string)`](/lib/VM-Operations-Post-Interfaces-IOperationsLine2DViewModelBase-ExportAllCurves) instead.
+- Removed the `ExportAllDataSeries` method from [`IOperationsHeatMapBaseViewModel`](/lib/VM-Operations-Post-Interfaces-IOperationsHeatMapBaseViewModel). Use [`ExportHeatMapData(string)`](/lib/VM-Operations-Post-Interfaces-IOperationsHeatMapBaseViewModel-ExportHeatMapData) instead.

@@ -1,0 +1,24 @@
+---
+title: "Property SmoothingType"
+sidebarTitle: "SmoothingType"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationsSignalProcessingLineDataSeriesViewModel_SmoothingType"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## SmoothingType {#VM_Operations_Post_Interfaces_IOperationsSignalProcessingLineDataSeriesViewModel_SmoothingType}
+
+Gets or sets the smoothing method selected from `SmoothingType`.
+
+```csharp
+SmoothingType SmoothingType { get; set; }
+```
+
+### Property Value
+
+ [SmoothingType](/lib/VM-Models-Post-SmoothingType)
+
+### Remarks
+
+This value applies when [`SignalProcessingType`](/lib/VM-Operations-Post-Interfaces-IOperationsSignalProcessingLineDataSeriesViewModel-SignalProcessingType) selects smoothing. Savitzky-Golay smoothing additionally uses [`PolynomialOrder`](/lib/VM-Operations-Post-Interfaces-IOperationsSignalProcessingLineDataSeriesViewModel-PolynomialOrder).

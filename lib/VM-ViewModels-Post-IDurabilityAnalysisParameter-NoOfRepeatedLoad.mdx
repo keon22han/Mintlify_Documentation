@@ -1,0 +1,24 @@
+---
+title: "Property NoOfRepeatedLoad"
+sidebarTitle: "NoOfRepeatedLoad"
+---
+<a id="VM_ViewModels_Post_IDurabilityAnalysisParameter_NoOfRepeatedLoad"></a>
+
+Namespace: [VM.ViewModels.Post](/lib/VM-ViewModels-Post)  
+Assembly: VM.ViewModels.Post.dll  
+
+## NoOfRepeatedLoad {#VM_ViewModels_Post_IDurabilityAnalysisParameter_NoOfRepeatedLoad}
+
+Gets or sets the number of repeated loads used when writing the fatigue analysis input.
+
+```csharp
+double NoOfRepeatedLoad { get; set; }
+```
+
+### Property Value
+
+ double
+
+### Remarks
+
+[RunFatigueAnalysis\(IDurabilityAnalysisParameter\)](/lib/VM-API-Post-Operations-DurabilityAnalysis-RunFatigueAnalysis) converts this value to an integer before writing the fatigue analysis input, so a fractional value loses its fractional part.

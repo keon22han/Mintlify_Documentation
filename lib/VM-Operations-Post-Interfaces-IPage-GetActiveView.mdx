@@ -1,0 +1,34 @@
+---
+title: "Method GetActiveView"
+sidebarTitle: "GetActiveView"
+---
+<a id="VM_Operations_Post_Interfaces_IPage_GetActiveView"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## GetActiveView\(\) {#VM_Operations_Post_Interfaces_IPage_GetActiveView}
+
+Gets [`IView`](/lib/VM-Operations-Post-Interfaces-IView) currently reported as active by the Operation API.
+
+```csharp
+IView GetActiveView()
+```
+
+### Returns
+
+ [IView](/lib/VM-Operations-Post-Interfaces-IView)
+
+Active `IView`, or `null` if no view is active.
+
+### Examples
+
+```python
+page_name = "Page"
+page = application_handler.GetPage(page_name)
+active_view = page.GetActiveView()
+```
+
+### Remarks
+
+Calling [Activate\(\)](/lib/VM-Operations-Post-Interfaces-IView-Activate) on a view, or creating a new view with [CreateAnimation\(IAnalysisResultViewModel, string\)](/lib/VM-Operations-Post-Interfaces-IPage-CreateAnimation) or [CreateChart\(string\)](/lib/VM-Operations-Post-Interfaces-IPage-CreateChart), changes the view reported by this method.

@@ -1,0 +1,24 @@
+---
+title: "Property FFTScaleType"
+sidebarTitle: "FFTScaleType"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationsFFTLineDataSeriesViewModel_FFTScaleType"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## FFTScaleType {#VM_Operations_Post_Interfaces_IOperationsFFTLineDataSeriesViewModel_FFTScaleType}
+
+Gets or sets the scale selected from [`ScaleType`](/lib/VM-Models-Post-ScaleType) to present FFT values.
+
+```csharp
+ScaleType FFTScaleType { get; set; }
+```
+
+### Property Value
+
+ [ScaleType](/lib/VM-Models-Post-ScaleType)
+
+### Remarks
+
+Changing this value refreshes the generated curve. For magnitude results, the original, logarithmic, or decibel scale changes the Y values. When [`FFTType`](/lib/VM-Operations-Post-Interfaces-IOperationsFFTLineDataSeriesViewModel-FFTType) selects phase, the result is expressed in degrees and logarithmic or decibel scaling is not applied.

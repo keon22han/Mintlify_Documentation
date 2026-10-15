@@ -1,0 +1,46 @@
+---
+title: "Method GetContourables"
+sidebarTitle: "GetContourables"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationAnalysisResult_GetContourables_VM_Models_ContourMappingType_"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## GetContourables\(ContourMappingType\) {#VM_Operations_Post_Interfaces_IOperationAnalysisResult_GetContourables_VM_Models_ContourMappingType_}
+
+Gets entity names that support a contour mapping type.
+
+```csharp
+string[] GetContourables(ContourMappingType contourMappingType)
+```
+
+### Parameters
+
+`contourMappingType` [ContourMappingType](/lib/VM-Models-ContourMappingType)
+
+Contour mapping type used to filter supported entities.
+
+### Returns
+
+ string\[\]
+
+Array of supported entity full names.
+
+### Examples
+
+```python
+# Get the dynamic analysis result.
+# RESULT_FILE_PATH : .dfr result file path
+document = application_handler.GetDocument(RESULT_FILE_PATH)
+analysis_result_type = AnalysisResultType.Dynamics
+analysis_result = document.GetAnalysisResultViewModel(analysis_result_type)
+
+# Find entities that support the selected contour mapping type.
+contour_mapping_type = ContourMappingType.FENode
+target_entities = analysis_result.GetContourables(contour_mapping_type)
+```
+
+### Remarks
+
+The returned names are the valid entity inputs for [CreateContour\(IList&lt;string\>, ContourMappingType, string, string, string\)](/lib/VM-Operations-Post-Interfaces-IOperationAnalysisResult-CreateContour) with the same mapping type.

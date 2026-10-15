@@ -1,0 +1,20 @@
+---
+title: "Interface IEntityBaseViewModel"
+sidebarTitle: "IEntityBaseViewModel"
+---
+<a id="VM_ViewModels_Post_IEntityBaseViewModel"></a>
+
+Namespace: [VM.ViewModels.Post](/lib/VM-ViewModels-Post)  
+Assembly: VM.ViewModels.Post.dll  
+
+Defines the identity, category, availability, and result metadata exposed for a result entity.
+
+```csharp
+public interface IEntityBaseViewModel : IViewModel, IHasGuid
+```
+
+## Properties
+
+ [EntityType](VM.ViewModels.Post.IEntityBaseViewModel.EntityType.md\#VM\_ViewModels\_Post\_IEntityBaseViewModel\_EntityType)
+
+Gets the [`EntityType`](/lib/VM-Models-Post-EntityType) that classifies which kind of result entity is represented. The value reflects the loaded result data and does not change after the entity becomes available.

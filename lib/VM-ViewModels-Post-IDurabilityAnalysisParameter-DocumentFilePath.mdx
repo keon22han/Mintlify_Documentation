@@ -1,0 +1,24 @@
+---
+title: "Property DocumentFilePath"
+sidebarTitle: "DocumentFilePath"
+---
+<a id="VM_ViewModels_Post_IDurabilityAnalysisParameter_DocumentFilePath"></a>
+
+Namespace: [VM.ViewModels.Post](/lib/VM-ViewModels-Post)  
+Assembly: VM.ViewModels.Post.dll  
+
+## DocumentFilePath {#VM_ViewModels_Post_IDurabilityAnalysisParameter_DocumentFilePath}
+
+Gets or sets the path of the imported result document used for the fatigue analysis.
+
+```csharp
+string DocumentFilePath { get; set; }
+```
+
+### Property Value
+
+ string
+
+### Remarks
+
+[RunFatigueAnalysis\(IDurabilityAnalysisParameter\)](/lib/VM-API-Post-Operations-DurabilityAnalysis-RunFatigueAnalysis) uses this path to find the active [`IOperationsAnimation`](/lib/VM-Operations-Post-Interfaces-IOperationsAnimation) for the analysis. The path must match a document already imported through [AddDocument\(IList&lt;string\>\)](/lib/VM-API-Post-Operations-ApplicationHandler-AddDocument).

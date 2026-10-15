@@ -1,0 +1,44 @@
+---
+title: "Method GetGeometryNodes"
+sidebarTitle: "GetGeometryNodes"
+---
+<a id="VM_Post_API_OutputReader_OutputReader_GetGeometryNodes_System_String_"></a>
+
+Namespace: [VM.Post.API.OutputReader](/lib/VM-Post-API-OutputReader)  
+Assembly: VM.Post.API.OutputReader.dll  
+
+## GetGeometryNodes\(string\) {#VM_Post_API_OutputReader_OutputReader_GetGeometryNodes_System_String_}
+
+Gets node coordinate values for the body identified by `target` with [`OutputReader`](/lib/VM-Post-API-OutputReader-OutputReader).
+
+```csharp
+public double[] GetGeometryNodes(string target)
+```
+
+### Parameters
+
+`target` string
+
+Full name of the body whose node values are requested.
+
+### Returns
+
+ double\[\]
+
+Flat array containing node coordinate values for the body's primary geometry data.
+
+### Examples
+
+```python
+# Read the node coordinate values for a body.
+entity_name = "FEBody_01"
+geometry_nodes = output_reader.GetGeometryNodes(entity_name)
+```
+
+### Remarks
+
+The method retrieves primary geometry data with [GetGeometryInfo\(string\)](/lib/VM-Post-API-OutputReader-OutputReader-GetGeometryInfo) and returns its node values.
+
+<Danger>
+`target` must identify a body. An unknown name or a non-body entity causes the geometry lookup to fail.
+</Danger>

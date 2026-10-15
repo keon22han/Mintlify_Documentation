@@ -1,0 +1,88 @@
+---
+title: "Method GetPage"
+sidebarTitle: "GetPage"
+---
+<a id="VM_API_Post_Operations_ApplicationHandler_GetPage_System_String_"></a>
+
+Namespace: [VM.API.Post.Operations](/lib/VM-API-Post-Operations)  
+Assembly: VM.API.Post.Operations.dll  
+
+## GetPage\(string\) {#VM_API_Post_Operations_ApplicationHandler_GetPage_System_String_}
+
+Retrieves and activates a page by its full name.
+
+```csharp
+public IPage GetPage(string name)
+```
+
+### Parameters
+
+`name` string
+
+The value of [`FullName`](/lib/VM-Operations-Post-Interfaces-IPage-FullName) identifying the page.
+
+### Returns
+
+ [IPage](/lib/VM-Operations-Post-Interfaces-IPage)
+
+The matching [`IPage`](/lib/VM-Operations-Post-Interfaces-IPage).
+
+### Examples
+
+```python
+# Get the page by its name.
+page_name = "Page"
+page = application_handler.GetPage(page_name)
+```
+
+### Remarks
+
+Successful lookup activates returned `IPage` before the method returns.
+
+### Exceptions
+
+ Exception
+
+Thrown when `name` is empty or does not match an existing page.
+
+## GetPage\(Guid\) {#VM_API_Post_Operations_ApplicationHandler_GetPage_System_Guid_}
+
+Retrieves and activates a page by its ID.
+
+```csharp
+public IPage GetPage(Guid id)
+```
+
+### Parameters
+
+`id` Guid
+
+The value of [`ID`](/lib/VM-Operations-Post-Interfaces-IPage-ID) identifying the page.
+
+### Returns
+
+ [IPage](/lib/VM-Operations-Post-Interfaces-IPage)
+
+The matching [`IPage`](/lib/VM-Operations-Post-Interfaces-IPage).
+
+### Examples
+
+```python
+# Get the page by name first, then read its ID.
+page_name = "Page"
+page = application_handler.GetPage(page_name)
+page_id = page.ID
+
+# Get the page by its ID.
+page = application_handler.GetPage(page_id)
+```
+
+### Remarks
+
+Successful lookup activates returned `IPage` before the method returns.
+
+### Exceptions
+
+ Exception
+
+Thrown when `id` does not match an existing page.

@@ -1,0 +1,20 @@
+---
+title: "Method Close"
+sidebarTitle: "Close"
+---
+<a id="VM_Operations_Post_Interfaces_IPage_Close"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## Close\(\) {#VM_Operations_Post_Interfaces_IPage_Close}
+
+Closes [`IPage`](/lib/VM-Operations-Post-Interfaces-IPage) and removes [`IView`](/lib/VM-Operations-Post-Interfaces-IView) objects associated with it.
+
+```csharp
+void Close()
+```
+
+### Remarks
+
+After this call, `IPage` is no longer included in [GetPages\(\)](/lib/VM-API-Post-Operations-ApplicationHandler-GetPages). The associated `IView` objects are also removed.

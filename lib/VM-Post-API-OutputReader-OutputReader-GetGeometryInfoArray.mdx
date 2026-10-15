@@ -1,0 +1,33 @@
+---
+title: "Method GetGeometryInfoArray"
+sidebarTitle: "GetGeometryInfoArray"
+---
+<a id="VM_Post_API_OutputReader_OutputReader_GetGeometryInfoArray"></a>
+
+Namespace: [VM.Post.API.OutputReader](/lib/VM-Post-API-OutputReader)  
+Assembly: VM.Post.API.OutputReader.dll  
+
+## GetGeometryInfoArray\(\) {#VM_Post_API_OutputReader_OutputReader_GetGeometryInfoArray}
+
+Gets the body entities that contain geometry data with [`OutputReader`](/lib/VM-Post-API-OutputReader-OutputReader).
+
+```csharp
+public IEnumerable<BodyBase> GetGeometryInfoArray()
+```
+
+### Returns
+
+ IEnumerable&lt;[BodyBase](/lib/VM-Models-Post-Bodies-BodyBase)\>
+
+Enumerable containing body entities available in the opened result file.
+
+### Examples
+
+```python
+# Read geometry information for all bodies.
+geometry_infos = output_reader.GetGeometryInfoArray()
+```
+
+### Remarks
+
+The result includes every body entity available through `OutputReader`. The returned sequence is empty when the result file contains no body entities.

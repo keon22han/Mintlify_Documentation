@@ -1,0 +1,25 @@
+---
+title: "Property PlasticityCorrection"
+sidebarTitle: "PlasticityCorrection"
+---
+<a id="VM_Operations_Post_FatigueParameter_PlasticityCorrection"></a>
+
+Namespace: [VM.Operations.Post](/lib/VM-Operations-Post)  
+Assembly: VM.Operations.Post.dll  
+
+## PlasticityCorrection {#VM_Operations_Post_FatigueParameter_PlasticityCorrection}
+
+Gets or sets the legacy plasticity correction selected from `PlasticityCorrection` for the legacy analysis path.
+
+```csharp
+[Obsolete("This property will be deprecated in the near future.")]
+public PlasticityCorrection PlasticityCorrection { get; set; }
+```
+
+### Property Value
+
+ [PlasticityCorrection](/lib/VM-Models-Post-PlasticityCorrection)
+
+### Remarks
+
+This property is obsolete. New analyses set [`PlasticityCorrection`](/lib/VM-Operations-Post-Interfaces-IOperationsFEBody-PlasticityCorrection) when [`AnalysisType`](/lib/VM-Operations-Post-Interfaces-IOperationsFEBody-AnalysisType) selects strain-life analysis.

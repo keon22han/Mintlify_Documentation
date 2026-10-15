@@ -1,0 +1,33 @@
+---
+title: "Method GetActivePage"
+sidebarTitle: "GetActivePage"
+---
+<a id="VM_API_Post_Operations_ApplicationHandler_GetActivePage"></a>
+
+Namespace: [VM.API.Post.Operations](/lib/VM-API-Post-Operations)  
+Assembly: VM.API.Post.Operations.dll  
+
+## GetActivePage\(\) {#VM_API_Post_Operations_ApplicationHandler_GetActivePage}
+
+Retrieves the active page.
+
+```csharp
+public IPage GetActivePage()
+```
+
+### Returns
+
+ [IPage](/lib/VM-Operations-Post-Interfaces-IPage)
+
+The active [`IPage`](/lib/VM-Operations-Post-Interfaces-IPage), or &lt;code>null&lt;/code> when no active page exists.
+
+### Examples
+
+```python
+# Get the currently active page.
+page = application_handler.GetActivePage()
+```
+
+### Remarks
+
+The method determines returned `IPage` from currently active [`IView`](/lib/VM-Operations-Post-Interfaces-IView). If no active view exists, or the active view cannot be associated with an `IPage`, no active page exists.

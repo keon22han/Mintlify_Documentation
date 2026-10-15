@@ -1,0 +1,46 @@
+---
+title: "Method GetMarkerPosition"
+sidebarTitle: "GetMarkerPosition"
+---
+<a id="VM_Post_API_OutputReader_OutputReader_GetMarkerPosition_System_Collections_Generic_IList_System_String__"></a>
+
+Namespace: [VM.Post.API.OutputReader](/lib/VM-Post-API-OutputReader)  
+Assembly: VM.Post.API.OutputReader.dll  
+
+## GetMarkerPosition\(IList&lt;string\>\) {#VM_Post_API_OutputReader_OutputReader_GetMarkerPosition_System_Collections_Generic_IList_System_String__}
+
+Gets position values for markers identified by `names`.
+
+```csharp
+public IDictionary<string, IList<double[]>> GetMarkerPosition(IList<string> names)
+```
+
+### Parameters
+
+`names` IList&lt;string\>
+
+Names used to find markers in the opened result file.
+
+### Returns
+
+ IDictionary&lt;string, IList&lt;double\[\]\>\>
+
+Dictionary keyed by matched marker `FullName`, with a list of position arrays for each marker.
+
+### Examples
+
+```python
+# Read positions for selected markers.
+marker_names = List[str]()
+marker_name = "Crank/CM"
+marker_names.Add(marker_name)
+marker_positions = output_reader.GetMarkerPosition(marker_names)
+```
+
+### Remarks
+
+Each input name is checked with [`OutputReader`](/lib/VM-Post-API-OutputReader-OutputReader). Names that do not identify an entity are omitted from the dictionary.
+
+<Note>
+Names that do not identify an entity are omitted from the returned dictionary.
+</Note>

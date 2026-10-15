@@ -1,0 +1,24 @@
+---
+title: "Property IsDecibel"
+sidebarTitle: "IsDecibel"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationsTransformLineDataSeriesViewModel_IsDecibel"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## IsDecibel {#VM_Operations_Post_Interfaces_IOperationsTransformLineDataSeriesViewModel_IsDecibel}
+
+Gets or sets whether the log-scale transform uses decibel values.
+
+```csharp
+bool IsDecibel { get; set; }
+```
+
+### Property Value
+
+ bool
+
+### Remarks
+
+When set to `true`, the transform sets [`Coefficient`](/lib/VM-Operations-Post-Interfaces-IOperationsTransformLineDataSeriesViewModel-Coefficient) to `20` and [`Base`](/lib/VM-Operations-Post-Interfaces-IOperationsTransformLineDataSeriesViewModel-Base) to `10`, then recalculates the curve.

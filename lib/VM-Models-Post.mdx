@@ -1,0 +1,255 @@
+---
+title: "Namespace VM.Models.Post"
+sidebarTitle: "VM.Models.Post"
+---
+<a id="VM_Models_Post"></a>
+
+### Namespaces
+
+ [VM.Models.Post.Bodies](/lib/VM-Models-Post-Bodies)
+
+ [VM.Models.Post.ChartMathLib](/lib/VM-Models-Post-ChartMathLib)
+
+ [VM.Models.Post.EntityTypes](/lib/VM-Models-Post-EntityTypes)
+
+### Classes
+
+ [EntityBase](/lib/VM-Models-Post-EntityBase)
+
+Defines the base class for entities loaded from a result document.
+
+ [GeneralMarker](/lib/VM-Models-Post-GeneralMarker)
+
+Represents a coordinate-system marker loaded from or created in a result document.
+
+ [ObjectBase](/lib/VM-Models-Post-ObjectBase)
+
+Defines the base class implementing `IObject` for postprocessor object.
+
+ [TransformationParameters](/lib/VM-Models-Post-TransformationParameters)
+
+Provides the angle, position, rotation-axis, and rotation-type values for a transformation offset.
+
+ [VectorDisplayCharacteristicInfo](/lib/VM-Models-Post-VectorDisplayCharacteristicInfo)
+
+Describes a characteristic that can be used to create a vector display.
+
+### Interfaces
+
+ [IDataPart](/lib/VM-Models-Post-IDataPart)
+
+Provides geometry, node, element, and transformation data for one finite-element part.
+
+ [IFEProperty](/lib/VM-Models-Post-IFEProperty)
+
+Represents a finite element property entity.
+
+ [IHasGuid](/lib/VM-Models-Post-IHasGuid)
+
+Defines an object that exposes a globally unique identifier.
+
+ [IResultMarker](/lib/VM-Models-Post-IResultMarker)
+
+Represents a marker result with the body, node, and parent information needed to read its values.
+
+ [ISTFTParameters](/lib/VM-Models-Post-ISTFTParameters)
+
+Carries the source signal and the window, frequency, and scaling settings that [`CreateSTFT(ISTFTParameters, IList<string>)`](/lib/VM-Operations-Post-Interfaces-IOperationsLine2DViewModel-CreateSTFT) uses to build a Short-Time Fourier Transform (STFT) heat map.
+
+The STFT splits the source signal into overlapping time windows and runs a Fast Fourier Transform (FFT) on each window, so the values set here decide the time range, window size, overlap, frequency axis, and value scaling of the result.
+
+ [IVectorDisplay](/lib/VM-Models-Post-IVectorDisplay)
+
+Represents a vector display definition associated with an entity and a vector characteristic.
+
+ [IVectorDisplayAnimationBase](/lib/VM-Models-Post-IVectorDisplayAnimationBase)
+
+Provides the common state used to render and update a vector display animation.
+
+ [IVectorDisplayable](/lib/VM-Models-Post-IVectorDisplayable)
+
+Identifies an entity that provides characteristics for vector display.
+
+### Enums
+
+ [ActionType](/lib/VM-Models-Post-ActionType)
+
+Identifies the action role of a connector relative to a body.
+
+ [AlignType](/lib/VM-Models-Post-AlignType)
+
+Selects how curves are lined up by [`CreateAlign(IEnumerable<string>, AlignType)`](/lib/VM-Operations-Post-Interfaces-IOperationsLine2DViewModel-CreateAlign).
+
+`Zero` moves each curve so its first Y point starts at zero. `Curve` shifts every following curve so its first Y point matches the first Y point of the first selected curve.
+
+ [AnalysisMethodEN](/lib/VM-Models-Post-AnalysisMethodEN)
+
+Specifies the mean-stress correction method used in fatigue analysis.
+
+ [AxisType](/lib/VM-Models-Post-AxisType)
+
+Specifies the scale type used by a chart axis.
+
+ [BehaviorType](/lib/VM-Models-Post-BehaviorType)
+
+Specifies the physical behavior exported as acoustic raw data.
+
+ [BodyType](/lib/VM-Models-Post-BodyType)
+
+Identifies the body category used to filter bodies in a result file.
+
+ [CalculusType](/lib/VM-Models-Post-CalculusType)
+
+Specifies the calculus operation applied to curve data.
+
+ [CategoryType](/lib/VM-Models-Post-CategoryType)
+
+Identifies the category used to group and filter an entity through [`CategoryType`](/lib/VM-Models-Post-EntityBase-CategoryType).
+
+ [ChartAxisType](/lib/VM-Models-Post-ChartAxisType)
+
+Specifies whether a chart tracking operation displays one curve or multiple curves at the same time.
+
+ [ColorSchemeType](/lib/VM-Models-Post-ColorSchemeType)
+
+Specifies the color mapping used to display result values.
+
+ [ConnectorType](/lib/VM-Models-Post-ConnectorType)
+
+Identifies the connector category reported for a result connector.
+
+ [CoordinateType](/lib/VM-Models-Post-CoordinateType)
+
+Identifies one of the three local coordinate axes used by a general marker.
+
+ [EntityType](/lib/VM-Models-Post-EntityType)
+
+Identifies the kind of entity loaded from a result document, used to classify and filter entities exposed through [`IEntityBaseViewModel`](/lib/VM-ViewModels-Post-IEntityBaseViewModel).
+
+ [ExtremalValueType](/lib/VM-Models-Post-ExtremalValueType)
+
+Specifies the scope used to calculate an extremal result value.
+
+ [FFTType](/lib/VM-Models-Post-FFTType)
+
+Specifies the value represented by a Fast Fourier Transform result.
+
+ [FFTWindowType](/lib/VM-Models-Post-FFTWindowType)
+
+Specifies the window function used for a Fast Fourier Transform.
+
+ [FatigueAnalysisType](/lib/VM-Models-Post-FatigueAnalysisType)
+
+Specifies the fatigue-analysis curve type.
+
+ [FilteringType](/lib/VM-Models-Post-FilteringType)
+
+Specifies the frequency range passed by a filtering operation.
+
+ [FrequencyAxisType](/lib/VM-Models-Post-FrequencyAxisType)
+
+Specifies the chart axis that supplies frequency values.
+
+ [GeneralMarkerType](/lib/VM-Models-Post-GeneralMarkerType)
+
+Specifies the coordinate-system representation used by a general marker.
+
+ [ImageFormat](/lib/VM-Models-Post-ImageFormat)
+
+Specifies the image format used when exporting a captured view.
+
+ [InterpolationErrorType](/lib/VM-Models-Post-InterpolationErrorType)
+
+Reports the result of an interpolation operation.
+
+ [LabelFormatType](/lib/VM-Models-Post-LabelFormatType)
+
+Specifies the numeric format used for chart labels.
+
+ [Layout](/lib/VM-Models-Post-Layout)
+
+Specifies a predefined corner position for information overlays displayed in an animation view.
+
+ [LegendPlacementType](/lib/VM-Models-Post-LegendPlacementType)
+
+Specifies where a chart legend is placed.
+
+ [LineStyleType](/lib/VM-Models-Post-LineStyleType)
+
+Specifies the dash pattern used to render a curve or chart grid line.
+
+ [MeanStressCorrection](/lib/VM-Models-Post-MeanStressCorrection)
+
+Specifies the mean-stress correction used for stress-life fatigue analysis.
+
+ [ParentType](/lib/VM-Models-Post-ParentType)
+
+Identifies the parent entity kind associated with a result marker.
+
+ [PlasticityCorrection](/lib/VM-Models-Post-PlasticityCorrection)
+
+Specifies the plasticity correction used for strain-life fatigue analysis.
+
+ [PointType](/lib/VM-Models-Post-PointType)
+
+Specifies the marker shape used to render points on a curve.
+
+ [RecordingRangeType](/lib/VM-Models-Post-RecordingRangeType)
+
+Specifies the visible area captured for an animation recording.
+
+ [RecordingType](/lib/VM-Models-Post-RecordingType)
+
+Specifies the file format used to record animation frames.
+
+ [RotationTypes](/lib/VM-Models-Post-RotationTypes)
+
+Specifies how angular offsets are converted into a reference orientation.
+
+ [STFTScaleType](/lib/VM-Models-Post-STFTScaleType)
+
+Specifies the scale used to display Short-Time Fourier Transform values.
+
+ [ScaleType](/lib/VM-Models-Post-ScaleType)
+
+Specifies the scale used to display signal values.
+
+ [SeriesType](/lib/VM-Models-Post-SeriesType)
+
+Selects how a curve is drawn on a 2D chart through [`SeriesType`](/lib/VM-Operations-Post-Interfaces-IOperationsLineDataSeriesViewModelBase-SeriesType).
+
+Each value changes the shape used to show the data points, such as a connected line, bars, single points, or stacked columns. When `Point` is selected, the connecting line is hidden so only the point markers appear.
+
+ [ShellDirectionType](/lib/VM-Models-Post-ShellDirectionType)
+
+Specifies which surface of a shell supplies stress or strain result values.
+
+ [SignType](/lib/VM-Models-Post-SignType)
+
+Selects the sign applied to the absolute-value curve created by [`CreateAbsolute(IEnumerable<string>, SignType)`](/lib/VM-Operations-Post-Interfaces-IOperationsLine2DViewModel-CreateAbsolute).
+
+The absolute transform first takes the absolute value of each Y point. `Positive` keeps those values as they are, and `Negative` flips them to make every point negative.
+
+ [SignalProcessingType](/lib/VM-Models-Post-SignalProcessingType)
+
+Specifies the signal-processing operation applied to curve data.
+
+ [SimpleMathType](/lib/VM-Models-Post-SimpleMathType)
+
+Specifies the arithmetic operation used to create calculated curve data.
+
+ [SmoothingType](/lib/VM-Models-Post-SmoothingType)
+
+Specifies the algorithm used to smooth curve data.
+
+ [TransformationType](/lib/VM-Models-Post-TransformationType)
+
+Specifies how a following camera responds to target motion.
+
+ [VectorDisplayType](/lib/VM-Models-Post-VectorDisplayType)
+
+Specifies how vector values are displayed in the animation.
+
+ [WeightingType](/lib/VM-Models-Post-WeightingType)
+
+Specifies the frequency weighting curve applied to signal data.

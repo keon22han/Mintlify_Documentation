@@ -1,0 +1,52 @@
+---
+title: "Method GetCurves"
+sidebarTitle: "GetCurves"
+---
+<a id="VM_Post_API_OutputReader_OutputReader_GetCurves_VM_Models_OutputReader_PlotParameters_"></a>
+
+Namespace: [VM.Post.API.OutputReader](/lib/VM-Post-API-OutputReader)  
+Assembly: VM.Post.API.OutputReader.dll  
+
+## GetCurves\(PlotParameters\) {#VM_Post_API_OutputReader_OutputReader_GetCurves_VM_Models_OutputReader_PlotParameters_}
+
+Gets curve samples described by [`PlotParameters`](/lib/VM-Models-OutputReader-PlotParameters).
+
+For a complete operations, see [Result File Reader API Example - Get Curve](/document/result-file-reader/example/example_curve_for_result_file_reader_api#get-curve).
+
+```csharp
+public IDictionary<string, Point2D[]> GetCurves(PlotParameters parameter)
+```
+
+### Parameters
+
+`parameter` [PlotParameters](/lib/VM-Models-OutputReader-PlotParameters)
+
+Plot target, characteristic paths, plot type, and coordinate-system settings used to read curves.
+
+### Returns
+
+ IDictionary&lt;string, [Point2D](/lib/VM-Point2D)\[\]\>
+
+Dictionary mapping each curve key to its [`Point2D`](/lib/VM-Point2D) samples.
+
+### Examples
+
+```python
+# Prepare a characteristic/component path for the curve target.
+entity_name = "Crank"
+curve_path = "Displacement/Magnitude"
+curve_paths = List[str]()
+curve_paths.Add(curve_path)
+parameters = PlotParameters()
+parameters.Target = entity_name
+parameters.Paths = curve_paths
+
+# Read the curve samples.
+curves = output_reader.GetCurves(parameters)
+```
+
+### Remarks
+
+<Danger>
+`parameter` must contain valid target and path settings.
+</Danger>

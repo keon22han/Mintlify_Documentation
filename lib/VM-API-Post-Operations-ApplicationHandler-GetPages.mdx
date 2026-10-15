@@ -1,0 +1,32 @@
+---
+title: "Method GetPages"
+sidebarTitle: "GetPages"
+---
+<a id="VM_API_Post_Operations_ApplicationHandler_GetPages"></a>
+
+Namespace: [VM.API.Post.Operations](/lib/VM-API-Post-Operations)  
+Assembly: VM.API.Post.Operations.dll  
+
+## GetPages\(\) {#VM_API_Post_Operations_ApplicationHandler_GetPages}
+
+Retrieves all currently created pages.
+
+```csharp
+public IPage[] GetPages()
+```
+
+### Returns
+
+ [IPage](/lib/VM-Operations-Post-Interfaces-IPage)\[\]
+
+An array containing every currently created [`IPage`](/lib/VM-Operations-Post-Interfaces-IPage), or an empty array when no page exists.
+
+### Examples
+
+```python
+pages = application_handler.GetPages()
+```
+
+### Remarks
+
+The returned array is a snapshot of the pages available when the method is called. Later page creation or removal does not change that array.

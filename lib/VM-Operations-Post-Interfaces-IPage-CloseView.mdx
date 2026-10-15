@@ -1,0 +1,121 @@
+---
+title: "Method CloseView"
+sidebarTitle: "CloseView"
+---
+<a id="VM_Operations_Post_Interfaces_IPage_CloseView_VM_Operations_Post_Interfaces_IView_"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## CloseView\(IView\) {#VM_Operations_Post_Interfaces_IPage_CloseView_VM_Operations_Post_Interfaces_IView_}
+
+Closes the given [`IView`](/lib/VM-Operations-Post-Interfaces-IView) with [`IPage`](/lib/VM-Operations-Post-Interfaces-IPage).
+
+```csharp
+void CloseView(IView view)
+```
+
+### Parameters
+
+`view` [IView](/lib/VM-Operations-Post-Interfaces-IView)
+
+[`IView`](/lib/VM-Operations-Post-Interfaces-IView) to close.
+
+### Examples
+
+```python
+# Get the page and create a chart view.
+page_name = "Page"
+page = application_handler.GetPage(page_name)
+chart_name = "ChartByView"
+view = page.CreateChart(chart_name)
+
+# Close the view by passing the view object.
+page.CloseView(view)
+```
+
+### Remarks
+
+If `view` identifies an object with [`IPage`](/lib/VM-Operations-Post-Interfaces-IPage), that object is removed and is no longer returned by [`GetView(int)`](/lib/VM-Operations-Post-Interfaces-IPage-GetView), [`GetView(string)`](/lib/VM-Operations-Post-Interfaces-IPage-GetView), or [GetViews\(\)](/lib/VM-Operations-Post-Interfaces-IPage-GetViews). If `view` does not identify an object with `IPage`, this method does not remove a view.
+
+### Exceptions
+
+ ArgumentNullException
+
+Thrown when `view` is `null`.
+
+## CloseView\(int\) {#VM_Operations_Post_Interfaces_IPage_CloseView_System_Int32_}
+
+Closes [`IView`](/lib/VM-Operations-Post-Interfaces-IView) with the specified [`Index`](/lib/VM-Operations-Post-Interfaces-IView-Index).
+
+```csharp
+void CloseView(int index)
+```
+
+### Parameters
+
+`index` int
+
+Index of the `IView` to close.
+
+### Examples
+
+```python
+# Get the page and create a chart view.
+page_name = "Page"
+page = application_handler.GetPage(page_name)
+chart_name = "ChartByIndex"
+view = page.CreateChart(chart_name)
+
+# Close the view by its index.
+view_index = view.Index
+page.CloseView(view_index)
+```
+
+### Remarks
+
+The matching `IView` is removed with [`IPage`](/lib/VM-Operations-Post-Interfaces-IPage) and is no longer returned by [`GetView(int)`](/lib/VM-Operations-Post-Interfaces-IPage-GetView), [`GetView(string)`](/lib/VM-Operations-Post-Interfaces-IPage-GetView), or [GetViews\(\)](/lib/VM-Operations-Post-Interfaces-IPage-GetViews).
+
+### Exceptions
+
+ ArgumentException
+
+Thrown when `index` does not identify an `IView` with `IPage`.
+
+## CloseView\(string\) {#VM_Operations_Post_Interfaces_IPage_CloseView_System_String_}
+
+Closes [`IView`](/lib/VM-Operations-Post-Interfaces-IView) with the specified [`FullName`](/lib/VM-Operations-Post-Interfaces-IView-FullName).
+
+```csharp
+void CloseView(string name)
+```
+
+### Parameters
+
+`name` string
+
+`FullName` of the `IView` to close.
+
+### Examples
+
+```python
+# Get the page and create a chart view.
+page_name = "Page"
+page = application_handler.GetPage(page_name)
+chart_name = "ChartByName"
+view = page.CreateChart(chart_name)
+
+# Close the view by its name.
+view_name = view.FullName
+page.CloseView(view_name)
+```
+
+### Remarks
+
+The matching `IView` is removed with [`IPage`](/lib/VM-Operations-Post-Interfaces-IPage) and is no longer returned by [`GetView(int)`](/lib/VM-Operations-Post-Interfaces-IPage-GetView), [`GetView(string)`](/lib/VM-Operations-Post-Interfaces-IPage-GetView), or [GetViews\(\)](/lib/VM-Operations-Post-Interfaces-IPage-GetViews). If no matching `FullName` exists with `IPage`, this method does nothing.
+
+### Exceptions
+
+ ArgumentException
+
+Thrown when `name` is `null` or empty.

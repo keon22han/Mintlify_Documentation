@@ -1,0 +1,48 @@
+---
+title: "Method CreateExpression"
+sidebarTitle: "CreateExpression"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationsDynamicAnalysisResultViewModel_CreateExpression_System_String_"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## CreateExpression\(string\) {#VM_Operations_Post_Interfaces_IOperationsDynamicAnalysisResultViewModel_CreateExpression_System_String_}
+
+Creates a named Python expression in the dynamic result.
+
+For a complete operations, see [Operation API Example - Expression](/document/operation-api/example/example_animation_for_operation_api#expression).
+
+```csharp
+IOperationsPythonExpressionViewModel CreateExpression(string newName)
+```
+
+### Parameters
+
+`newName` string
+
+Name used for the new expression and exposed through [`FullName`](/lib/VM-Operations-Post-Interfaces-IOperationsPythonExpressionViewModel-FullName).
+
+### Returns
+
+ [IOperationsPythonExpressionViewModel](/lib/VM-Operations-Post-Interfaces-IOperationsPythonExpressionViewModel)
+
+Created [`IOperationsPythonExpressionViewModel`](/lib/VM-Operations-Post-Interfaces-IOperationsPythonExpressionViewModel).
+
+### Examples
+
+```python
+# Get the dynamic analysis result.
+# RESULT_FILE_PATH : .dfr result file path
+document = application_handler.GetDocument(RESULT_FILE_PATH)
+analysis_result_type = AnalysisResultType.Dynamics
+dynamic_analysis = document.GetAnalysisResultViewModel(analysis_result_type)
+
+# Create a named expression.
+expression_name = "Expression"
+expression = dynamic_analysis.CreateExpression(expression_name)
+```
+
+### Remarks
+
+The new expression is added with an empty formula. Set [`Expression`](/lib/VM-Operations-Post-Interfaces-IOperationsPythonExpressionViewModel-Expression) before evaluating or using it as curve data.

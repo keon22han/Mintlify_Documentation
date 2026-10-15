@@ -1,0 +1,24 @@
+---
+title: "Property SphericalAxis2"
+sidebarTitle: "SphericalAxis2"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationsCSYSViewModel_SphericalAxis2"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## SphericalAxis2 {#VM_Operations_Post_Interfaces_IOperationsCSYSViewModel_SphericalAxis2}
+
+Gets or sets the second spherical-axis direction selected from [`CoordinateType`](/lib/VM-Models-Post-CoordinateType) when [`CurrentCoordinateSystemType`](/lib/VM-Operations-Post-Interfaces-IOperationsCSYSViewModel-CurrentCoordinateSystemType) is spherical.
+
+```csharp
+CoordinateType SphericalAxis2 { get; set; }
+```
+
+### Property Value
+
+ [CoordinateType](/lib/VM-Models-Post-CoordinateType)
+
+### Remarks
+
+The value affects the orientation used to interpret spherical coordinates. The coordinate system keeps the two spherical axes distinct.

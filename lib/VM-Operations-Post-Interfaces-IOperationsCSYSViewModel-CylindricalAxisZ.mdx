@@ -1,0 +1,24 @@
+---
+title: "Property CylindricalAxisZ"
+sidebarTitle: "CylindricalAxisZ"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationsCSYSViewModel_CylindricalAxisZ"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## CylindricalAxisZ {#VM_Operations_Post_Interfaces_IOperationsCSYSViewModel_CylindricalAxisZ}
+
+Gets or sets the axial direction selected from [`CoordinateType`](/lib/VM-Models-Post-CoordinateType) for cylindrical coordinates.
+
+```csharp
+CoordinateType CylindricalAxisZ { get; set; }
+```
+
+### Property Value
+
+ [CoordinateType](/lib/VM-Models-Post-CoordinateType)
+
+### Remarks
+
+This property applies when [`CurrentCoordinateSystemType`](/lib/VM-Operations-Post-Interfaces-IOperationsCSYSViewModel-CurrentCoordinateSystemType) is cylindrical. Assigning an axis already used by the other cylindrical axis changes the other axis to its next available value.

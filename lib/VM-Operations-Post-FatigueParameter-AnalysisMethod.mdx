@@ -1,0 +1,25 @@
+---
+title: "Property AnalysisMethod"
+sidebarTitle: "AnalysisMethod"
+---
+<a id="VM_Operations_Post_FatigueParameter_AnalysisMethod"></a>
+
+Namespace: [VM.Operations.Post](/lib/VM-Operations-Post)  
+Assembly: VM.Operations.Post.dll  
+
+## AnalysisMethod {#VM_Operations_Post_FatigueParameter_AnalysisMethod}
+
+Gets or sets the legacy strain-life analysis method selected from [`AnalysisMethodEN`](/lib/VM-Models-Post-AnalysisMethodEN) for the legacy analysis path.
+
+```csharp
+[Obsolete("This property will be deprecated in the near future.")]
+public AnalysisMethodEN AnalysisMethod { get; set; }
+```
+
+### Property Value
+
+ [AnalysisMethodEN](/lib/VM-Models-Post-AnalysisMethodEN)
+
+### Remarks
+
+This property is obsolete. New analyses set [`AnalysisMethodEN`](/lib/VM-Operations-Post-Interfaces-IOperationsFEBody-AnalysisMethodEN) when [`AnalysisType`](/lib/VM-Operations-Post-Interfaces-IOperationsFEBody-AnalysisType) selects strain-life analysis.

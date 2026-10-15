@@ -1,0 +1,28 @@
+---
+title: "Method GetContour"
+sidebarTitle: "GetContour"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationAnalysisResult_GetContour_System_String_"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## GetContour\(string\) {#VM_Operations_Post_Interfaces_IOperationAnalysisResult_GetContour_System_String_}
+
+Gets a contour by its [`FullName`](/lib/VM-Operations-Post-Interfaces-IOperationsContourViewModel-FullName).
+
+```csharp
+IOperationsContourViewModel GetContour(string name)
+```
+
+### Parameters
+
+`name` string
+
+Full name of a contour previously created with [CreateContour\(IList&lt;string\>, ContourMappingType, string, string, string\)](/lib/VM-Operations-Post-Interfaces-IOperationAnalysisResult-CreateContour).
+
+### Returns
+
+ [IOperationsContourViewModel](/lib/VM-Operations-Post-Interfaces-IOperationsContourViewModel)
+
+Matching [`IOperationsContourViewModel`](/lib/VM-Operations-Post-Interfaces-IOperationsContourViewModel), or `null` if no contour with that name exists.

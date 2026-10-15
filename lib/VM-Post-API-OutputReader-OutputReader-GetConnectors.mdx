@@ -1,0 +1,40 @@
+---
+title: "Method GetConnectors"
+sidebarTitle: "GetConnectors"
+---
+<a id="VM_Post_API_OutputReader_OutputReader_GetConnectors_System_String_"></a>
+
+Namespace: [VM.Post.API.OutputReader](/lib/VM-Post-API-OutputReader)  
+Assembly: VM.Post.API.OutputReader.dll  
+
+## GetConnectors\(string\) {#VM_Post_API_OutputReader_OutputReader_GetConnectors_System_String_}
+
+Gets connector type, action type, and name information associated with a body.
+
+```csharp
+public IList<(ConnectorType, ActionType, string)> GetConnectors(string name)
+```
+
+### Parameters
+
+`name` string
+
+Full name of the body.
+
+### Returns
+
+ IList&lt;\([ConnectorType](/lib/VM-Models-Post-ConnectorType), [ActionType](/lib/VM-Models-Post-ActionType), string\)\>
+
+List of connector type, action type, and connector full-name tuples. An empty list is returned when no body with `name` is found.
+
+### Examples
+
+```python
+# Read connectors associated with a body.
+entity_name = "Crank"
+connectors = output_reader.GetConnectors(entity_name)
+```
+
+### Remarks
+
+The method checks constraints, contacts, and forces associated with the body and includes each connector once.

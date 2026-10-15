@@ -1,0 +1,24 @@
+---
+title: "Property SourceY"
+sidebarTitle: "SourceY"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationsLineDataSeriesViewModel_SourceY"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## SourceY {#VM_Operations_Post_Interfaces_IOperationsLineDataSeriesViewModel_SourceY}
+
+Gets or sets [`ILineDataSeriesAxisViewModel`](/lib/VM-ViewModels-Post-ILineDataSeriesAxisViewModel) used to obtain Y values for the curve.
+
+```csharp
+ILineDataSeriesAxisViewModel SourceY { get; set; }
+```
+
+### Property Value
+
+ [ILineDataSeriesAxisViewModel](/lib/VM-ViewModels-Post-ILineDataSeriesAxisViewModel)
+
+### Remarks
+
+Changing this value updates the user-defined Y source metadata and recalculates the curve when the X source is also available.

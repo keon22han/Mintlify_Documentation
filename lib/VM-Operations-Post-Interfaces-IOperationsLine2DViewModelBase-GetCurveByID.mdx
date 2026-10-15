@@ -1,0 +1,59 @@
+---
+title: "Method GetCurveByID"
+sidebarTitle: "GetCurveByID"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationsLine2DViewModelBase_GetCurveByID_System_String_"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## GetCurveByID\(string\) {#VM_Operations_Post_Interfaces_IOperationsLine2DViewModelBase_GetCurveByID_System_String_}
+
+Gets a curve from the chart by its ID.
+
+```csharp
+IOperationsLineDataSeriesViewModelBase GetCurveByID(string id)
+```
+
+### Parameters
+
+`id` string
+
+The ID of the curve to retrieve.
+
+### Returns
+
+ [IOperationsLineDataSeriesViewModelBase](/lib/VM-Operations-Post-Interfaces-IOperationsLineDataSeriesViewModelBase)
+
+Matching [`IOperationsLineDataSeriesViewModelBase`](/lib/VM-Operations-Post-Interfaces-IOperationsLineDataSeriesViewModelBase), or `null` if no such curve exists.
+
+### Examples
+
+```python
+# Get the result document.
+# RESULT_FILE_PATH : .dfr result file path
+document = application_handler.GetDocument(RESULT_FILE_PATH)
+
+# Create the chart view.
+page = application_handler.GetActivePage()
+chart_name = "Chart"
+chart = page.CreateChart(chart_name)
+
+# Add curves to the chart.
+curve_paths = List[str]()
+curve_path = "Displacement/Magnitude"
+curve_paths.Add(curve_path)
+entity_name = "Crank"
+parameters = PlotParameters()
+parameters.Paths = curve_paths
+parameters.Target = entity_name
+curves = chart.AddCurves(RESULT_FILE_PATH, parameters)
+
+# Get the curve by ID.
+curve_id = curves[0].ID
+curve = chart.GetCurveByID(curve_id)
+```
+
+### Remarks
+
+This method searches for and returns the curve with the given ID from the chart. If no curve with the specified ID is found, it returns `null`.

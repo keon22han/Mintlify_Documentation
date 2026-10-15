@@ -1,0 +1,28 @@
+---
+title: "Method RemoveVectorDisplay"
+sidebarTitle: "RemoveVectorDisplay"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationsDynamicAnalysisResultViewModel_RemoveVectorDisplay_System_String_"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## RemoveVectorDisplay\(string\) {#VM_Operations_Post_Interfaces_IOperationsDynamicAnalysisResultViewModel_RemoveVectorDisplay_System_String_}
+
+Removes a vector display by its full name.
+
+```csharp
+void RemoveVectorDisplay(string name)
+```
+
+### Parameters
+
+`name` string
+
+Full name from [`FullName`](/lib/VM-Operations-Post-Interfaces-IOperationsVectorDisplayBaseViewModel-FullName) for a vector display in the dynamic result.
+
+### Remarks
+
+When a matching vector display exists, it is removed from the dynamic result and the animation display is updated.
+
+If no vector display matches `name`, the dynamic result is unchanged.

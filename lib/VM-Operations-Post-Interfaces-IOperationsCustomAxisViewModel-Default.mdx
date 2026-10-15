@@ -1,0 +1,24 @@
+---
+title: "Property Default"
+sidebarTitle: "Default"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationsCustomAxisViewModel_Default"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## Default {#VM_Operations_Post_Interfaces_IOperationsCustomAxisViewModel_Default}
+
+Gets or sets whether axis label decimal formatting is automatic. `true` uses automatic formatting and `false` applies [`Decimal`](/lib/VM-Operations-Post-Interfaces-IOperationsCustomAxisViewModel-Decimal) and [`LabelFormatType`](/lib/VM-Operations-Post-Interfaces-IOperationsCustomAxisViewModel-LabelFormatType).
+
+```csharp
+bool Default { get; set; }
+```
+
+### Property Value
+
+ bool
+
+### Remarks
+
+When this value is `false`, [`Decimal`](/lib/VM-Operations-Post-Interfaces-IOperationsCustomAxisViewModel-Decimal) and [`LabelFormatType`](/lib/VM-Operations-Post-Interfaces-IOperationsCustomAxisViewModel-LabelFormatType) provide the custom label format. When it is `true`, the axis uses its default label formatting.

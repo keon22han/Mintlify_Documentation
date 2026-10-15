@@ -1,0 +1,24 @@
+---
+title: "Property Targets"
+sidebarTitle: "Targets"
+---
+<a id="VM_ViewModels_Post_IDurabilityAnalysisParameter_Targets"></a>
+
+Namespace: [VM.ViewModels.Post](/lib/VM-ViewModels-Post)  
+Assembly: VM.ViewModels.Post.dll  
+
+## Targets {#VM_ViewModels_Post_IDurabilityAnalysisParameter_Targets}
+
+Gets the identifiers of finite-element bodies selected for the fatigue analysis.
+
+```csharp
+IEnumerable<Guid> Targets { get; }
+```
+
+### Property Value
+
+ IEnumerable&lt;Guid\>
+
+### Remarks
+
+[AddTarget\(Guid\)](/lib/VM-ViewModels-Post-IDurabilityAnalysisParameter-AddTarget) and [RemoveTarget\(Guid\)](/lib/VM-ViewModels-Post-IDurabilityAnalysisParameter-RemoveTarget) modify this collection. [RunFatigueAnalysis\(IDurabilityAnalysisParameter\)](/lib/VM-API-Post-Operations-DurabilityAnalysis-RunFatigueAnalysis) resolves each identifier to a finite-element body and ignores bodies that cannot perform fatigue analysis.

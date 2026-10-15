@@ -1,0 +1,210 @@
+---
+title: "Interface IOperationsLine2DViewModel"
+sidebarTitle: "IOperationsLine2DViewModel"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationsLine2DViewModel"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+Provides 2D chart display settings and operations that create transformed curve data.
+
+```csharp
+public interface IOperationsLine2DViewModel : IOperationsLine2DViewModelBase, IOperationsChartViewModel, IView, IHasGuid
+```
+
+## Properties
+
+ [AxisX](VM.Operations.Post.Interfaces.IOperationsLine2DViewModel.AxisX.md\#VM\_Operations\_Post\_Interfaces\_IOperationsLine2DViewModel\_AxisX)
+
+Gets or sets whether the X axis is rendered in the 2D chart. `true` renders the axis and `false` hides it.
+
+ [AxisY](VM.Operations.Post.Interfaces.IOperationsLine2DViewModel.AxisY.md\#VM\_Operations\_Post\_Interfaces\_IOperationsLine2DViewModel\_AxisY)
+
+Gets or sets whether the Y axis is rendered in the 2D chart. `true` renders the axis and `false` hides it.
+
+ [ShowAnimationBar](VM.Operations.Post.Interfaces.IOperationsLine2DViewModel.ShowAnimationBar.md\#VM\_Operations\_Post\_Interfaces\_IOperationsLine2DViewModel\_ShowAnimationBar)
+
+Gets or sets whether the animation bar is rendered for the 2D chart. `true` renders the bar and `false` hides it.
+
+ [ShowLegend](VM.Operations.Post.Interfaces.IOperationsLine2DViewModel.ShowLegend.md\#VM\_Operations\_Post\_Interfaces\_IOperationsLine2DViewModel\_ShowLegend)
+
+Gets or sets whether the legend is rendered for the 2D chart. `true` renders it when curves are present and `false` hides it.
+
+ [ShowVisibleMinMax](VM.Operations.Post.Interfaces.IOperationsLine2DViewModel.ShowVisibleMinMax.md\#VM\_Operations\_Post\_Interfaces\_IOperationsLine2DViewModel\_ShowVisibleMinMax)
+
+Gets or sets whether minimum and maximum annotations are shown for visible curves. `true` shows the annotations and `false` hides them.
+
+ [TrackingCurve](VM.Operations.Post.Interfaces.IOperationsLine2DViewModel.TrackingCurve.md\#VM\_Operations\_Post\_Interfaces\_IOperationsLine2DViewModel\_TrackingCurve)
+
+Gets or sets whether data tracking is enabled for the 2D chart. `true` enables tracking and `false` disables it.
+
+ [TrackingOption](VM.Operations.Post.Interfaces.IOperationsLine2DViewModel.TrackingOption.md\#VM\_Operations\_Post\_Interfaces\_IOperationsLine2DViewModel\_TrackingOption)
+
+Gets or sets [`ChartAxisType`](/lib/VM-Models-Post-ChartAxisType) mode used when tracking displays data points over the chart. `Single` tracks one curve and `Multiple` tracks several curves.
+
+## Methods
+
+ [CreateAbsolute\(IEnumerable&lt;string\>, SignType\)](VM.Operations.Post.Interfaces.IOperationsLine2DViewModel.CreateAbsolute.md\#VM\_Operations\_Post\_Interfaces\_IOperationsLine2DViewModel\_CreateAbsolute\_System\_Collections\_Generic\_IEnumerable\_System\_String\_\_VM\_Models\_Post\_SignType\_)
+
+Transforms curve data into absolute values for the Y-Axis as part of the chart tab's Transform functionality.
+
+For a complete operations, see [Operation API Example - Transform](/document/operation-api/example/example_chart_for_operation_api#transform).
+
+ [CreateAbsolute\(IEnumerable&lt;IOperationsLineDataSeriesViewModelBase\>, SignType\)](VM.Operations.Post.Interfaces.IOperationsLine2DViewModel.CreateAbsolute.md\#VM\_Operations\_Post\_Interfaces\_IOperationsLine2DViewModel\_CreateAbsolute\_System\_Collections\_Generic\_IEnumerable\_VM\_Operations\_Post\_Interfaces\_IOperationsLineDataSeriesViewModelBase\_\_VM\_Models\_Post\_SignType\_)
+
+Transforms curve data into absolute values for the Y-Axis as part of the chart tab's Transform functionality.
+
+For a complete operations, see [Operation API Example - Transform](/document/operation-api/example/example_chart_for_operation_api#transform).
+
+ [CreateAlign\(IEnumerable&lt;string\>, AlignType\)](VM.Operations.Post.Interfaces.IOperationsLine2DViewModel.CreateAlign.md\#VM\_Operations\_Post\_Interfaces\_IOperationsLine2DViewModel\_CreateAlign\_System\_Collections\_Generic\_IEnumerable\_System\_String\_\_VM\_Models\_Post\_AlignType\_)
+
+Aligns curve data to zero or the first point of the target curve as part of the chart tab's Transform functionality.
+
+For a complete operations, see [Operation API Example - Transform](/document/operation-api/example/example_chart_for_operation_api#transform).
+
+ [CreateAlign\(IEnumerable&lt;IOperationsLineDataSeriesViewModelBase\>, AlignType\)](VM.Operations.Post.Interfaces.IOperationsLine2DViewModel.CreateAlign.md\#VM\_Operations\_Post\_Interfaces\_IOperationsLine2DViewModel\_CreateAlign\_System\_Collections\_Generic\_IEnumerable\_VM\_Operations\_Post\_Interfaces\_IOperationsLineDataSeriesViewModelBase\_\_VM\_Models\_Post\_AlignType\_)
+
+Aligns curve data to zero or the first point of the target curve as part of the chart tab's Transform functionality.
+
+For a complete operations, see [Operation API Example - Transform](/document/operation-api/example/example_chart_for_operation_api#transform).
+
+ [CreateDifferentiatedCurve\(IEnumerable&lt;string\>\)](VM.Operations.Post.Interfaces.IOperationsLine2DViewModel.CreateDifferentiatedCurve.md\#VM\_Operations\_Post\_Interfaces\_IOperationsLine2DViewModel\_CreateDifferentiatedCurve\_System\_Collections\_Generic\_IEnumerable\_System\_String\_\_)
+
+Differentiates curve data as part of the chart tab's Calculus functionality.
+
+For a complete operations, see [Operation API Example - Calculus](/document/operation-api/example/example_chart_for_operation_api#calculus).
+
+ [CreateDifferentiatedCurve\(IEnumerable&lt;IOperationsLineDataSeriesViewModelBase\>\)](VM.Operations.Post.Interfaces.IOperationsLine2DViewModel.CreateDifferentiatedCurve.md\#VM\_Operations\_Post\_Interfaces\_IOperationsLine2DViewModel\_CreateDifferentiatedCurve\_System\_Collections\_Generic\_IEnumerable\_VM\_Operations\_Post\_Interfaces\_IOperationsLineDataSeriesViewModelBase\_\_)
+
+Differentiates curve data as part of the chart tab's Calculus functionality.
+
+For a complete operations, see [Operation API Example - Calculus](/document/operation-api/example/example_chart_for_operation_api#calculus).
+
+ [CreateFFT\(IEnumerable&lt;string\>, FFTType, FFTWindowType, ScaleType, int, double, double\)](VM.Operations.Post.Interfaces.IOperationsLine2DViewModel.CreateFFT.md\#VM\_Operations\_Post\_Interfaces\_IOperationsLine2DViewModel\_CreateFFT\_System\_Collections\_Generic\_IEnumerable\_System\_String\_\_VM\_Models\_Post\_FFTType\_VM\_Models\_Post\_FFTWindowType\_VM\_Models\_Post\_ScaleType\_System\_Int32\_System\_Double\_System\_Double\_)
+
+Applies FFT (Fast Fourier Transform) to curve data as part of the chart tab's functionality.
+
+For a complete operations, see [Operation API Example - FFT](/document/operation-api/example/example_chart_for_operation_api#fft).
+
+ [CreateFFT\(IEnumerable&lt;IOperationsLineDataSeriesViewModelBase\>, FFTType, FFTWindowType, ScaleType, int, double, double\)](VM.Operations.Post.Interfaces.IOperationsLine2DViewModel.CreateFFT.md\#VM\_Operations\_Post\_Interfaces\_IOperationsLine2DViewModel\_CreateFFT\_System\_Collections\_Generic\_IEnumerable\_VM\_Operations\_Post\_Interfaces\_IOperationsLineDataSeriesViewModelBase\_\_VM\_Models\_Post\_FFTType\_VM\_Models\_Post\_FFTWindowType\_VM\_Models\_Post\_ScaleType\_System\_Int32\_System\_Double\_System\_Double\_)
+
+Applies FFT (Fast Fourier Transform) to curve data as part of the chart tab's functionality.
+
+For a complete operations, see [Operation API Example - FFT](/document/operation-api/example/example_chart_for_operation_api#fft).
+
+ [CreateFiltering\(IEnumerable&lt;string\>, FilteringType, int, double, double\)](VM.Operations.Post.Interfaces.IOperationsLine2DViewModel.CreateFiltering.md\#VM\_Operations\_Post\_Interfaces\_IOperationsLine2DViewModel\_CreateFiltering\_System\_Collections\_Generic\_IEnumerable\_System\_String\_\_VM\_Models\_Post\_FilteringType\_System\_Int32\_System\_Double\_System\_Double\_)
+
+Applies data filtering and smoothing to curve data as part of the chart tab's Signal Processing functionality.
+
+For a complete operations, see [Operation API Example - Signal Processing](/document/operation-api/example/example_chart_for_operation_api#signal-processing).
+
+ [CreateFiltering\(IEnumerable&lt;IOperationsLineDataSeriesViewModelBase\>, FilteringType, int, double, double\)](VM.Operations.Post.Interfaces.IOperationsLine2DViewModel.CreateFiltering.md\#VM\_Operations\_Post\_Interfaces\_IOperationsLine2DViewModel\_CreateFiltering\_System\_Collections\_Generic\_IEnumerable\_VM\_Operations\_Post\_Interfaces\_IOperationsLineDataSeriesViewModelBase\_\_VM\_Models\_Post\_FilteringType\_System\_Int32\_System\_Double\_System\_Double\_)
+
+Applies data filtering and smoothing to curve data as part of the chart tab's Signal Processing functionality.
+
+For a complete operations, see [Operation API Example - Signal Processing](/document/operation-api/example/example_chart_for_operation_api#signal-processing).
+
+ [CreateFrequencyWeighting\(IEnumerable&lt;string\>, WeightingType, FrequencyAxisType\)](VM.Operations.Post.Interfaces.IOperationsLine2DViewModel.CreateFrequencyWeighting.md\#VM\_Operations\_Post\_Interfaces\_IOperationsLine2DViewModel\_CreateFrequencyWeighting\_System\_Collections\_Generic\_IEnumerable\_System\_String\_\_VM\_Models\_Post\_WeightingType\_VM\_Models\_Post\_FrequencyAxisType\_)
+
+Applies frequency weighting to curve data as part of the chart tab's Signal Processing functionality.
+
+For a complete operations, see [Operation API Example - Signal Processing](/document/operation-api/example/example_chart_for_operation_api#signal-processing).
+
+ [CreateFrequencyWeighting\(IEnumerable&lt;IOperationsLineDataSeriesViewModelBase\>, WeightingType, FrequencyAxisType\)](VM.Operations.Post.Interfaces.IOperationsLine2DViewModel.CreateFrequencyWeighting.md\#VM\_Operations\_Post\_Interfaces\_IOperationsLine2DViewModel\_CreateFrequencyWeighting\_System\_Collections\_Generic\_IEnumerable\_VM\_Operations\_Post\_Interfaces\_IOperationsLineDataSeriesViewModelBase\_\_VM\_Models\_Post\_WeightingType\_VM\_Models\_Post\_FrequencyAxisType\_)
+
+Applies frequency weighting to curve data as part of the chart tab's Signal Processing functionality.
+
+For a complete operations, see [Operation API Example - Signal Processing](/document/operation-api/example/example_chart_for_operation_api#signal-processing).
+
+ [CreateIntegratedCurve\(IEnumerable&lt;string\>\)](VM.Operations.Post.Interfaces.IOperationsLine2DViewModel.CreateIntegratedCurve.md\#VM\_Operations\_Post\_Interfaces\_IOperationsLine2DViewModel\_CreateIntegratedCurve\_System\_Collections\_Generic\_IEnumerable\_System\_String\_\_)
+
+Integrates curve data as part of the chart tab's Calculus functionality.
+
+For a complete operations, see [Operation API Example - Calculus](/document/operation-api/example/example_chart_for_operation_api#calculus).
+
+ [CreateIntegratedCurve\(IEnumerable&lt;IOperationsLineDataSeriesViewModelBase\>\)](VM.Operations.Post.Interfaces.IOperationsLine2DViewModel.CreateIntegratedCurve.md\#VM\_Operations\_Post\_Interfaces\_IOperationsLine2DViewModel\_CreateIntegratedCurve\_System\_Collections\_Generic\_IEnumerable\_VM\_Operations\_Post\_Interfaces\_IOperationsLineDataSeriesViewModelBase\_\_)
+
+Integrates curve data as part of the chart tab's Calculus functionality.
+
+For a complete operations, see [Operation API Example - Calculus](/document/operation-api/example/example_chart_for_operation_api#calculus).
+
+ [CreateInterpolation\(IEnumerable&lt;string\>, int\)](VM.Operations.Post.Interfaces.IOperationsLine2DViewModel.CreateInterpolation.md\#VM\_Operations\_Post\_Interfaces\_IOperationsLine2DViewModel\_CreateInterpolation\_System\_Collections\_Generic\_IEnumerable\_System\_String\_\_System\_Int32\_)
+
+Applies interpolation to curve data as part of the chart tab's Interpolation functionality.
+
+For a complete operations, see [Operation API Example - Interpolation](/document/operation-api/example/example_chart_for_operation_api#interpolation).
+
+ [CreateInterpolation\(IEnumerable&lt;IOperationsLineDataSeriesViewModelBase\>, int\)](VM.Operations.Post.Interfaces.IOperationsLine2DViewModel.CreateInterpolation.md\#VM\_Operations\_Post\_Interfaces\_IOperationsLine2DViewModel\_CreateInterpolation\_System\_Collections\_Generic\_IEnumerable\_VM\_Operations\_Post\_Interfaces\_IOperationsLineDataSeriesViewModelBase\_\_System\_Int32\_)
+
+Applies interpolation to curve data as part of the chart tab's Interpolation functionality.
+
+For a complete operations, see [Operation API Example - Interpolation](/document/operation-api/example/example_chart_for_operation_api#interpolation).
+
+ [CreateLogScale\(IEnumerable&lt;string\>, double, double, bool\)](VM.Operations.Post.Interfaces.IOperationsLine2DViewModel.CreateLogScale.md\#VM\_Operations\_Post\_Interfaces\_IOperationsLine2DViewModel\_CreateLogScale\_System\_Collections\_Generic\_IEnumerable\_System\_String\_\_System\_Double\_System\_Double\_System\_Boolean\_)
+
+Applies a logarithmic scale to curve data as part of the chart tab's Transform functionality.
+
+ [CreateLogScale\(IEnumerable&lt;IOperationsLineDataSeriesViewModelBase\>, double, double, bool\)](VM.Operations.Post.Interfaces.IOperationsLine2DViewModel.CreateLogScale.md\#VM\_Operations\_Post\_Interfaces\_IOperationsLine2DViewModel\_CreateLogScale\_System\_Collections\_Generic\_IEnumerable\_VM\_Operations\_Post\_Interfaces\_IOperationsLineDataSeriesViewModelBase\_\_System\_Double\_System\_Double\_System\_Boolean\_)
+
+Applies a logarithmic scale to curve data as part of the chart tab's Transform functionality.
+
+ [CreateSTFT\(ISTFTParameters, IList&lt;string\>\)](VM.Operations.Post.Interfaces.IOperationsLine2DViewModel.CreateSTFT.md\#VM\_Operations\_Post\_Interfaces\_IOperationsLine2DViewModel\_CreateSTFT\_VM\_Models\_Post\_ISTFTParameters\_System\_Collections\_Generic\_IList\_System\_String\_\_)
+
+Creates a Short Time Fourier Transform (STFT) for curve data and updates the heatmap data.
+
+For a complete operations, see [Operation API Example - STFT](/document/operation-api/example/example_chart_for_operation_api#stft).
+
+ [CreateSTFT\(ISTFTParameters, IEnumerable&lt;IOperationsLineDataSeriesViewModelBase\>\)](VM.Operations.Post.Interfaces.IOperationsLine2DViewModel.CreateSTFT.md\#VM\_Operations\_Post\_Interfaces\_IOperationsLine2DViewModel\_CreateSTFT\_VM\_Models\_Post\_ISTFTParameters\_System\_Collections\_Generic\_IEnumerable\_VM\_Operations\_Post\_Interfaces\_IOperationsLineDataSeriesViewModelBase\_\_)
+
+Creates a Short Time Fourier Transform (STFT) for curve data and updates the heatmap data.
+
+For a complete operations, see [Operation API Example - STFT](/document/operation-api/example/example_chart_for_operation_api#stft).
+
+ [CreateScale\(IEnumerable&lt;string\>, double, double\)](VM.Operations.Post.Interfaces.IOperationsLine2DViewModel.CreateScale.md\#VM\_Operations\_Post\_Interfaces\_IOperationsLine2DViewModel\_CreateScale\_System\_Collections\_Generic\_IEnumerable\_System\_String\_\_System\_Double\_System\_Double\_)
+
+Scales curve data by the specified scale values as part of the chart tab's Transform functionality.
+
+For a complete operations, see [Operation API Example - Transform](/document/operation-api/example/example_chart_for_operation_api#transform).
+
+ [CreateScale\(IEnumerable&lt;IOperationsLineDataSeriesViewModelBase\>, double, double\)](VM.Operations.Post.Interfaces.IOperationsLine2DViewModel.CreateScale.md\#VM\_Operations\_Post\_Interfaces\_IOperationsLine2DViewModel\_CreateScale\_System\_Collections\_Generic\_IEnumerable\_VM\_Operations\_Post\_Interfaces\_IOperationsLineDataSeriesViewModelBase\_\_System\_Double\_System\_Double\_)
+
+Scales curve data by the specified scale values as part of the chart tab's Transform functionality.
+
+For a complete operations, see [Operation API Example - Transform](/document/operation-api/example/example_chart_for_operation_api#transform).
+
+ [CreateSimpleMath\(IEnumerable&lt;string\>, SimpleMathType, int\)](VM.Operations.Post.Interfaces.IOperationsLine2DViewModel.CreateSimpleMath.md\#VM\_Operations\_Post\_Interfaces\_IOperationsLine2DViewModel\_CreateSimpleMath\_System\_Collections\_Generic\_IEnumerable\_System\_String\_\_VM\_Models\_Post\_SimpleMathType\_System\_Int32\_)
+
+Performs simple mathematical operations (+, -, *) on curve data as part of the chart tab's Simple Math functionality.
+
+For a complete operations, see [Operation API Example - Simple Math](/document/operation-api/example/example_chart_for_operation_api#simple-math).
+
+ [CreateSimpleMath\(IEnumerable&lt;IOperationsLineDataSeriesViewModelBase\>, SimpleMathType, int\)](VM.Operations.Post.Interfaces.IOperationsLine2DViewModel.CreateSimpleMath.md\#VM\_Operations\_Post\_Interfaces\_IOperationsLine2DViewModel\_CreateSimpleMath\_System\_Collections\_Generic\_IEnumerable\_VM\_Operations\_Post\_Interfaces\_IOperationsLineDataSeriesViewModelBase\_\_VM\_Models\_Post\_SimpleMathType\_System\_Int32\_)
+
+Performs simple mathematical operations (+, -, *) on curve data as part of the chart tab's Simple Math functionality.
+
+For a complete operations, see [Operation API Example - Simple Math](/document/operation-api/example/example_chart_for_operation_api#simple-math).
+
+ [CreateSmoothing\(IEnumerable&lt;string\>, SmoothingType, int, int\)](VM.Operations.Post.Interfaces.IOperationsLine2DViewModel.CreateSmoothing.md\#VM\_Operations\_Post\_Interfaces\_IOperationsLine2DViewModel\_CreateSmoothing\_System\_Collections\_Generic\_IEnumerable\_System\_String\_\_VM\_Models\_Post\_SmoothingType\_System\_Int32\_System\_Int32\_)
+
+Applies data filtering and smoothing to curve data as part of the chart tab's Signal Processing functionality.
+
+For a complete operations, see [Operation API Example - Signal Processing](/document/operation-api/example/example_chart_for_operation_api#signal-processing).
+
+ [CreateSmoothing\(IEnumerable&lt;IOperationsLineDataSeriesViewModelBase\>, SmoothingType, int, int\)](VM.Operations.Post.Interfaces.IOperationsLine2DViewModel.CreateSmoothing.md\#VM\_Operations\_Post\_Interfaces\_IOperationsLine2DViewModel\_CreateSmoothing\_System\_Collections\_Generic\_IEnumerable\_VM\_Operations\_Post\_Interfaces\_IOperationsLineDataSeriesViewModelBase\_\_VM\_Models\_Post\_SmoothingType\_System\_Int32\_System\_Int32\_)
+
+Applies data filtering and smoothing to curve data as part of the chart tab's Signal Processing functionality.
+
+For a complete operations, see [Operation API Example - Signal Processing](/document/operation-api/example/example_chart_for_operation_api#signal-processing).
+
+ [CreateTranslate\(IEnumerable&lt;string\>, double, double\)](VM.Operations.Post.Interfaces.IOperationsLine2DViewModel.CreateTranslate.md\#VM\_Operations\_Post\_Interfaces\_IOperationsLine2DViewModel\_CreateTranslate\_System\_Collections\_Generic\_IEnumerable\_System\_String\_\_System\_Double\_System\_Double\_)
+
+Translates curve data by the specified offsets as part of the chart tab's Transform functionality.
+
+For a complete operations, see [Operation API Example - Transform](/document/operation-api/example/example_chart_for_operation_api#transform).
+
+ [CreateTranslate\(IEnumerable&lt;IOperationsLineDataSeriesViewModelBase\>, double, double\)](VM.Operations.Post.Interfaces.IOperationsLine2DViewModel.CreateTranslate.md\#VM\_Operations\_Post\_Interfaces\_IOperationsLine2DViewModel\_CreateTranslate\_System\_Collections\_Generic\_IEnumerable\_VM\_Operations\_Post\_Interfaces\_IOperationsLineDataSeriesViewModelBase\_\_System\_Double\_System\_Double\_)
+
+Translates curve data by the specified offsets as part of the chart tab's Transform functionality.
+
+For a complete operations, see [Operation API Example - Transform](/document/operation-api/example/example_chart_for_operation_api#transform).

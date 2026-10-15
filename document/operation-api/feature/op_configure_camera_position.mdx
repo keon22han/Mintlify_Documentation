@@ -1,0 +1,16 @@
+---
+title: "Configure Camera Position"
+---
+This feature covers configuring the camera viewpoint of [`IOperationsAnimation`](/lib/VM-Operations-Post-Interfaces-IOperationsAnimation) with [`IViewSpec`](/lib/VM-Operations-Post-Interfaces-IViewSpec), created through [Manage View - Creating](/document/operation-api/feature/op_manage_view#creating), for the current animation frame and assigning different viewpoints to loaded animation frames during recording.
+
+## Current Viewpoint
+Use `IViewSpec` to define the camera viewpoint.
+
+- Set the camera position with [`Eye`](/lib/VM-Operations-Post-Interfaces-IViewSpec-Eye).
+- Set the camera target with [`Target`](/lib/VM-Operations-Post-Interfaces-IViewSpec-Target).
+- Set the camera up direction with [`UpVector`](/lib/VM-Operations-Post-Interfaces-IViewSpec-UpVector).
+
+Select the animation frame to apply the viewpoint to with [`MoveToAnimationFrame(int)`](/lib/VM-Operations-Post-Interfaces-IOperationAnalysisResult-MoveToAnimationFrame), see [Control Animation Playback](/document/operation-api/feature/op_control_animation_playback). Apply the changed viewpoint to that frame with [`SetViewSpec(IViewSpec)`](/lib/VM-Operations-Post-Interfaces-IOperationsAnimation-SetViewSpec); the new viewpoint affects the displayed or captured image for that frame.
+
+## Frame-Specific Viewpoints
+Prepare an array of `IViewSpec` entries with [`GetViewSpecs()`](/lib/VM-Operations-Post-Interfaces-IOperationsAnimation-GetViewSpecs). The array contains one `IViewSpec` for each frame available in the animation result. Set the `Eye`, `Target`, and `UpVector` values in each entry and pass the array to [`RecordingAnimation(string, RecordingType, RecordingRangeType, int, IViewSpec[])`](/lib/VM-Operations-Post-Interfaces-IOperationsAnimation-RecordingAnimation). During recording, the corresponding specification is applied before each frame is captured, see [Control Animation Playback](/document/operation-api/feature/op_control_animation_playback).

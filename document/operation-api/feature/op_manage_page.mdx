@@ -1,0 +1,22 @@
+---
+title: "Manage Page"
+---
+This feature covers creating, finding, activating, and closing [`IPage`](/lib/VM-Operations-Post-Interfaces-IPage) with [`ApplicationHandler`](/lib/VM-API-Post-Operations-ApplicationHandler) while running Operation API scripts.
+
+## Creating
+Create a new `IPage` with [`AddPage(string)`](/lib/VM-API-Post-Operations-ApplicationHandler-AddPage).
+
+After creation, create `IView` on new `IPage`, see [Manage View](/document/operation-api/feature/op_manage_view).
+
+## Getting
+Get `IPage` with [`GetPage(string)`](/lib/VM-API-Post-Operations-ApplicationHandler-GetPage) or [`GetPage(Guid)`](/lib/VM-API-Post-Operations-ApplicationHandler-GetPage).
+
+Get the active `IPage` with [`GetActivePage()`](/lib/VM-API-Post-Operations-ApplicationHandler-GetActivePage).
+
+Get all pages with [`GetPages()`](/lib/VM-API-Post-Operations-ApplicationHandler-GetPages).
+
+## Activating
+Activate the target `IPage` with [`Activate()`](/lib/VM-Operations-Post-Interfaces-IPage-Activate). Other pages are deactivated.
+
+## Closing
+Close `IPage` through [`Close()`](/lib/VM-Operations-Post-Interfaces-IPage-Close), [`ClosePage(Guid)`](/lib/VM-API-Post-Operations-ApplicationHandler-ClosePage), or [`ClosePage(string)`](/lib/VM-API-Post-Operations-ApplicationHandler-ClosePage).

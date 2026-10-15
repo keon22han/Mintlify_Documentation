@@ -1,0 +1,24 @@
+---
+title: "Property PlasticityCorrection"
+sidebarTitle: "PlasticityCorrection"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationsFEBody_PlasticityCorrection"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## PlasticityCorrection {#VM_Operations_Post_Interfaces_IOperationsFEBody_PlasticityCorrection}
+
+Gets or sets the correction method selected from [`PlasticityCorrection`](/lib/VM-Models-Post-PlasticityCorrection) for strain-life fatigue analysis.
+
+```csharp
+PlasticityCorrection PlasticityCorrection { get; set; }
+```
+
+### Property Value
+
+ [PlasticityCorrection](/lib/VM-Models-Post-PlasticityCorrection)
+
+### Remarks
+
+This property applies when [`AnalysisType`](/lib/VM-Operations-Post-Interfaces-IOperationsFEBody-AnalysisType) selects strain-life analysis. Changing it updates the plasticity correction stored for fatigue evaluation.

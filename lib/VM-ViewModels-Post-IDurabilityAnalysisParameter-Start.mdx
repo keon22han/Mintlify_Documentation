@@ -1,0 +1,24 @@
+---
+title: "Property Start"
+sidebarTitle: "Start"
+---
+<a id="VM_ViewModels_Post_IDurabilityAnalysisParameter_Start"></a>
+
+Namespace: [VM.ViewModels.Post](/lib/VM-ViewModels-Post)  
+Assembly: VM.ViewModels.Post.dll  
+
+## Start {#VM_ViewModels_Post_IDurabilityAnalysisParameter_Start}
+
+Gets or sets the first State included in the fatigue analysis range.
+
+```csharp
+int Start { get; set; }
+```
+
+### Property Value
+
+ int
+
+### Remarks
+
+[RunFatigueAnalysis\(IDurabilityAnalysisParameter\)](/lib/VM-API-Post-Operations-DurabilityAnalysis-RunFatigueAnalysis) analyzes States from this value through [`End`](/lib/VM-ViewModels-Post-IDurabilityAnalysisParameter-End), including both endpoints.

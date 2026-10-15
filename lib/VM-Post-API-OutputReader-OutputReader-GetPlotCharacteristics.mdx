@@ -1,0 +1,40 @@
+---
+title: "Method GetPlotCharacteristics"
+sidebarTitle: "GetPlotCharacteristics"
+---
+<a id="VM_Post_API_OutputReader_OutputReader_GetPlotCharacteristics_System_String_"></a>
+
+Namespace: [VM.Post.API.OutputReader](/lib/VM-Post-API-OutputReader)  
+Assembly: VM.Post.API.OutputReader.dll  
+
+## GetPlotCharacteristics\(string\) {#VM_Post_API_OutputReader_OutputReader_GetPlotCharacteristics_System_String_}
+
+Gets characteristic names available for an entity identified by `entityName`.
+
+```csharp
+public IEnumerable<string> GetPlotCharacteristics(string entityName)
+```
+
+### Parameters
+
+`entityName` string
+
+Full name of the entity whose plot characteristics are requested.
+
+### Returns
+
+ IEnumerable&lt;string\>
+
+Enumerable of characteristic full names, or an empty enumerable when the entity is not found or does not provide plot data.
+
+### Examples
+
+```python
+# Read curve characteristics for an entity.
+entity_name = "FEBody_01"
+characteristics = output_reader.GetPlotCharacteristics(entity_name)
+```
+
+### Remarks
+
+The lookup and characteristic query are performed with [`OutputReader`](/lib/VM-Post-API-OutputReader-OutputReader).

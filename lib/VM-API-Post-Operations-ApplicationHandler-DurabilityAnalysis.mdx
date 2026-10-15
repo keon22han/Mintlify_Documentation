@@ -1,0 +1,33 @@
+---
+title: "Method DurabilityAnalysis"
+sidebarTitle: "DurabilityAnalysis"
+---
+<a id="VM_API_Post_Operations_ApplicationHandler_DurabilityAnalysis_VM_ViewModels_Post_IDurabilityAnalysisParameter_"></a>
+
+Namespace: [VM.API.Post.Operations](/lib/VM-API-Post-Operations)  
+Assembly: VM.API.Post.Operations.dll  
+
+## DurabilityAnalysis\(IDurabilityAnalysisParameter\) {#VM_API_Post_Operations_ApplicationHandler_DurabilityAnalysis_VM_ViewModels_Post_IDurabilityAnalysisParameter_}
+
+Runs the obsolete combined durability-analysis operation.
+
+```csharp
+[Obsolete("This method is considered outdated and its use is discouraged. It may be removed in future versions, so it is advisable to use the RunFatigueAnalysisAndGenerateContours function of the DurabilityAnalysis class instead.", true)]
+public bool DurabilityAnalysis(IDurabilityAnalysisParameter parameter)
+```
+
+### Parameters
+
+`parameter` [IDurabilityAnalysisParameter](/lib/VM-ViewModels-Post-IDurabilityAnalysisParameter)
+
+The fatigue-analysis and contour-generation settings.
+
+### Returns
+
+ bool
+
+&lt;code>true&lt;/code> when both operations complete successfully; otherwise, &lt;code>false&lt;/code>.
+
+### Remarks
+
+This method is obsolete. Use [RunFatigueAnalysis\(IDurabilityAnalysisParameter\)](/lib/VM-API-Post-Operations-DurabilityAnalysis-RunFatigueAnalysis) and the contour APIs instead.

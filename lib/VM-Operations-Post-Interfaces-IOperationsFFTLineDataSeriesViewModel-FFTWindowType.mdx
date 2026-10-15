@@ -1,0 +1,24 @@
+---
+title: "Property FFTWindowType"
+sidebarTitle: "FFTWindowType"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationsFFTLineDataSeriesViewModel_FFTWindowType"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## FFTWindowType {#VM_Operations_Post_Interfaces_IOperationsFFTLineDataSeriesViewModel_FFTWindowType}
+
+Gets or sets the window function selected from `FFTWindowType` and applied before FFT.
+
+```csharp
+FFTWindowType FFTWindowType { get; set; }
+```
+
+### Property Value
+
+ [FFTWindowType](/lib/VM-Models-Post-FFTWindowType)
+
+### Remarks
+
+Changing this value refreshes the generated curve. The selected window weights the interpolated source samples before the FFT calculation. The `None` selection leaves those samples unchanged.

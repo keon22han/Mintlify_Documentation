@@ -1,0 +1,24 @@
+---
+title: "Property ReferenceValue"
+sidebarTitle: "ReferenceValue"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationsHeatMapSTFTDataViewModel_ReferenceValue"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## ReferenceValue {#VM_Operations_Post_Interfaces_IOperationsHeatMapSTFTDataViewModel_ReferenceValue}
+
+Gets or sets the reference value used for STFT decibel scaling.
+
+```csharp
+double ReferenceValue { get; set; }
+```
+
+### Property Value
+
+ double
+
+### Remarks
+
+Changing this value refreshes STFT data when [`SelectedScaleType`](/lib/VM-Operations-Post-Interfaces-IOperationsHeatMapSTFTDataViewModel-SelectedScaleType) selects decibel scaling. It has no scaling effect in the original-value mode.

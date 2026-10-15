@@ -1,0 +1,24 @@
+---
+title: "Property SelectedScaleType"
+sidebarTitle: "SelectedScaleType"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationsHeatMapSTFTDataViewModel_SelectedScaleType"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## SelectedScaleType {#VM_Operations_Post_Interfaces_IOperationsHeatMapSTFTDataViewModel_SelectedScaleType}
+
+Gets or sets [`STFTScaleType`](/lib/VM-Models-Post-STFTScaleType) used for STFT values.
+
+```csharp
+STFTScaleType SelectedScaleType { get; set; }
+```
+
+### Property Value
+
+ [STFTScaleType](/lib/VM-Models-Post-STFTScaleType)
+
+### Remarks
+
+Changing this value refreshes the heat map. Decibel mode also makes [`ReferenceValue`](/lib/VM-Operations-Post-Interfaces-IOperationsHeatMapSTFTDataViewModel-ReferenceValue) applicable.

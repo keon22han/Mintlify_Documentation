@@ -1,0 +1,43 @@
+---
+title: "Method GetBodies"
+sidebarTitle: "GetBodies"
+---
+<a id="VM_Post_API_OutputReader_OutputReader_GetBodies_VM_Models_Post_BodyType_System_Boolean_"></a>
+
+Namespace: [VM.Post.API.OutputReader](/lib/VM-Post-API-OutputReader)  
+Assembly: VM.Post.API.OutputReader.dll  
+
+## GetBodies\(BodyType, bool\) {#VM_Post_API_OutputReader_OutputReader_GetBodies_VM_Models_Post_BodyType_System_Boolean_}
+
+Gets body types and names matching the selected [`BodyType`](/lib/VM-Models-Post-BodyType).
+
+```csharp
+public IEnumerable<(BodyType, string)> GetBodies(BodyType type, bool includeDuymmy = false)
+```
+
+### Parameters
+
+`type` [BodyType](/lib/VM-Models-Post-BodyType)
+
+Body type used to filter the result.
+
+`includeDuymmy` bool
+
+`true` to include dummy bodies. `false` excludes dummy bodies.
+
+### Returns
+
+ IEnumerable&lt;\([BodyType](/lib/VM-Models-Post-BodyType), string\)\>
+
+Enumerable of body type and full-name pairs matching the filter.
+
+### Examples
+
+```python
+# Read rigid-body names and types.
+bodies = output_reader.GetBodies(BodyType.RIGID)
+```
+
+### Remarks
+
+The method reads body entities from [`OutputReader`](/lib/VM-Post-API-OutputReader-OutputReader) and omits dummy bodies unless `includeDuymmy` is `true`.

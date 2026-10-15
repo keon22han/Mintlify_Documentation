@@ -1,0 +1,24 @@
+---
+title: "Property HighCutOffFrequency"
+sidebarTitle: "HighCutOffFrequency"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationsSignalProcessingLineDataSeriesViewModel_HighCutOffFrequency"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## HighCutOffFrequency {#VM_Operations_Post_Interfaces_IOperationsSignalProcessingLineDataSeriesViewModel_HighCutOffFrequency}
+
+Gets or sets the upper cutoff frequency, in the frequency unit of the source curve, for band-pass or band-stop filtering.
+
+```csharp
+double HighCutOffFrequency { get; set; }
+```
+
+### Property Value
+
+ double
+
+### Remarks
+
+This value is used when [`FilteringType`](/lib/VM-Operations-Post-Interfaces-IOperationsSignalProcessingLineDataSeriesViewModel-FilteringType) selects a band filter. Changing it recalculates the calculated curve when an original curve exists.

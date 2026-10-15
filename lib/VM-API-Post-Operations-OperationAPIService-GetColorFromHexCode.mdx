@@ -1,0 +1,50 @@
+---
+title: "Method GetColorFromHexCode"
+sidebarTitle: "GetColorFromHexCode"
+---
+<a id="VM_API_Post_Operations_OperationAPIService_GetColorFromHexCode_System_String_"></a>
+
+Namespace: [VM.API.Post.Operations](/lib/VM-API-Post-Operations)  
+Assembly: VM.API.Post.Operations.dll  
+
+## GetColorFromHexCode\(string\) {#VM_API_Post_Operations_OperationAPIService_GetColorFromHexCode_System_String_}
+
+Converts a hex color code to `Color`.
+
+```csharp
+public static Color GetColorFromHexCode(string color)
+```
+
+### Parameters
+
+`color` string
+
+A color string in a format accepted by `ColorConverter`.
+
+### Returns
+
+ Color
+
+The converted `Color` value.
+
+### Examples
+
+```python
+page_name = "Page"
+page = application_handler.GetPage(page_name)
+chart_name = "Chart"
+chart = page.CreateChart(chart_name)
+# hex_code : hexadecimal color code accepted by ColorConverter
+hex_code = "#FF5733"
+chart.Legend.Background = OperationAPIService.GetColorFromHexCode(hex_code)
+```
+
+### Remarks
+
+A value such as `#FF5733` can be used to create a color with the specified channel values.
+
+### Exceptions
+
+ Exception
+
+Thrown when `color` is not a valid color string.

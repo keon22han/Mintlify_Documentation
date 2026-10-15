@@ -1,0 +1,24 @@
+---
+title: "Property Coefficient"
+sidebarTitle: "Coefficient"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationsTransformLineDataSeriesViewModel_Coefficient"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## Coefficient {#VM_Operations_Post_Interfaces_IOperationsTransformLineDataSeriesViewModel_Coefficient}
+
+Gets or sets the coefficient used by the log-scale transform.
+
+```csharp
+double Coefficient { get; set; }
+```
+
+### Property Value
+
+ double
+
+### Remarks
+
+When the transform type is `LogScale`, this value scales the logarithmic result. Setting [`IsDecibel`](/lib/VM-Operations-Post-Interfaces-IOperationsTransformLineDataSeriesViewModel-IsDecibel) to `true` changes it to `20`.

@@ -1,0 +1,45 @@
+---
+title: "Namespace VM.ViewModels.Post"
+sidebarTitle: "VM.ViewModels.Post"
+---
+<a id="VM_ViewModels_Post"></a>
+
+### Namespaces
+
+ [VM.ViewModels.Post.Interfaces](/lib/VM-ViewModels-Post-Interfaces)
+
+### Interfaces
+
+ [IAnalysisResultViewModel](/lib/VM-ViewModels-Post-IAnalysisResultViewModel)
+
+Represents analysis result data loaded from a result document and exposed to Operation API views.
+
+ [IDurabilityAnalysisParameter](/lib/VM-ViewModels-Post-IDurabilityAnalysisParameter)
+
+Defines the result document, fatigue result name, state range, repeated-load count, and finite-element targets for [RunFatigueAnalysis\(IDurabilityAnalysisParameter\)](/lib/VM-API-Post-Operations-DurabilityAnalysis-RunFatigueAnalysis).
+
+ [IEntityBaseViewModel](/lib/VM-ViewModels-Post-IEntityBaseViewModel)
+
+Defines the identity, category, availability, and result metadata exposed for a result entity.
+
+ [IHeatMapSTFTView2DViewModel](/lib/VM-ViewModels-Post-IHeatMapSTFTView2DViewModel)
+
+Represents the 2D view of a Short-Time Fourier Transform (STFT) heat map, reached through [`STFT2DViewModel`](/lib/VM-Operations-Post-Interfaces-IOperationsHeatMapSTFTViewModel-STFT2DViewModel).
+
+This view shows STFT values on a flat time-frequency map and is used when [`IsWaterfallType`](/lib/VM-Operations-Post-Interfaces-IOperationsHeatMapSTFTViewModel-IsWaterfallType) is set to keep the flat 2D map instead of the 3D waterfall view.
+
+ [IHeatMapSTFTView3DViewModel](/lib/VM-ViewModels-Post-IHeatMapSTFTView3DViewModel)
+
+Represents the 3D waterfall view of a Short-Time Fourier Transform (STFT) heat map, reached through [`STFT3DViewModel`](/lib/VM-Operations-Post-Interfaces-IOperationsHeatMapSTFTViewModel-STFT3DViewModel).
+
+This view shows STFT values as a 3D waterfall surface over time and frequency and is used when [`IsWaterfallType`](/lib/VM-Operations-Post-Interfaces-IOperationsHeatMapSTFTViewModel-IsWaterfallType) is set to show the waterfall instead of the flat 2D map.
+
+ [ILineDataSeriesAxisViewModel](/lib/VM-ViewModels-Post-ILineDataSeriesAxisViewModel)
+
+Describes the result data assigned to one axis of a 2D curve, such as the axis returned by [`SourceX`](/lib/VM-Operations-Post-Interfaces-IOperationsLineDataSeriesViewModel-SourceX) or [`SourceY`](/lib/VM-Operations-Post-Interfaces-IOperationsLineDataSeriesViewModel-SourceY).
+
+The values read here identify which target, result characteristic, component, and coordinate system supply the numbers plotted on that axis.
+
+ [INumericParameter](/lib/VM-ViewModels-Post-INumericParameter)
+
+Defines the name and source columns used to create a curve from a numeric file.

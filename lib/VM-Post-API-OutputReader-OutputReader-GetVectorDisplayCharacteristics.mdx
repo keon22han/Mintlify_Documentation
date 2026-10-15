@@ -1,0 +1,40 @@
+---
+title: "Method GetVectorDisplayCharacteristics"
+sidebarTitle: "GetVectorDisplayCharacteristics"
+---
+<a id="VM_Post_API_OutputReader_OutputReader_GetVectorDisplayCharacteristics_System_String_"></a>
+
+Namespace: [VM.Post.API.OutputReader](/lib/VM-Post-API-OutputReader)  
+Assembly: VM.Post.API.OutputReader.dll  
+
+## GetVectorDisplayCharacteristics\(string\) {#VM_Post_API_OutputReader_OutputReader_GetVectorDisplayCharacteristics_System_String_}
+
+Gets vector-display characteristic names available for an entity identified by `entityName`.
+
+```csharp
+public IEnumerable<string> GetVectorDisplayCharacteristics(string entityName)
+```
+
+### Parameters
+
+`entityName` string
+
+Full name of the entity whose vector-display characteristics are requested.
+
+### Returns
+
+ IEnumerable&lt;string\>
+
+Enumerable of characteristic full names, or an empty enumerable when the entity is not vector-displayable.
+
+### Examples
+
+```python
+# Read vector-display characteristics for an entity.
+entity_name = "TJ_01"
+characteristics = output_reader.GetVectorDisplayCharacteristics(entity_name)
+```
+
+### Remarks
+
+The entity is looked up with [`OutputReader`](/lib/VM-Post-API-OutputReader-OutputReader). A non-vector-displayable entity produces an empty result.

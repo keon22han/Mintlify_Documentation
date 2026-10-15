@@ -1,0 +1,159 @@
+---
+title: "Namespace VM.Operations.Post.Interfaces"
+sidebarTitle: "VM.Operations.Post.Interfaces"
+---
+<a id="VM_Operations_Post_Interfaces"></a>
+
+### Interfaces
+
+ [IOperationAnalysisResult](/lib/VM-Operations-Post-Interfaces-IOperationAnalysisResult)
+
+Provides operations for reading and changing an analysis result used by an animation or chart. Implemented by [`IOperationsDynamicAnalysisResultViewModel`](/lib/VM-Operations-Post-Interfaces-IOperationsDynamicAnalysisResultViewModel) for a dynamic analysis result and [`IOperationsEigenValueAnalysisResultViewModel`](/lib/VM-Operations-Post-Interfaces-IOperationsEigenValueAnalysisResultViewModel) for an eigenvalue analysis result.
+
+ [IOperationsAnimation](/lib/VM-Operations-Post-Interfaces-IOperationsAnimation)
+
+Provides animation-view properties and operations for camera control, playback, recording, entity visibility, coordinate systems, and result display settings.
+
+ [IOperationsAxisViewModelBase](/lib/VM-Operations-Post-Interfaces-IOperationsAxisViewModelBase)
+
+Provides title text and font settings for a chart axis.
+
+ [IOperationsCSYSViewModel](/lib/VM-Operations-Post-Interfaces-IOperationsCSYSViewModel)
+
+Provides configuration for a coordinate system created with [`IOperationsAnimation`](/lib/VM-Operations-Post-Interfaces-IOperationsAnimation).
+
+ [IOperationsCalculusLineDataSeriesViewModel](/lib/VM-Operations-Post-Interfaces-IOperationsCalculusLineDataSeriesViewModel)
+
+Provides the calculus operation applied to a calculated curve.
+
+ [IOperationsChartViewModel](/lib/VM-Operations-Post-Interfaces-IOperationsChartViewModel)
+
+Provides legend access and numeric-file import operations for a chart view.
+
+ [IOperationsContourViewModel](/lib/VM-Operations-Post-Interfaces-IOperationsContourViewModel)
+
+Provides display, component, range, and legend settings for contour data created with [`IOperationAnalysisResult`](/lib/VM-Operations-Post-Interfaces-IOperationAnalysisResult).
+
+ [IOperationsCustomAxisViewModel](/lib/VM-Operations-Post-Interfaces-IOperationsCustomAxisViewModel)
+
+Defines scale, label-format, font, range, and unit settings for a custom chart axis.
+
+ [IOperationsDynamicAnalysisResultViewModel](/lib/VM-Operations-Post-Interfaces-IOperationsDynamicAnalysisResultViewModel)
+
+Provides frame, vector-display, and expression operations for a dynamic analysis result through [`IOperationAnalysisResult`](/lib/VM-Operations-Post-Interfaces-IOperationAnalysisResult).
+
+ [IOperationsEigenValueAnalysisResultViewModel](/lib/VM-Operations-Post-Interfaces-IOperationsEigenValueAnalysisResultViewModel)
+
+Provides sampling-time, frequency, and mode-shape frame operations for an eigenvalue analysis result through [`IOperationAnalysisResult`](/lib/VM-Operations-Post-Interfaces-IOperationAnalysisResult).
+
+ [IOperationsElementViewModel](/lib/VM-Operations-Post-Interfaces-IOperationsElementViewModel)
+
+Provides the operation for changing the identifier of an element in finite-element result data.
+
+ [IOperationsFEBody](/lib/VM-Operations-Post-Interfaces-IOperationsFEBody)
+
+Provides deformation, fatigue, property, and finite-element selection operations for a finite-element body.
+
+ [IOperationsFFTLineDataSeriesViewModel](/lib/VM-Operations-Post-Interfaces-IOperationsFFTLineDataSeriesViewModel)
+
+Provides the time range, window, scale, result, and sample-count settings used to regenerate a calculated FFT curve.
+
+ [IOperationsFrequencyViewModel](/lib/VM-Operations-Post-Interfaces-IOperationsFrequencyViewModel)
+
+Provides the enabled state for an eigenvalue frequency and controls its mode-shape animation.
+
+ [IOperationsHeatMapBaseViewModel](/lib/VM-Operations-Post-Interfaces-IOperationsHeatMapBaseViewModel)
+
+Provides legend range, legend appearance, and curve export operations for a heat-map view.
+
+ [IOperationsHeatMapSTFTDataViewModel](/lib/VM-Operations-Post-Interfaces-IOperationsHeatMapSTFTDataViewModel)
+
+Provides the source, scaling, legend, and export settings used to calculate Short-Time Fourier Transform (STFT) heat-map data.
+
+ [IOperationsHeatMapSTFTViewModel](/lib/VM-Operations-Post-Interfaces-IOperationsHeatMapSTFTViewModel)
+
+Provides access to the 2D heat-map and 3D waterfall representations of a Short-Time Fourier Transform (STFT).
+
+ [IOperationsHeatmapLineDataSeriesViewModel](/lib/VM-Operations-Post-Interfaces-IOperationsHeatmapLineDataSeriesViewModel)
+
+Provides interval and harmonic settings for a heat-map curve.
+
+ [IOperationsHeatmapNumericAxis2DViewModel](/lib/VM-Operations-Post-Interfaces-IOperationsHeatmapNumericAxis2DViewModel)
+
+Provides label-formatting and manual range settings for a numeric axis in a 2D STFT heat map.
+
+ [IOperationsInterpolationLineDataSeriesViewModel](/lib/VM-Operations-Post-Interfaces-IOperationsInterpolationLineDataSeriesViewModel)
+
+Provides the generated-point setting for an interpolated curve.
+
+ [IOperationsLegendModifier](/lib/VM-Operations-Post-Interfaces-IOperationsLegendModifier)
+
+Provides appearance, filtering, and placement settings for the legend rendered by a chart.
+
+ [IOperationsLine2DViewModel](/lib/VM-Operations-Post-Interfaces-IOperationsLine2DViewModel)
+
+Provides 2D chart display settings and operations that create transformed curve data.
+
+ [IOperationsLine2DViewModelBase](/lib/VM-Operations-Post-Interfaces-IOperationsLine2DViewModelBase)
+
+Provides chart appearance, curve management, lookup, and export operations shared by 2D chart views.
+
+ [IOperationsLineDataSeriesAxisViewModel](/lib/VM-Operations-Post-Interfaces-IOperationsLineDataSeriesAxisViewModel)
+
+Defines the public axis-information contract used by curve source settings, carrying source-file and result-path metadata that identifies target, characteristic, component, and coordinate-system data for a curve.
+
+ [IOperationsLineDataSeriesViewModel](/lib/VM-Operations-Post-Interfaces-IOperationsLineDataSeriesViewModel)
+
+Provides source-axis settings and axis-data creation operations for a curve.
+
+ [IOperationsLineDataSeriesViewModelBase](/lib/VM-Operations-Post-Interfaces-IOperationsLineDataSeriesViewModelBase)
+
+Provides the name, line appearance, point appearance, and rendering type for a curve.
+
+ [IOperationsLineDisplayViewModel](/lib/VM-Operations-Post-Interfaces-IOperationsLineDisplayViewModel)
+
+Provides color and width settings for line-style vector display.
+
+ [IOperationsNodeViewModel](/lib/VM-Operations-Post-Interfaces-IOperationsNodeViewModel)
+
+Provides the operation for changing a node identifier in finite-element result data.
+
+ [IOperationsPointDisplayViewModel](/lib/VM-Operations-Post-Interfaces-IOperationsPointDisplayViewModel)
+
+Provides symbol-size settings for a point-style vector display.
+
+ [IOperationsPythonExpressionViewModel](/lib/VM-Operations-Post-Interfaces-IOperationsPythonExpressionViewModel)
+
+Provides the name and formula for a Python expression that produces a curve from a dynamic analysis result.
+
+ [IOperationsSignalProcessingLineDataSeriesViewModel](/lib/VM-Operations-Post-Interfaces-IOperationsSignalProcessingLineDataSeriesViewModel)
+
+Provides signal-processing settings for a calculated curve created from an existing curve.
+
+ [IOperationsSimpleMathLineDataSeriesViewModel](/lib/VM-Operations-Post-Interfaces-IOperationsSimpleMathLineDataSeriesViewModel)
+
+Provides the mathematical operation and interpolation count for a calculated curve based on existing curves.
+
+ [IOperationsTransformLineDataSeriesViewModel](/lib/VM-Operations-Post-Interfaces-IOperationsTransformLineDataSeriesViewModel)
+
+Provides transform settings for a calculated curve.
+
+ [IOperationsVectorDisplayBaseViewModel](/lib/VM-Operations-Post-Interfaces-IOperationsVectorDisplayBaseViewModel)
+
+Provides settings for a vector display created with a dynamic analysis result.
+
+ [IOperationsVectorDisplayViewModel](/lib/VM-Operations-Post-Interfaces-IOperationsVectorDisplayViewModel)
+
+Provides color, scale, and logarithmic display settings for a vector display.
+
+ [IPage](/lib/VM-Operations-Post-Interfaces-IPage)
+
+Enables creating, finding, activating, and closing [`IView`](/lib/VM-Operations-Post-Interfaces-IView) through the Operation API.
+
+ [IView](/lib/VM-Operations-Post-Interfaces-IView)
+
+Represents an animation or chart view that can be activated, arranged, and exported through the Operation API.
+
+ [IViewSpec](/lib/VM-Operations-Post-Interfaces-IViewSpec)
+
+Defines the camera position, target, and up direction applied to an animation view.

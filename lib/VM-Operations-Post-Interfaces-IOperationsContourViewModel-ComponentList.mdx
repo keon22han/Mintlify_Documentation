@@ -1,0 +1,24 @@
+---
+title: "Property ComponentList"
+sidebarTitle: "ComponentList"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationsContourViewModel_ComponentList"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## ComponentList {#VM_Operations_Post_Interfaces_IOperationsContourViewModel_ComponentList}
+
+Gets the component names available for the contour target and characteristic and accepted by [`Component`](/lib/VM-Operations-Post-Interfaces-IOperationsContourViewModel-Component).
+
+```csharp
+IEnumerable<string> ComponentList { get; }
+```
+
+### Property Value
+
+ IEnumerable&lt;string\>
+
+### Remarks
+
+The collection is provided by the created contour's selected target, mapping type, and characteristic.

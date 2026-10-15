@@ -1,0 +1,25 @@
+---
+title: "Property AnalysisType"
+sidebarTitle: "AnalysisType"
+---
+<a id="VM_Operations_Post_FatigueParameter_AnalysisType"></a>
+
+Namespace: [VM.Operations.Post](/lib/VM-Operations-Post)  
+Assembly: VM.Operations.Post.dll  
+
+## AnalysisType {#VM_Operations_Post_FatigueParameter_AnalysisType}
+
+Gets or sets the legacy fatigue method selected from [`FatigueAnalysisType`](/lib/VM-Models-Post-FatigueAnalysisType) for the legacy analysis path.
+
+```csharp
+[Obsolete("This property will be deprecated in the near future.")]
+public FatigueAnalysisType AnalysisType { get; set; }
+```
+
+### Property Value
+
+ [FatigueAnalysisType](/lib/VM-Models-Post-FatigueAnalysisType)
+
+### Remarks
+
+This property is obsolete. New analyses set [`AnalysisType`](/lib/VM-Operations-Post-Interfaces-IOperationsFEBody-AnalysisType) on the selected target body.

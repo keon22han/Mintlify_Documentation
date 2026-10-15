@@ -1,0 +1,41 @@
+---
+title: "Method RunFatigueAnalysisAndGenerateContours"
+sidebarTitle: "RunFatigueAnalysisAndGenerateContours"
+---
+<a id="VM_API_Post_Operations_DurabilityAnalysis_RunFatigueAnalysisAndGenerateContours_VM_ViewModels_Post_IDurabilityAnalysisParameter_"></a>
+
+Namespace: [VM.API.Post.Operations](/lib/VM-API-Post-Operations)  
+Assembly: VM.API.Post.Operations.dll  
+
+## RunFatigueAnalysisAndGenerateContours\(IDurabilityAnalysisParameter\) {#VM_API_Post_Operations_DurabilityAnalysis_RunFatigueAnalysisAndGenerateContours_VM_ViewModels_Post_IDurabilityAnalysisParameter_}
+
+Runs a fatigue analysis and then generates fatigue contours using the specified parameters.
+
+```csharp
+[Obsolete("This method is considered outdated and its use is discouraged. It may be removed in future versions, so it is advisable to use the RunFatigueAnalysis function of the DurabilityAnalysis class and the CreateContour method of IOperationAnalysisResult instead.", true)]
+public static bool RunFatigueAnalysisAndGenerateContours(IDurabilityAnalysisParameter parameter)
+```
+
+### Parameters
+
+`parameter` [IDurabilityAnalysisParameter](/lib/VM-ViewModels-Post-IDurabilityAnalysisParameter)
+
+The imported result document, fatigue result name, state range, repeated-load count, and target IDs used for both operations.
+
+### Returns
+
+ bool
+
+`true` when both the fatigue analysis and contour generation complete successfully; otherwise, `false`.
+
+### Remarks
+
+This method is obsolete. Call [RunFatigueAnalysis\(IDurabilityAnalysisParameter\)](/lib/VM-API-Post-Operations-DurabilityAnalysis-RunFatigueAnalysis), then call [CreateContour\(IList&lt;string\>, ContourMappingType, string, string, string\)](/lib/VM-Operations-Post-Interfaces-IOperationAnalysisResult-CreateContour) for `Fatigue/Life Cycle` and `Fatigue/Damage` instead.
+
+For the complete replacement flow, see [Operation API Example - Fatigue Analysis](/document/operation-api/example/example_analysis_for_operation_api#fatigue-analysis).
+
+### Exceptions
+
+ Exception
+
+Thrown when the active view is not an animation view or the fatigue analysis cannot complete.

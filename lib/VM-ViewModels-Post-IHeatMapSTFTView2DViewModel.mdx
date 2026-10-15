@@ -1,0 +1,17 @@
+---
+title: "Interface IHeatMapSTFTView2DViewModel"
+sidebarTitle: "IHeatMapSTFTView2DViewModel"
+---
+<a id="VM_ViewModels_Post_IHeatMapSTFTView2DViewModel"></a>
+
+Namespace: [VM.ViewModels.Post](/lib/VM-ViewModels-Post)  
+Assembly: VM.ViewModels.Post.dll  
+
+Represents the 2D view of a Short-Time Fourier Transform (STFT) heat map, reached through [`STFT2DViewModel`](/lib/VM-Operations-Post-Interfaces-IOperationsHeatMapSTFTViewModel-STFT2DViewModel).
+
+This view shows STFT values on a flat time-frequency map and is used when [`IsWaterfallType`](/lib/VM-Operations-Post-Interfaces-IOperationsHeatMapSTFTViewModel-IsWaterfallType) is set to keep the flat 2D map instead of the 3D waterfall view.
+
+```csharp
+public interface IHeatMapSTFTView2DViewModel : IViewModel, IHasGuid, ISTFTParameters
+```
+

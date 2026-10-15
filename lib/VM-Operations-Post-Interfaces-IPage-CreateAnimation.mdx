@@ -1,0 +1,60 @@
+---
+title: "Method CreateAnimation"
+sidebarTitle: "CreateAnimation"
+---
+<a id="VM_Operations_Post_Interfaces_IPage_CreateAnimation_VM_ViewModels_Post_IAnalysisResultViewModel_System_String_"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## CreateAnimation\(IAnalysisResultViewModel, string\) {#VM_Operations_Post_Interfaces_IPage_CreateAnimation_VM_ViewModels_Post_IAnalysisResultViewModel_System_String_}
+
+Creates [`IOperationsAnimation`](/lib/VM-Operations-Post-Interfaces-IOperationsAnimation) with an analysis result on this page.
+
+For a complete operations, see [Operation API Example - Create an AnimationView corresponding to the Analysis type](/document/operation-api/example/example_animation_for_operation_api#create-an-animationview-corresponding-to-the-analysis-type).
+
+```csharp
+IOperationsAnimation CreateAnimation(IAnalysisResultViewModel analysis, string name = null)
+```
+
+### Parameters
+
+`analysis` [IAnalysisResultViewModel](/lib/VM-ViewModels-Post-IAnalysisResultViewModel)
+
+Analysis result obtained from an imported result file through [`GetAnalysisResultViewModel(AnalysisResultType)`](/lib/VM-ViewModels-Post-Interfaces-IOperationDocument-GetAnalysisResultViewModel).
+
+`name` string
+
+Initial name for the new view. If omitted, a default name is generated.
+
+### Returns
+
+ [IOperationsAnimation](/lib/VM-Operations-Post-Interfaces-IOperationsAnimation)
+
+Newly created [`IOperationsAnimation`](/lib/VM-Operations-Post-Interfaces-IOperationsAnimation). The method returns `default` when [`ResultDocumentViewModel`](/lib/VM-ViewModels-Post-IAnalysisResultViewModel-ResultDocumentViewModel) does not expose VM.ViewModels.Post.ResultDocumentViewModel.
+
+### Examples
+
+```python
+# Get the dynamic analysis result from the imported document.
+# RESULT_FILE_PATH : .dfr result file path
+document = application_handler.GetDocument(RESULT_FILE_PATH)
+analysis_result_type = AnalysisResultType.Dynamics
+dynamic_analysis = document.GetAnalysisResultViewModel(analysis_result_type)
+
+# Get the page that will hold the animation.
+page_name = "Page"
+page = application_handler.GetPage(page_name)
+
+# Create the animation on the page.
+animation_view_name = "ResultAnimation"
+animation_view = page.CreateAnimation(dynamic_analysis, animation_view_name)
+```
+
+### Remarks
+
+The returned `IOperationsAnimation` is kept with [`IPage`](/lib/VM-Operations-Post-Interfaces-IPage) and becomes active immediately. Activating the new view deactivates the previously active view.
+
+<Danger>
+`analysis` must expose VM.ViewModels.Post.ResultDocumentViewModel through `ResultDocumentViewModel`. Otherwise, this method returns `default`.
+</Danger>

@@ -1,0 +1,24 @@
+---
+title: "Property AnalysisType"
+sidebarTitle: "AnalysisType"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationsFEBody_AnalysisType"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## AnalysisType {#VM_Operations_Post_Interfaces_IOperationsFEBody_AnalysisType}
+
+Gets or sets the fatigue method selected from [`FatigueAnalysisType`](/lib/VM-Models-Post-FatigueAnalysisType) for finite-element durability analysis.
+
+```csharp
+FatigueAnalysisType AnalysisType { get; set; }
+```
+
+### Property Value
+
+ [FatigueAnalysisType](/lib/VM-Models-Post-FatigueAnalysisType)
+
+### Remarks
+
+The selected method determines which fatigue settings apply. Strain-life analysis uses [`AnalysisMethodEN`](/lib/VM-Models-Post-AnalysisMethodEN) and [`PlasticityCorrection`](/lib/VM-Operations-Post-Interfaces-IOperationsFEBody-PlasticityCorrection), while stress-life analysis uses [`MeanStressCorrection`](/lib/VM-Operations-Post-Interfaces-IOperationsFEBody-MeanStressCorrection).

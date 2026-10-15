@@ -1,0 +1,44 @@
+---
+title: "Method GetMarkerInfo"
+sidebarTitle: "GetMarkerInfo"
+---
+<a id="VM_Post_API_OutputReader_OutputReader_GetMarkerInfo_System_String_"></a>
+
+Namespace: [VM.Post.API.OutputReader](/lib/VM-Post-API-OutputReader)  
+Assembly: VM.Post.API.OutputReader.dll  
+
+## GetMarkerInfo\(string\) {#VM_Post_API_OutputReader_OutputReader_GetMarkerInfo_System_String_}
+
+Gets marker values for the marker identified by `name` across the available result states.
+
+```csharp
+public IList<double[]> GetMarkerInfo(string name)
+```
+
+### Parameters
+
+`name` string
+
+Full name used to find a marker in the opened result file.
+
+### Returns
+
+ IList&lt;double\[\]\>
+
+List of value arrays for each result state, or `null` when `name` does not identify a supported marker.
+
+### Examples
+
+```python
+# Read marker values across the result states.
+marker_name = "Crank/CM"
+marker_info = output_reader.GetMarkerInfo(marker_name)
+```
+
+### Remarks
+
+Each state array contains position, orientation, velocity, angular velocity, acceleration, and angular acceleration values. [`OutputReader`](/lib/VM-Post-API-OutputReader-OutputReader) uses the Inertia marker when values are read from a general marker.
+
+<Note>
+If `name` does not identify a [`GeneralMarker`](/lib/VM-Models-Post-GeneralMarker) or `ResultMarker`, this method returns `null`.
+</Note>

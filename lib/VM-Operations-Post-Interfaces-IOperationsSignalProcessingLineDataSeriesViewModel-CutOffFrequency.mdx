@@ -1,0 +1,24 @@
+---
+title: "Property CutOffFrequency"
+sidebarTitle: "CutOffFrequency"
+---
+<a id="VM_Operations_Post_Interfaces_IOperationsSignalProcessingLineDataSeriesViewModel_CutOffFrequency"></a>
+
+Namespace: [VM.Operations.Post.Interfaces](/lib/VM-Operations-Post-Interfaces)  
+Assembly: VM.Operations.Post.dll  
+
+## CutOffFrequency {#VM_Operations_Post_Interfaces_IOperationsSignalProcessingLineDataSeriesViewModel_CutOffFrequency}
+
+Gets or sets the cutoff frequency, in the frequency unit of the source curve, for low-pass or high-pass filtering.
+
+```csharp
+double CutOffFrequency { get; set; }
+```
+
+### Property Value
+
+ double
+
+### Remarks
+
+This value is used when [`FilteringType`](/lib/VM-Operations-Post-Interfaces-IOperationsSignalProcessingLineDataSeriesViewModel-FilteringType) selects low-pass or high-pass filtering. Changing it recalculates the calculated curve when an original curve exists.
