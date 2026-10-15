@@ -23,9 +23,8 @@ IOperationsContourViewModel CreateContour(IList<string> entities, ContourMapping
 
 Full names returned by [GetContourables\(ContourMappingType\)](/lib/VM-Operations-Post-Interfaces-IOperationAnalysisResult-GetContourables) for the same `mappingType`.
 
-<Danger>
-A name that `GetContourables(ContourMappingType)` did not return causes an exception when the contour is built.
-</Danger>
+> [!IMPORTANT]
+> A name that `GetContourables(ContourMappingType)` did not return causes an exception when the contour is built.
 
 `mappingType` [ContourMappingType](/lib/VM-Models-ContourMappingType)
 
@@ -43,9 +42,8 @@ Component name returned by [GetContourComponents\(string, ContourMappingType, st
 
 Name for the new contour. If omitted, the name combines `characteristic` and `component`, and a numbered variant is generated automatically when that name is already used in the analysis result.
 
-<Danger>
-Passing `newName` when the analysis result does not support contour visualization causes an exception, because no contour is created to rename.
-</Danger>
+> [!IMPORTANT]
+> Passing `newName` when the analysis result does not support contour visualization causes an exception, because no contour is created to rename.
 
 ### Returns
 

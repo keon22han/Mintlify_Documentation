@@ -50,6 +50,5 @@ Calling `DockTo(DockLayout, IView)` moves the current view to a new position rel
 The position is specified using the `dockLayout` parameter, which determines the direction
 where the current view will be docked in relation to the target view.
 
-<Danger>
-The `target` must identify a valid [`IView`](/lib/VM-Operations-Post-Interfaces-IView) in the same [`IPage`](/lib/VM-Operations-Post-Interfaces-IPage) as the current view. An invalid target cannot receive the docking request.
-</Danger>
+> [!IMPORTANT]
+> The `target` must identify a valid [`IView`](/lib/VM-Operations-Post-Interfaces-IView) in the same [`IPage`](/lib/VM-Operations-Post-Interfaces-IPage) as the current view. An invalid target cannot receive the docking request.

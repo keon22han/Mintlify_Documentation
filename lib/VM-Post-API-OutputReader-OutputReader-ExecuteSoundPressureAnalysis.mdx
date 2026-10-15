@@ -111,9 +111,8 @@ sound_pressure_curves = output_reader.ExecuteSoundPressureAnalysis(
 
 The method maps `startTime` and `endTime` to the nearest available states with [`OutputReader`](/lib/VM-Post-API-OutputReader-OutputReader) before calculating the curves. Body surfaces and node values are read from the primary analysis result.
 
-<Danger>
-Every name in `bodynames` must identify an FE body.
-</Danger>
+> [!IMPORTANT]
+> Every name in `bodynames` must identify an FE body.
 
 ### Exceptions
 

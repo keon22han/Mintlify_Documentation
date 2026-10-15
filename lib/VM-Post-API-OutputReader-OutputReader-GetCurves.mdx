@@ -11,7 +11,7 @@ Assembly: VM.Post.API.OutputReader.dll
 
 Gets curve samples described by [`PlotParameters`](/lib/VM-Models-OutputReader-PlotParameters).
 
-For a complete operations, see [Result File Reader API Example - Get Curve](/document/result-file-reader/example/example_curve_for_result_file_reader_api#get-curve).
+For a complete operations, see [Result File Reader API Example - Get Curve](../document/result-file-reader/example/example_result_file_reader.md#get-curve).
 
 ```csharp
 public IDictionary<string, Point2D[]> GetCurves(PlotParameters parameter)
@@ -47,6 +47,5 @@ curves = output_reader.GetCurves(parameters)
 
 ### Remarks
 
-<Danger>
-`parameter` must contain valid target and path settings.
-</Danger>
+> [!IMPORTANT]
+> `parameter` must contain valid target and path settings.

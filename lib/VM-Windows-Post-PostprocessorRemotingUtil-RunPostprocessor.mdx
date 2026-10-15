@@ -28,7 +28,3 @@ The full path to the Postprocessor executable.
  Task&lt;bool\>
 
 A task whose result is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when the Postprocessor remoting service is ready. otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
-
-<Danger>
-The method returns before the Postprocessor is ready. Call `Wait()` on the returned task, or read its `Result`, before the next call. A call such as [ImportScriptFile\(string\)](/lib/VM-Windows-Post-PostprocessorRemotingUtil-ImportScriptFile) fails while the remoting service is not ready.
-</Danger>

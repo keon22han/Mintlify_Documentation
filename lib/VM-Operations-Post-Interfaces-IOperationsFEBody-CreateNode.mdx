@@ -23,17 +23,15 @@ IOperationsNodeViewModel CreateNode(int nodeID, PlotDataType fileType = PlotData
 
 Node ID that exists in the current finite-element data part.
 
-<Danger>
-The ID must identify an existing node. An invalid ID cannot be resolved into a node selection.
-</Danger>
+> [!IMPORTANT]
+> The ID must identify an existing node. An invalid ID cannot be resolved into a node selection.
 
 `fileType` [PlotDataType](/lib/VM-Models-PlotDataType)
 
 Plot data type associated with the node selection. The default is `DEFAULT`.
 
-<Note>
-The current implementation creates the node selection with `DEFAULT` regardless of the supplied value.
-</Note>
+> [!NOTE]
+> The current implementation creates the node selection with `DEFAULT` regardless of the supplied value.
 
 ### Returns
 

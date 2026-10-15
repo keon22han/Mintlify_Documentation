@@ -55,6 +55,5 @@ animation_view = page.CreateAnimation(dynamic_analysis, animation_view_name)
 
 The returned `IOperationsAnimation` is kept with [`IPage`](/lib/VM-Operations-Post-Interfaces-IPage) and becomes active immediately. Activating the new view deactivates the previously active view.
 
-<Danger>
-`analysis` must expose VM.ViewModels.Post.ResultDocumentViewModel through `ResultDocumentViewModel`. Otherwise, this method returns `default`.
-</Danger>
+> [!IMPORTANT]
+> `analysis` must expose VM.ViewModels.Post.ResultDocumentViewModel through `ResultDocumentViewModel`. Otherwise, this method returns `default`.

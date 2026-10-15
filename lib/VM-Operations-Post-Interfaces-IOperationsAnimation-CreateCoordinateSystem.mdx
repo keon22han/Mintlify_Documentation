@@ -23,17 +23,15 @@ IOperationsCSYSViewModel CreateCoordinateSystem(string name, string parentInfo =
 
 Name for the new coordinate system.
 
-<Danger>
-`name` must not identify an existing entity in the associated analysis result.
-</Danger>
+> [!IMPORTANT]
+> `name` must not identify an existing entity in the associated analysis result.
 
 `parentInfo` string
 
 Full name of the body, node, or coordinate system that will contain the new coordinate system. Obtain the full name from a public entity property or lookup result. If omitted, the ground entity is used. To specify a node, use the containing body full name followed by `/Node/` and the node ID, such as `body full name/Node/42`.
 
-<Danger>
-`parentInfo` must identify an existing body, node, or coordinate system in the associated analysis result.
-</Danger>
+> [!IMPORTANT]
+> `parentInfo` must identify an existing body, node, or coordinate system in the associated analysis result.
 
 ### Returns
 

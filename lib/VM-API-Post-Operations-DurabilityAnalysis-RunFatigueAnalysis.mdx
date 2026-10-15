@@ -75,9 +75,8 @@ DurabilityAnalysis.RunFatigueAnalysis(durability_parameter)
 
 The active view must implement [`IOperationsAnimation`](/lib/VM-Operations-Post-Interfaces-IOperationsAnimation) for the document identified by [`DocumentFilePath`](/lib/VM-ViewModels-Post-IDurabilityAnalysisParameter-DocumentFilePath). The analysis uses the target IDs and state range in `parameter` to write and run the fatigue analysis.
 
-<Danger>
-Activate the required `IOperationsAnimation` with [Activate\(\)](/lib/VM-Operations-Post-Interfaces-IView-Activate) before calling this method.
-</Danger>
+> [!IMPORTANT]
+> Activate the required `IOperationsAnimation` with [Activate\(\)](/lib/VM-Operations-Post-Interfaces-IView-Activate) before calling this method.
 
 ### Exceptions
 

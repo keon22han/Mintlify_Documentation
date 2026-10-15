@@ -144,6 +144,7 @@
                                   "lib/VM-API-Post-Operations-ApplicationHandler-GetPages",
                                   "lib/VM-API-Post-Operations-ApplicationHandler-GetView",
                                   "lib/VM-API-Post-Operations-ApplicationHandler-ImportNumeric",
+                                  "lib/VM-API-Post-Operations-ApplicationHandler-ImportPythonScripts",
                                   "lib/VM-API-Post-Operations-ApplicationHandler-RemoveDocument",
                                   "lib/VM-API-Post-Operations-ApplicationHandler-RemoveView"
                                 ]
@@ -567,7 +568,8 @@
                               {
                                 "group": "Methods",
                                 "pages": [
-                                  "lib/VM-Operations-Post-Interfaces-IOperationsHeatMapBaseViewModel-ExportHeatMapData"
+                                  "lib/VM-Operations-Post-Interfaces-IOperationsHeatMapBaseViewModel-ExportAllCurves",
+                                  "lib/VM-Operations-Post-Interfaces-IOperationsHeatMapBaseViewModel-ExportAllDataSeries"
                                 ]
                               }
                             ]
@@ -739,6 +741,7 @@
                                 "pages": [
                                   "lib/VM-Operations-Post-Interfaces-IOperationsLine2DViewModelBase-AddCurves",
                                   "lib/VM-Operations-Post-Interfaces-IOperationsLine2DViewModelBase-ExportAllCurves",
+                                  "lib/VM-Operations-Post-Interfaces-IOperationsLine2DViewModelBase-ExportAllDataSeries",
                                   "lib/VM-Operations-Post-Interfaces-IOperationsLine2DViewModelBase-GetAxis",
                                   "lib/VM-Operations-Post-Interfaces-IOperationsLine2DViewModelBase-GetCurve",
                                   "lib/VM-Operations-Post-Interfaces-IOperationsLine2DViewModelBase-GetCurveByID",

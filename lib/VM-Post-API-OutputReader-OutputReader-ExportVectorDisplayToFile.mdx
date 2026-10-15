@@ -11,7 +11,7 @@ Assembly: VM.Post.API.OutputReader.dll
 
 Exports vector results to a file.
 
-For a complete operations, see [Result File Reader API Example - Export Vector](/document/result-file-reader/example/example_vector_for_result_file_reader_api#export-vector).
+For a complete operations, see [Result File Reader API Example - Export Vector](../document/result-file-reader/example/example_result_file_reader.md#export-vector).
 
 The created file is always a text table, and its column separator is chosen from the file extension of `filepath`. It takes one of the following forms.
 
@@ -144,7 +144,7 @@ Thrown when an object in `targets` is not a vector display model.
 
 Exports vector results to a file.
 
-For a complete operations, see [Result File Reader API Example - Export Vector](/document/result-file-reader/example/example_vector_for_result_file_reader_api#export-vector).
+For a complete operations, see [Result File Reader API Example - Export Vector](../document/result-file-reader/example/example_result_file_reader.md#export-vector).
 
 The created file uses the same text table format as `ExportVectorDisplayToFile(string, int[], IEnumerable<object>, bool, bool, bool, AnalysisResultType)`.
 
@@ -219,10 +219,8 @@ output_reader.ExportVectorDisplayToFile(
 
 The target entity must implement [`IVectorDisplayable`](/lib/VM-Models-Post-IVectorDisplayable) for vector results to be exported.
 
-<Danger>
-A Dynamics analysis result must be available.
-</Danger>
+> [!IMPORTANT]
+> A Dynamics analysis result must be available.
 
-<Note>
-If the target entity cannot be resolved as an [`IVectorDisplayable`](/lib/VM-Models-Post-IVectorDisplayable), this overload performs no export.
-</Note>
+> [!NOTE]
+> If the target entity cannot be resolved as an [`IVectorDisplayable`](/lib/VM-Models-Post-IVectorDisplayable), this overload performs no export.

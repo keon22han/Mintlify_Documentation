@@ -71,10 +71,8 @@ interpolation_result = output_reader.InterpolationAkimaSpline(
 
 Output arrays contain `NoOfDesiredPnt` values. Adjacent duplicate X values are removed by the interpolation implementation before the spline is calculated.
 
-<Note>
-When adjacent X-values are duplicated, duplicate samples are removed before interpolation.
-</Note>
+> [!NOTE]
+> When adjacent X-values are duplicated, duplicate samples are removed before interpolation.
 
-<Danger>
-`X`, `Y`, `NoOfPnt`, `NoOfDesiredPnt`, `StartPnt`, and `EndPnt` must describe compatible input and output ranges.
-</Danger>
+> [!IMPORTANT]
+> `X`, `Y`, `NoOfPnt`, `NoOfDesiredPnt`, `StartPnt`, and `EndPnt` must describe compatible input and output ranges.

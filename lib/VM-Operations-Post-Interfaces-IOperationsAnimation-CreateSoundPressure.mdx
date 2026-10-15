@@ -23,17 +23,15 @@ IEnumerable<IOperationsLineDataSeriesViewModelBase> CreateSoundPressure(IList<st
 
 Full names of body entities in the analysis result. Obtain each name from a public entity property or lookup result.
 
-<Danger>
-The collection must contain at least one full name, and every name must identify a body in the associated analysis result.
-</Danger>
+> [!IMPORTANT]
+> The collection must contain at least one full name, and every name must identify a body in the associated analysis result.
 
 `coordinateNames` IList&lt;string\>
 
 Full names of coordinate systems used as microphone positions. Obtain each value from [`FullName`](/lib/VM-Operations-Post-Interfaces-IOperationsCSYSViewModel-FullName) after retrieving or creating the coordinate system.
 
-<Danger>
-The collection must contain at least one full name, and every name must identify a coordinate system in the associated analysis result.
-</Danger>
+> [!IMPORTANT]
+> The collection must contain at least one full name, and every name must identify a coordinate system in the associated analysis result.
 
 `coarseningRate` double
 
@@ -77,9 +75,8 @@ Last frame in the analysis range.
 
 Curve data created for the requested microphone positions.
 
-<Danger>
-The return value is `null` when either name collection is empty or contains an invalid entity name.
-</Danger>
+> [!IMPORTANT]
+> The return value is `null` when either name collection is empty or contains an invalid entity name.
 
 ### Examples
 

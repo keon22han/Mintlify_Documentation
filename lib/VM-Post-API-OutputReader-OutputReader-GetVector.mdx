@@ -11,7 +11,7 @@ Assembly: VM.Post.API.OutputReader.dll
 
 Gets vector results for a target entity and characteristic path using Dynamics analysis data.
 
-For a complete operations, see [Result File Reader API Example - Get Vector](/document/result-file-reader/example/example_vector_for_result_file_reader_api#get-vector).
+For a complete operations, see [Result File Reader API Example - Get Vector](../document/result-file-reader/example/example_result_file_reader.md#get-vector).
 
 ```csharp
 public IDictionary<string, IVectorDisplayAnimationData> GetVector(string target, string path)
@@ -46,13 +46,11 @@ vector_data = output_reader.GetVector(entity_name, characteristic_name)
 
 This calls `GetVector(string, string, AnalysisResultType)` with `Dynamics`.
 
-<Danger>
-`target` and `path` must be valid for the Dynamics analysis result.
-</Danger>
+> [!IMPORTANT]
+> `target` and `path` must be valid for the Dynamics analysis result.
 
-<Note>
-This overload uses `AnalysisResultType.Dynamics` when no analysis-result type is supplied.
-</Note>
+> [!NOTE]
+> This overload uses `AnalysisResultType.Dynamics` when no analysis-result type is supplied.
 
 ## GetVector\(string, string, AnalysisResultType\) {#VM_Post_API_OutputReader_OutputReader_GetVector_System_String_System_String_VM_Models_AnalysisResultType_}
 
@@ -95,6 +93,5 @@ vector_data = output_reader.GetVector(entity_name, characteristic_name, Analysis
 
 The selected analysis result is used with [`OutputReader`](/lib/VM-Post-API-OutputReader-OutputReader) to read vector display information.
 
-<Danger>
-`target` and `path` must be valid for `analysisResultType`.
-</Danger>
+> [!IMPORTANT]
+> `target` and `path` must be valid for `analysisResultType`.

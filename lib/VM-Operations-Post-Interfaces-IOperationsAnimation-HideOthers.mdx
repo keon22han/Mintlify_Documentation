@@ -23,9 +23,8 @@ void HideOthers(params string[] names)
 
 Full names already available for entities in the analysis result. Obtain each name from a public entity property or lookup result; this method does not produce or enumerate entity names.
 
-<Danger>
-`names` must contain at least one value. A `null` or empty array causes an exception.
-</Danger>
+> [!IMPORTANT]
+> `names` must contain at least one value. A `null` or empty array causes an exception.
 
 ### Examples
 
@@ -67,9 +66,8 @@ void HideOthers(params Guid[] entityIDs)
 
 Values of [`ID`](/lib/VM-Models-Post-IHasGuid-ID) from entities that should remain visible. Obtain the entities before passing their IDs to this overload.
 
-<Danger>
-`entityIDs` must contain at least one value. A `null` or empty array causes an exception.
-</Danger>
+> [!IMPORTANT]
+> `entityIDs` must contain at least one value. A `null` or empty array causes an exception.
 
 ### Examples
 

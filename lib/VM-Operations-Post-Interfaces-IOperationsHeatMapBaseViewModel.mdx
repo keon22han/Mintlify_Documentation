@@ -37,7 +37,7 @@ Gets or sets the minimum value of the heat-map legend range used when [`IsAutoRa
 
 ## Methods
 
- [ExportHeatMapData\(string\)](VM.Operations.Post.Interfaces.IOperationsHeatMapBaseViewModel.ExportHeatMapData.md\#VM\_Operations\_Post\_Interfaces\_IOperationsHeatMapBaseViewModel\_ExportHeatMapData\_System\_String\_)
+ [ExportAllCurves\(string\)](VM.Operations.Post.Interfaces.IOperationsHeatMapBaseViewModel.ExportAllCurves.md\#VM\_Operations\_Post\_Interfaces\_IOperationsHeatMapBaseViewModel\_ExportAllCurves\_System\_String\_)
 
 Exports the heat-map view's own X, Y, and Z grid values to a specified file path.
 
@@ -82,3 +82,9 @@ Time (sec)	Frequency (Hz)	Z
 ```
 
 The columns and iteration order are identical to the `.csv` form, and only the separator differs, using a tab character between columns.
+
+ [ExportAllDataSeries\(\)](VM.Operations.Post.Interfaces.IOperationsHeatMapBaseViewModel.ExportAllDataSeries.md\#VM\_Operations\_Post\_Interfaces\_IOperationsHeatMapBaseViewModel\_ExportAllDataSeries)
+
+Exports the heat-map view's own X, Y, and Z grid values.
+
+The created file uses the same text table format as [ExportAllCurves\(string\)](/lib/VM-Operations-Post-Interfaces-IOperationsHeatMapBaseViewModel-ExportAllCurves).

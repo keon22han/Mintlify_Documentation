@@ -26,7 +26,3 @@ The full path of the Python script file to run.
  Task&lt;bool\>
 
 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the Postprocessor ran the script. otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
-
-<Danger>
-The method returns before the call completes. Call `Wait()` on the returned task, or read its `Result`, to wait for the result. Wait for [RunPostprocessor\(string\)](/lib/VM-Windows-Post-PostprocessorRemotingUtil-RunPostprocessor) in the same way before this call.
-</Danger>
