@@ -23,15 +23,17 @@ IOperationsNodeViewModel CreateNode(int nodeID, PlotDataType fileType = PlotData
 
 Node ID that exists in the current finite-element data part.
 
-> [!IMPORTANT]
-> The ID must identify an existing node. An invalid ID cannot be resolved into a node selection.
+<Danger>
+The ID must identify an existing node. An invalid ID cannot be resolved into a node selection.
+</Danger>
 
 `fileType` [PlotDataType](/lib/VM-Models-PlotDataType)
 
 Plot data type associated with the node selection. The default is `DEFAULT`.
 
-> [!NOTE]
-> The current implementation creates the node selection with `DEFAULT` regardless of the supplied value.
+<Note>
+The current implementation creates the node selection with `DEFAULT` regardless of the supplied value.
+</Note>
 
 ### Returns
 
@@ -59,3 +61,5 @@ node = febody.CreateNode(node_id, plot_data_type)
 ### Remarks
 
 The operation resolves the node index and part from the current analysis result, adds the node selection to the available node entries, and selects the returned node.
+
+<a href="/lib/VM.Operations.Post.Interfaces.IOperationsFEBody.CreateNode.md" download="VM.Operations.Post.Interfaces.IOperationsFEBody.CreateNode.md">Download this page as Markdown</a>

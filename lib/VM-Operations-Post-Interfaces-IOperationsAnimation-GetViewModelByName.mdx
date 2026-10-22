@@ -27,8 +27,9 @@ Full name already available for an entity in the analysis result. This method us
 
 Matching [`IEntityBaseViewModel`](/lib/VM-ViewModels-Post-IEntityBaseViewModel).
 
-> [!NOTE]
-> The return value is `null` when `name` does not identify an entity or when no analysis result is associated with [`IOperationsAnimation`](/lib/VM-Operations-Post-Interfaces-IOperationsAnimation).
+<Note>
+The return value is `null` when `name` does not identify an entity or when no analysis result is associated with [`IOperationsAnimation`](/lib/VM-Operations-Post-Interfaces-IOperationsAnimation).
+</Note>
 
 ### Examples
 
@@ -53,3 +54,5 @@ entity = animation_view.GetViewModelByName(entity_full_name)
 ### Remarks
 
 The lookup compares `name` with entity full names in the analysis result associated with [`IOperationsAnimation`](/lib/VM-Operations-Post-Interfaces-IOperationsAnimation).
+
+<a href="/lib/VM.Operations.Post.Interfaces.IOperationsAnimation.GetViewModelByName.md" download="VM.Operations.Post.Interfaces.IOperationsAnimation.GetViewModelByName.md">Download this page as Markdown</a>

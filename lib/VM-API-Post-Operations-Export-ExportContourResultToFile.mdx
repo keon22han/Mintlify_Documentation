@@ -144,11 +144,18 @@ Export.ExportContourResultToFile(RESULT_FILE_PATH, output_path, target_names, is
 
 `IOperationsAnimation` supplies the result document and frame state used for the export. That result document creates or overwrites `resultFilePath`.
 
-> [!IMPORTANT]
-> Activate `IOperationsAnimation` for `documentFilePath` and load its frames before calling this method.
+<Note>
+`FEElementNode` and `FEMaterial` are supported only for an `FEBody` that uses a linear material.
+</Note>
+
+<Danger>
+Activate `IOperationsAnimation` for `documentFilePath` and load its frames before calling this method.
+</Danger>
 
 ### Exceptions
 
  Exception
 
 Thrown when the active view is not an animation for `documentFilePath` or its frames are not available.
+
+<a href="/lib/VM.API.Post.Operations.Export.ExportContourResultToFile.md" download="VM.API.Post.Operations.Export.ExportContourResultToFile.md">Download this page as Markdown</a>

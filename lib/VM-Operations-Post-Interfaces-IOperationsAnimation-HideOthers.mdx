@@ -23,8 +23,9 @@ void HideOthers(params string[] names)
 
 Full names already available for entities in the analysis result. Obtain each name from a public entity property or lookup result; this method does not produce or enumerate entity names.
 
-> [!IMPORTANT]
-> `names` must contain at least one value. A `null` or empty array causes an exception.
+<Danger>
+`names` must contain at least one value. A `null` or empty array causes an exception.
+</Danger>
 
 ### Examples
 
@@ -66,8 +67,9 @@ void HideOthers(params Guid[] entityIDs)
 
 Values of [`ID`](/lib/VM-Models-Post-IHasGuid-ID) from entities that should remain visible. Obtain the entities before passing their IDs to this overload.
 
-> [!IMPORTANT]
-> `entityIDs` must contain at least one value. A `null` or empty array causes an exception.
+<Danger>
+`entityIDs` must contain at least one value. A `null` or empty array causes an exception.
+</Danger>
 
 ### Examples
 
@@ -95,3 +97,5 @@ animation_view.HideOthers(entity.ID)
 ### Remarks
 
 Entities matching the supplied IDs remain visible, and other entities are hidden.
+
+<a href="/lib/VM.Operations.Post.Interfaces.IOperationsAnimation.HideOthers.md" download="VM.Operations.Post.Interfaces.IOperationsAnimation.HideOthers.md">Download this page as Markdown</a>

@@ -21,8 +21,9 @@ IViewSpec[] GetViewSpecs()
 
 An array of [`IViewSpec`](/lib/VM-Operations-Post-Interfaces-IViewSpec) values initialized with default camera settings, with one entry for each loaded animation frame.
 
-> [!NOTE]
-> The returned array is empty when no animation frames are loaded.
+<Note>
+The returned array is empty when no animation frames are loaded.
+</Note>
 
 ### Examples
 
@@ -60,3 +61,5 @@ for frame_index in range(frame_count):
 ### Remarks
 
 The returned entries are newly created camera specifications in loaded-frame order. They are not snapshots of the current camera position. Redefine the [`Eye`](/lib/VM-Operations-Post-Interfaces-IViewSpec-Eye), [`Target`](/lib/VM-Operations-Post-Interfaces-IViewSpec-Target), and [`UpVector`](/lib/VM-Operations-Post-Interfaces-IViewSpec-UpVector) values in different entries to create a frame-by-frame camera path before using the array with [`RecordingAnimation(string, RecordingType, RecordingRangeType, int, IViewSpec[])`](/lib/VM-Operations-Post-Interfaces-IOperationsAnimation-RecordingAnimation).
+
+<a href="/lib/VM.Operations.Post.Interfaces.IOperationsAnimation.GetViewSpecs.md" download="VM.Operations.Post.Interfaces.IOperationsAnimation.GetViewSpecs.md">Download this page as Markdown</a>

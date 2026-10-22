@@ -31,7 +31,7 @@ Initial name for the new view. If omitted, a default name is generated.
 
  [IOperationsAnimation](/lib/VM-Operations-Post-Interfaces-IOperationsAnimation)
 
-Newly created [`IOperationsAnimation`](/lib/VM-Operations-Post-Interfaces-IOperationsAnimation). The method returns `default` when [`ResultDocumentViewModel`](/lib/VM-ViewModels-Post-IAnalysisResultViewModel-ResultDocumentViewModel) does not expose VM.ViewModels.Post.ResultDocumentViewModel.
+Newly created [`IOperationsAnimation`](/lib/VM-Operations-Post-Interfaces-IOperationsAnimation). The method returns `default` when `ResultDocumentViewModel` does not expose VM.ViewModels.Post.ResultDocumentViewModel.
 
 ### Examples
 
@@ -55,5 +55,8 @@ animation_view = page.CreateAnimation(dynamic_analysis, animation_view_name)
 
 The returned `IOperationsAnimation` is kept with [`IPage`](/lib/VM-Operations-Post-Interfaces-IPage) and becomes active immediately. Activating the new view deactivates the previously active view.
 
-> [!IMPORTANT]
-> `analysis` must expose VM.ViewModels.Post.ResultDocumentViewModel through `ResultDocumentViewModel`. Otherwise, this method returns `default`.
+<Danger>
+`analysis` must expose VM.ViewModels.Post.ResultDocumentViewModel through `ResultDocumentViewModel`. Otherwise, this method returns `default`.
+</Danger>
+
+<a href="/lib/VM.Operations.Post.Interfaces.IPage.CreateAnimation.md" download="VM.Operations.Post.Interfaces.IPage.CreateAnimation.md">Download this page as Markdown</a>

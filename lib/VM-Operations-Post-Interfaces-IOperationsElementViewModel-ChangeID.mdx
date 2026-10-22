@@ -21,8 +21,9 @@ void ChangeID(int id)
 
 Existing element ID to assign within the parent finite-element data part.
 
-> [!IMPORTANT]
-> The ID must identify an element in the current finite-element data. The operation uses that element's index and type when updating the selection.
+<Danger>
+The ID must identify an element in the current finite-element data. The operation uses that element's index and type when updating the selection.
+</Danger>
 
 ### Examples
 
@@ -45,3 +46,5 @@ element.ChangeID(new_element_id)
 ### Remarks
 
 The operation updates the element's stored ID, index, and type information, then refreshes the displayed identifier so subsequent reads show the new ID.
+
+<a href="/lib/VM.Operations.Post.Interfaces.IOperationsElementViewModel.ChangeID.md" download="VM.Operations.Post.Interfaces.IOperationsElementViewModel.ChangeID.md">Download this page as Markdown</a>

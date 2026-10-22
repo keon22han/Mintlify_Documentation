@@ -12,12 +12,12 @@ Assembly: VM.API.Post.Operations.dll
 Imports result documents from the specified file paths.
 
 ```csharp
-public void AddDocument(IList<string> filepath)
+public void AddDocument(IList<string> filepaths)
 ```
 
 ### Parameters
 
-`filepath` IList&lt;string\>
+`filepaths` IList&lt;string\>
 
 The paths of the `.dfr` result files to import.
 
@@ -30,3 +30,5 @@ filepaths = List[str]()
 filepaths.Add(RESULT_FILE_PATH)
 application_handler.AddDocument(filepaths)
 ```
+
+<a href="/lib/VM.API.Post.Operations.ApplicationHandler.AddDocument.md" download="VM.API.Post.Operations.ApplicationHandler.AddDocument.md">Download this page as Markdown</a>

@@ -39,13 +39,13 @@ Closes `OutputReader`.
 
 Creates a coordinate-system marker in the Dynamics analysis result.
 
-For a complete operations, see [Result File Reader API Example - Create a Coordinate System](../document/result-file-reader/example/example_result_file_reader.md#create-a-coordinate-system).
+For a complete operations, see [Result File Reader API Example - Create a Coordinate System](/document/result-file-reader/example/example_coordinate_system_for_result_file_reader_api#create-a-coordinate-system).
 
  [CreateVector\(string, string, string\)](VM.Post.API.OutputReader.OutputReader.CreateVector.md\#VM\_Post\_API\_OutputReader\_OutputReader\_CreateVector\_System\_String\_System\_String\_System\_String\_)
 
 Creates a vector definition for a vector-displayable entity and characteristic path.
 
-For a complete operations, see [Result File Reader API Example - Export Vector](../document/result-file-reader/example/example_result_file_reader.md#export-vector).
+For a complete operations, see [Result File Reader API Example - Export Vector](/document/result-file-reader/example/example_vector_for_result_file_reader_api#export-vector).
 
  [ExecuteSoundPressureAnalysis\(IList&lt;string\>, IList&lt;double\[\]\>, double, double, double, double, double, double, double, double, bool\)](VM.Post.API.OutputReader.OutputReader.ExecuteSoundPressureAnalysis.md\#VM\_Post\_API\_OutputReader\_OutputReader\_ExecuteSoundPressureAnalysis\_System\_Collections\_Generic\_IList\_System\_String\_\_System\_Collections\_Generic\_IList\_System\_Double\_\_\_\_System\_Double\_System\_Double\_System\_Double\_System\_Double\_System\_Double\_System\_Double\_System\_Double\_System\_Double\_System\_Boolean\_)
 
@@ -80,7 +80,7 @@ The created file uses the same binary layout as [`ExportAcousticRawDataToFile(st
 
 Exports contour results to a file.
 
-For a complete operations, see [Result File Reader API Example - Export Contour](../document/result-file-reader/example/example_result_file_reader.md#export-contour).
+For a complete operations, see [Result File Reader API Example - Export Contour](/document/result-file-reader/example/example_contour_for_result_file_reader_api#export-contour).
 
 This overload defaults `formatType` to `BINARY`, unlike the Operation API export, which defaults to text. The exported text and binary formats are the same as the Operation API's contour export. For the file format, see [ExportContourResultToFile\(string, string, IList&lt;string\>, bool, ContourMappingType, string, AnalysisResultType, FileFormatType\)](/lib/VM-API-Post-Operations-Export-ExportContourResultToFile).
 
@@ -150,7 +150,7 @@ Exports raw data about the FE modal body to a file.
 
 Exports vector results to a file.
 
-For a complete operations, see [Result File Reader API Example - Export Vector](../document/result-file-reader/example/example_result_file_reader.md#export-vector).
+For a complete operations, see [Result File Reader API Example - Export Vector](/document/result-file-reader/example/example_vector_for_result_file_reader_api#export-vector).
 
 The created file is always a text table, and its column separator is chosen from the file extension of `filepath`. It takes one of the following forms.
 
@@ -203,7 +203,7 @@ The header block, component rows, and per-state result rows are identical to the
 
 Exports vector results to a file.
 
-For a complete operations, see [Result File Reader API Example - Export Vector](../document/result-file-reader/example/example_result_file_reader.md#export-vector).
+For a complete operations, see [Result File Reader API Example - Export Vector](/document/result-file-reader/example/example_vector_for_result_file_reader_api#export-vector).
 
 The created file uses the same text table format as [`ExportVectorDisplayToFile(string, int[], IEnumerable<object>, bool, bool, bool, AnalysisResultType)`](/lib/VM-Post-API-OutputReader-OutputReader-ExportVectorDisplayToFile).
 
@@ -235,7 +235,7 @@ Gets contour component names available for an entity, mapping type, characterist
 
 Reads contour values for one entity and invokes a callback for each requested state.
 
-For a complete operations, see [Result File Reader API Example - Get Contour](../document/result-file-reader/example/example_result_file_reader.md#get-contour).
+For a complete operations, see [Result File Reader API Example - Get Contour](/document/result-file-reader/example/example_contour_for_result_file_reader_api#get-contour).
 
  [GetContourResult\(IList&lt;int\>, IList&lt;string\>, ContourMappingType, string, Action&lt;int, IList&lt;double\[\]\>\>, AnalysisResultType\)](VM.Post.API.OutputReader.OutputReader.GetContourResult.md\#VM\_Post\_API\_OutputReader\_OutputReader\_GetContourResult\_System\_Collections\_Generic\_IList\_System\_Int32\_\_System\_Collections\_Generic\_IList\_System\_String\_\_VM\_Models\_ContourMappingType\_System\_String\_System\_Action\_System\_Int32\_System\_Collections\_Generic\_IList\_System\_Double\_\_\_\_\_VM\_Models\_AnalysisResultType\_)
 
@@ -245,7 +245,7 @@ Reads contour values for multiple entities and invokes a callback for each reque
 
 Gets curve samples described by [`PlotParameters`](/lib/VM-Models-OutputReader-PlotParameters).
 
-For a complete operations, see [Result File Reader API Example - Get Curve](../document/result-file-reader/example/example_result_file_reader.md#get-curve).
+For a complete operations, see [Result File Reader API Example - Get Curve](/document/result-file-reader/example/example_curve_for_result_file_reader_api#get-curve).
 
  [GetEntities\(EntityType\)](VM.Post.API.OutputReader.OutputReader.GetEntities.md\#VM\_Post\_API\_OutputReader\_OutputReader\_GetEntities\_VM\_Models\_Post\_EntityType\_)
 
@@ -327,7 +327,7 @@ Gets unit information stored in the mode-shape file for a modal body.
 
 Gets vector results for a target entity and characteristic path using Dynamics analysis data.
 
-For a complete operations, see [Result File Reader API Example - Get Vector](../document/result-file-reader/example/example_result_file_reader.md#get-vector).
+For a complete operations, see [Result File Reader API Example - Get Vector](/document/result-file-reader/example/example_vector_for_result_file_reader_api#get-vector).
 
  [GetVector\(string, string, AnalysisResultType\)](VM.Post.API.OutputReader.OutputReader.GetVector.md\#VM\_Post\_API\_OutputReader\_OutputReader\_GetVector\_System\_String\_System\_String\_VM\_Models\_AnalysisResultType\_)
 
@@ -344,3 +344,5 @@ Builds interpolated points from X and Y arrays with the Akima spline method.
  [RemoveCoordinateSystem\(string\)](VM.Post.API.OutputReader.OutputReader.RemoveCoordinateSystem.md\#VM\_Post\_API\_OutputReader\_OutputReader\_RemoveCoordinateSystem\_System\_String\_)
 
 Removes a user-created coordinate-system marker identified by `name`.
+
+<a href="/lib/VM.Post.API.OutputReader.OutputReader.md" download="VM.Post.API.OutputReader.OutputReader.md">Download this page as Markdown</a>

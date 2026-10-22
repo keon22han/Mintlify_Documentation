@@ -11,7 +11,7 @@ Assembly: VM.Post.API.OutputReader.dll
 
 Reads contour values for one entity and invokes a callback for each requested state.
 
-For a complete operations, see [Result File Reader API Example - Get Contour](../document/result-file-reader/example/example_result_file_reader.md#get-contour).
+For a complete operations, see [Result File Reader API Example - Get Contour](/document/result-file-reader/example/example_contour_for_result_file_reader_api#get-contour).
 
 ```csharp
 public void GetContourResult(IList<int> stateids, string fullName, ContourMappingType type, string path, Action<int, IList<double[]>> fncallback, AnalysisResultType analysisType = AnalysisResultType.Dynamics)
@@ -72,8 +72,9 @@ output_reader.GetContourResult(
 
 This overload delegates the read to the multiple-entity overload with one entity name. The callback receives one call for each requested state.
 
-> [!NOTE]
-> Invalid state IDs, entity names, mapping types, or paths can cause the read to fail.
+<Note>
+Invalid state IDs, entity names, mapping types, or paths can cause the read to fail.
+</Note>
 
 ### Exceptions
 
@@ -148,11 +149,14 @@ output_reader.GetContourResult(
 
 The method creates data states for `stateids`, reads the selected path, removes `null` result arrays from each group, and passes the remaining values to `fncallback`.
 
-> [!NOTE]
-> Invalid state IDs, entity names, mapping types, or paths can cause the read to fail.
+<Note>
+Invalid state IDs, entity names, mapping types, or paths can cause the read to fail.
+</Note>
 
 ### Exceptions
 
  ArgumentNullException
 
 Thrown when `fncallback` is `null`.
+
+<a href="/lib/VM.Post.API.OutputReader.OutputReader.GetContourResult.md" download="VM.Post.API.OutputReader.OutputReader.GetContourResult.md">Download this page as Markdown</a>

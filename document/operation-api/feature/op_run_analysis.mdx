@@ -11,6 +11,12 @@ The active view returned by [`GetActiveView()`](/lib/VM-Operations-Post-Interfac
 Activate the required `IOperationsAnimation` with [`Activate()`](/lib/VM-Operations-Post-Interfaces-IView-Activate), see [Manage View](/document/operation-api/feature/op_manage_view).
 </Danger>
 
+Assign a fatigue material to each target [`IOperationsFEBody`](/lib/VM-Operations-Post-Interfaces-IOperationsFEBody) with [`Material`](/lib/VM-Operations-Post-Interfaces-IOperationsFEBody-Material) before running this operation.
+
+<Danger>
+The fatigue material assigned with `Material` must be registered in the Postprocessor UI beforehand.
+</Danger>
+
 Once `RunFatigueAnalysis(IDurabilityAnalysisParameter)` finishes, use [`SetFatiguePath(string, string)`](/lib/VM-API-Post-Operations-DurabilityAnalysis-SetFatiguePath) to pick which fatigue result to use next.
 
 To see the analysis result as a contour, see [Manage a Contour](/document/operation-api/feature/op_manage_contour).
@@ -21,3 +27,5 @@ Calculate sound pressure data with [`CreateSoundPressure(IList<string>, IList<st
 <Danger>
 The supplied body and coordinate system names must identify entities that already exist. If a name cannot be matched, no sound pressure data is created.
 </Danger>
+
+<a href="/document/operation-api/feature/op_run_analysis.md" download="op_run_analysis.md">Download this page as Markdown</a>

@@ -23,8 +23,9 @@ IOperationsContourViewModel CreateContour(IList<string> entities, ContourMapping
 
 Full names returned by [GetContourables\(ContourMappingType\)](/lib/VM-Operations-Post-Interfaces-IOperationAnalysisResult-GetContourables) for the same `mappingType`.
 
-> [!IMPORTANT]
-> A name that `GetContourables(ContourMappingType)` did not return causes an exception when the contour is built.
+<Danger>
+A name that `GetContourables(ContourMappingType)` did not return causes an exception when the contour is built.
+</Danger>
 
 `mappingType` [ContourMappingType](/lib/VM-Models-ContourMappingType)
 
@@ -42,8 +43,9 @@ Component name returned by [GetContourComponents\(string, ContourMappingType, st
 
 Name for the new contour. If omitted, the name combines `characteristic` and `component`, and a numbered variant is generated automatically when that name is already used in the analysis result.
 
-> [!IMPORTANT]
-> Passing `newName` when the analysis result does not support contour visualization causes an exception, because no contour is created to rename.
+<Danger>
+Passing `newName` when the analysis result does not support contour visualization causes an exception, because no contour is created to rename.
+</Danger>
 
 ### Returns
 
@@ -74,3 +76,5 @@ contour = analysis_result.CreateContour(target_entities, contour_mapping_type, c
 The created contour can be configured through `IOperationsContourViewModel`, including its [`IsEnabled`](/lib/VM-Operations-Post-Interfaces-IOperationsContourViewModel-IsEnabled) display state.
 
 When `entities` lists more than one entity, only the contour components common to every listed entity become available through [`ComponentList`](/lib/VM-Operations-Post-Interfaces-IOperationsContourViewModel-ComponentList).
+
+<a href="/lib/VM.Operations.Post.Interfaces.IOperationAnalysisResult.CreateContour.md" download="VM.Operations.Post.Interfaces.IOperationAnalysisResult.CreateContour.md">Download this page as Markdown</a>

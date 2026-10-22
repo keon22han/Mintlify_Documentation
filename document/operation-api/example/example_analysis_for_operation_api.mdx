@@ -39,6 +39,7 @@ application_handler.LoadingAnimation()
 # The GetViewModelByName method retrieves the target by its name.
 entity_name = "FEBody_01"
 fe_body = active_view.GetViewModelByName(entity_name)
+# The fatigue material must already be registered in the Postprocessor UI.
 material_name = "2014_HV_O"
 material = active_view.GetViewModelByName(material_name)
 
@@ -177,3 +178,5 @@ for page in pages :
 # Close the Document
 application_handler.CloseDocument(RESULT_FILE_PATH)
 ```
+
+<a href="/document/operation-api/example/example_analysis_for_operation_api.md" download="example_analysis_for_operation_api.md">Download this page as Markdown</a>
